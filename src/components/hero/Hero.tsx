@@ -42,10 +42,10 @@ export function Hero() {
               className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-secondary)]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-android)]" />
-              Engineer
+              Mobile
               <span className="text-[var(--color-text-tertiary)]">/</span>
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-ai)]" />
-              Builder
+              Vibe Coding
             </motion.div>
 
             <h1 className="font-display text-[15vw] leading-[0.95] font-medium tracking-tight text-[var(--color-text-primary)] sm:text-7xl lg:text-[5.5rem]">
@@ -63,7 +63,7 @@ export function Hero() {
             >
               <span className="text-[var(--color-android)]">Android Developer</span>
               <span className="text-[var(--color-text-tertiary)]"> &amp; </span>
-              <span className="text-[var(--color-ai)]">AI-Assisted Builder</span>
+              <span className="text-[var(--color-ai)]">Vibe Coder</span>
             </motion.p>
 
             <motion.p
@@ -94,11 +94,34 @@ export function Hero() {
 
             <motion.div
               {...fadeUp(0.5)}
-              className="mt-14 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-tertiary)]"
+              className="mt-10 flex items-center gap-8"
             >
-              <span>Engineering</span>
+              <div className="flex items-baseline gap-2.5">
+                <span className="font-display text-3xl font-semibold tracking-tight text-[var(--color-android)]">
+                  {profile.androidExperience}
+                </span>
+                <span className="max-w-[110px] font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">
+                  {profile.androidExperienceLabel}
+                </span>
+              </div>
+              <span aria-hidden className="h-10 w-px bg-[var(--color-border)]" />
+              <div className="flex items-baseline gap-2.5">
+                <span className="font-display text-3xl font-semibold tracking-tight text-[var(--color-ai)]">
+                  {profile.aiExperience}
+                </span>
+                <span className="max-w-[110px] font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">
+                  {profile.aiExperienceLabel}
+                </span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              {...fadeUp(0.55)}
+              className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-tertiary)]"
+            >
+              <span>Mobile</span>
               <ArrowRight size={12} />
-              <span>Building</span>
+              <span>Vibe Coding</span>
               <ArrowRight size={12} />
               <span>Shipping</span>
             </motion.div>
@@ -109,43 +132,19 @@ export function Hero() {
             initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.97 }}
             animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="relative mx-auto w-full max-w-[360px] lg:max-w-none"
+            className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:mx-0 lg:max-w-[330px] lg:justify-self-end"
           >
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
+            <div className="relative aspect-square w-full overflow-hidden rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)]">
               <Image
                 src={profile.photo.src}
                 alt={profile.photo.alt}
                 fill
                 priority
-                sizes="(min-width: 1024px) 420px, (min-width: 640px) 60vw, 90vw"
+                sizes="(min-width: 1024px) 330px, (min-width: 640px) 300px, 280px"
                 className="object-cover grayscale-[12%]"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/50 via-transparent to-transparent" />
-              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/5" />
-            </div>
-
-            {/* corner accent */}
-            <div
-              aria-hidden
-              className="absolute -top-3 -right-3 h-14 w-14 rounded-xl border border-[var(--color-android-line)] sm:h-16 sm:w-16"
-            />
-
-            <div className="absolute -bottom-6 -left-6 hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/95 px-4 py-3 backdrop-blur-sm sm:flex sm:flex-col sm:gap-0.5">
-              <span className="font-display text-lg font-semibold text-[var(--color-android)]">
-                {profile.androidExperience}
-              </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
-                Years Android
-              </span>
-            </div>
-
-            <div className="absolute -top-6 -left-6 hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/95 px-4 py-3 backdrop-blur-sm sm:flex sm:flex-col sm:gap-0.5">
-              <span className="font-display text-lg font-semibold text-[var(--color-ai)]">
-                {profile.aiExperience}
-              </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
-                Year AI-Assisted
-              </span>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/25 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 rounded-full ring-1 ring-inset ring-white/10" />
             </div>
           </motion.div>
         </div>

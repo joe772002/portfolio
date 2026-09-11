@@ -9,8 +9,8 @@ export function AISkillsSection() {
     <section className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-28">
       <Container>
         <Reveal>
-          <h2 className="sr-only">AI-Assisted Development Toolkit</h2>
-          <SectionKicker accent="ai">AI-Assisted Development Toolkit</SectionKicker>
+          <h2 className="sr-only">Vibe Coding Toolkit</h2>
+          <SectionKicker accent="ai">Vibe Coding Toolkit</SectionKicker>
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">

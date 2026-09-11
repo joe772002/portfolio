@@ -12,10 +12,10 @@ export function AIProjectsSection() {
     <section className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
       <Container>
         <SectionHeading
-          kicker="Building with AI"
+          kicker="Projects — Vibe Coding"
           kickerAccent="ai"
-          title="From idea to product."
-          description="AI-assisted, product-driven builds. This section grows as new prototypes and MVPs are shipped."
+          title="Vibe-coded builds, from idea to product."
+          description="Product-driven builds made with vibe coding. This section grows as new prototypes and MVPs are shipped."
         />
 
         {majors.length > 0 && (

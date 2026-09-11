@@ -8,7 +8,7 @@ export function ProductWorkflowSection() {
     <section className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-28">
       <Container>
         <Reveal>
-          <SectionKicker accent="ai">Product Building Workflow</SectionKicker>
+          <SectionKicker accent="ai">Vibe Coding Workflow</SectionKicker>
           <h2 className="mt-4 max-w-xl text-balance font-display text-3xl font-medium tracking-tight sm:text-4xl">
             From idea to working product.
           </h2>

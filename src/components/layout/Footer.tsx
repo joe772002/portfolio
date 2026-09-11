@@ -9,7 +9,7 @@ export function Footer() {
           © {new Date().getFullYear()} {profile.name}
         </p>
         <p className="font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-          Engineering → Building → Shipping
+          Mobile → Vibe Coding → Shipping
         </p>
       </Container>
     </footer>

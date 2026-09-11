@@ -44,6 +44,15 @@ export const androidProjects: AndroidProject[] = [
     ],
     confidential: true,
     featured: true,
+    images: [
+      "/images/projects/oman-mtcit/home.webp",
+      "/images/projects/oman-mtcit/requests.webp",
+      "/images/projects/oman-mtcit/notifications.webp",
+      "/images/projects/oman-mtcit/vessel-details.webp",
+      "/images/projects/oman-mtcit/services.webp",
+    ],
+    imageAlt:
+      "Oman MTCIT mobile app — home dashboard, registration requests, notifications, vessel details, and services screens (sensitive data blurred)",
   },
   {
     id: "electronic-meetings",

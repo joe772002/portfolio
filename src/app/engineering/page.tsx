@@ -3,9 +3,9 @@ import { EngineerSection } from "@/components/sections/EngineerSection";
 import { TechnicalExpertise } from "@/components/sections/TechnicalExpertise";
 
 export const metadata: Metadata = {
-  title: "Engineering",
+  title: "Mobile",
   description:
-    "Android engineering background — Kotlin, Jetpack Compose, scalable mobile architecture.",
+    "Mobile engineering background — Kotlin, Jetpack Compose, scalable mobile architecture.",
 };
 
 export default function EngineeringPage() {

@@ -26,7 +26,7 @@ export function EngineerSection() {
     <section id="engineer" className="relative py-24 sm:py-32">
       <Container>
         <SectionHeading
-          kicker="Engineer"
+          kicker="Mobile"
           kickerAccent="android"
           title="Building reliable, scalable, and modern mobile applications."
           description={profile.philosophy}

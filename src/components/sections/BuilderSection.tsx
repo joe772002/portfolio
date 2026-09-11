@@ -17,9 +17,9 @@ export function BuilderSection() {
     <section id="builder" className="relative py-24 sm:py-32">
       <Container>
         <SectionHeading
-          kicker="Builder"
+          kicker="Vibe Coding"
           kickerAccent="ai"
-          title="Turning ideas into prototypes and products with AI-assisted development workflows."
+          title="Turning ideas into prototypes and products with vibe coding."
           description={profile.aiPhilosophy}
         />
 
@@ -35,7 +35,7 @@ export function BuilderSection() {
                 </p>
               </div>
               <p className="mt-10 border-t border-[var(--color-border-soft)] pt-6 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                I use modern AI-powered development tools and coding agents to accelerate
+                I use vibe coding — modern AI-powered tools and coding agents — to accelerate
                 development, explore solutions, and move faster from concept to working software.
                 My engineering knowledge remains the foundation — AI is a productivity multiplier,
                 not a replacement for judgment.
@@ -46,7 +46,7 @@ export function BuilderSection() {
           <Reveal delay={0.12} className="lg:col-span-7">
             <div className="flex h-full flex-col justify-center rounded-2xl border border-[var(--color-border)] p-8 sm:p-10">
               <p className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
-                What AI accelerates
+                What vibe coding accelerates
               </p>
               <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {aiFocusAreas.map((item) => (

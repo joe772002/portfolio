@@ -16,18 +16,17 @@ export function TransitionSection() {
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--color-text-tertiary)]">
-              From Engineering to Building
+              From Mobile to Vibe Coding
             </p>
             <h2 className="mt-6 text-balance font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl">
-              <span className="text-[var(--color-android)]">Engineering</span>
+              <span className="text-[var(--color-android)]">Mobile</span>
               <span className="text-[var(--color-text-primary)]"> gives me the foundation.</span>
               <br />
-              <span className="text-[var(--color-ai)]">AI</span>
+              <span className="text-[var(--color-ai)]">Vibe coding</span>
               <span className="text-[var(--color-text-primary)]"> changes how quickly I can build.</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg">
-              The foundation is engineering discipline. The accelerator is modern AI-assisted
-              development.
+              The foundation is mobile engineering discipline. The accelerator is vibe coding.
             </p>
           </div>
         </Reveal>

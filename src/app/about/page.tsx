@@ -3,7 +3,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Youssef Osama Ali — Android Developer & AI-Assisted Builder.",
+  description: "About Youssef Osama Ali — Android Developer & Vibe Coder.",
 };
 
 export default function AboutPage() {

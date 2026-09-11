@@ -8,8 +8,8 @@ export function TechnicalExpertise() {
     <section className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-28">
       <Container>
         <Reveal>
-          <h2 className="sr-only">Technical Expertise</h2>
-          <SectionKicker accent="android">Technical Expertise</SectionKicker>
+          <h2 className="sr-only">Mobile Expertise</h2>
+          <SectionKicker accent="android">Mobile Expertise</SectionKicker>
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-border-soft)] sm:grid-cols-2 lg:grid-cols-4">

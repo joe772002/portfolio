@@ -102,7 +102,7 @@ export const aiProjects: AIProject[] = [
       "Information storage",
       "Smart organization",
       "Modern product experience",
-      "AI-assisted product development",
+      "Vibe-coded product development",
     ],
     technicalDirection: [
       "Android",
@@ -117,14 +117,14 @@ export const aiProjects: AIProject[] = [
     id: "coming-soon-1",
     title: "Coming Soon",
     status: "Coming Soon",
-    overview: "A future AI-assisted product experiment.",
+    overview: "A future vibe-coded product experiment.",
     placeholder: true,
   },
   {
     id: "coming-soon-2",
     title: "Coming Soon",
     status: "Coming Soon",
-    overview: "A future MVP built with AI-assisted workflows.",
+    overview: "A future MVP built with vibe coding.",
     placeholder: true,
   },
 ];

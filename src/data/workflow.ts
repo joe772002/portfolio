@@ -15,7 +15,7 @@ export const productWorkflow: WorkflowStep[] = [
   {
     index: "03",
     title: "Build",
-    description: "Use AI-assisted workflows to accelerate execution.",
+    description: "Use vibe coding to accelerate execution.",
     items: ["Development", "Prototyping", "UI creation", "Feature implementation"],
   },
   {

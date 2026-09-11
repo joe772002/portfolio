@@ -63,8 +63,8 @@ export function ContactSection() {
               Let&apos;s build something reliable.
             </h2>
             <p className="mt-5 max-w-lg text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg">
-              Open to conversations about Android engineering, product builds, and AI-assisted
-              development workflows.
+              Open to conversations about mobile engineering, vibe-coded products, and rapid
+              prototyping.
             </p>
           </div>
         </Reveal>

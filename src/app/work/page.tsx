@@ -3,8 +3,8 @@ import { AndroidProjectsSection } from "@/components/sections/AndroidProjectsSec
 import { AIProjectsSection } from "@/components/sections/AIProjectsSection";
 
 export const metadata: Metadata = {
-  title: "Work",
-  description: "Selected Android projects and AI-assisted builds.",
+  title: "Projects",
+  description: "All projects — professional mobile apps and vibe-coded builds.",
 };
 
 export default function WorkPage() {

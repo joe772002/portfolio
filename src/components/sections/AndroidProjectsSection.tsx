@@ -14,10 +14,10 @@ export function AndroidProjectsSection() {
     <section id="work" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
       <Container>
         <SectionHeading
-          kicker="Selected Work"
+          kicker="Projects"
           kickerAccent="android"
-          title="Professional and personal Android projects."
-          description="A mix of enterprise, government-related, and independent Android applications. Some professional projects involve confidential or pre-release systems — implementation details are limited accordingly."
+          title="Professional and personal mobile projects."
+          description="A mix of enterprise, government-related, and independent mobile applications. Some professional projects involve confidential or pre-release systems — implementation details are limited accordingly."
         />
 
         <div className="mt-16 flex flex-col gap-8">

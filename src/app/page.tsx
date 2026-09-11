@@ -5,27 +5,27 @@ import { TransitionSection } from "@/components/sections/TransitionSection";
 import { Container } from "@/components/ui/Container";
 
 export const metadata: Metadata = {
-  title: "Android Developer & AI-Assisted Builder",
+  title: "Android Developer & Vibe Coder",
 };
 
 const cards = [
   {
     href: "/engineering",
-    kicker: "Engineer",
-    title: "Reliable Android engineering",
+    kicker: "Mobile",
+    title: "Reliable mobile engineering",
     desc: "Kotlin, Jetpack Compose, scalable architecture.",
   },
   {
     href: "/work",
-    kicker: "Work",
-    title: "Selected projects",
-    desc: "Android apps and AI-assisted builds in one place.",
+    kicker: "Projects",
+    title: "All my projects",
+    desc: "Mobile apps and vibe-coded builds in one place.",
   },
   {
     href: "/builder",
-    kicker: "Builder",
+    kicker: "Vibe Coding",
     title: "From idea to product",
-    desc: "AI-assisted workflows for rapid prototyping.",
+    desc: "Vibe coding workflows for rapid prototyping.",
   },
 ];
 

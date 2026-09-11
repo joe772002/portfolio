@@ -9,7 +9,7 @@ const strengths = [
   "Experience with professional enterprise applications",
   "Experience with government-related digital platforms",
   "Secure API and authentication workflows",
-  "AI-assisted development workflows for rapid prototyping and MVPs",
+  "Vibe coding workflows for rapid prototyping and MVPs",
 ];
 
 export function AboutSection() {
@@ -38,7 +38,7 @@ export function AboutSection() {
             <Reveal delay={0.1}>
               <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-7 sm:p-8">
                 <p className="mb-5 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
-                  Where engineering meets building
+                  Where mobile meets vibe coding
                 </p>
                 <ul className="flex flex-col gap-3.5">
                   {strengths.map((item, i) => (
