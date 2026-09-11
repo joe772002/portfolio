@@ -29,7 +29,7 @@
 @theme inline {
   --font-display: "Cairo", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono);
+  --font-mono: var(--font-jetbrains-mono), "Cairo", ui-monospace, monospace;
   --container-page: 1200px;
 }
 
@@ -117,6 +117,12 @@ button:focus-visible,
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Arabic script has no letter-spacing — wide mono tracking would break
+   letter connections, so reset it in RTL mode. */
+html[dir="rtl"] .font-mono {
+  letter-spacing: 0;
 }
 
 .noise-overlay {

@@ -1,9 +1,12 @@
+"use client";
+
 import type { AIProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
 import { AbstractVisual } from "./AbstractVisual";
 import { WebVisual } from "./WebVisual";
 import { WebScreensGallery } from "./WebScreensGallery";
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function AIProjectCard({
   project,
@@ -14,34 +17,35 @@ export function AIProjectCard({
   reverse?: boolean;
   delay?: number;
 }) {
+  const { lang, t } = useLanguage();
   const hasGallery = project.images && project.images.length >= 3;
 
   const header = (
     <>
       <div className="flex flex-wrap items-center gap-3">
         <h3 className="font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
-          {project.title}
+          {pick(lang, project.title, project.titleAr)}
         </h3>
-        <Tag accent="ai">{project.status}</Tag>
+        <Tag accent="ai">{t.ai.status[project.status]}</Tag>
       </div>
 
       {project.context && (
         <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
-          {project.context}
+          {pick(lang, project.context, project.contextAr)}
         </p>
       )}
 
       <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)]">
-        {project.overview}
+        {pick(lang, project.overview, project.overviewAr)}
       </p>
 
       {project.focus && (
         <div className="mt-7">
           <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-            Focus
+            {t.ai.focus}
           </p>
           <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-            {project.focus.map((item) => (
+            {pick(lang, project.focus, project.focusAr).map((item) => (
               <li
                 key={item}
                 className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]"
@@ -74,7 +78,7 @@ export function AIProjectCard({
 
           <div className="mt-10">
             <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-              Product screens
+              {t.ai.screens}
             </p>
             <WebScreensGallery panels={project.images!} />
           </div>

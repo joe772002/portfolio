@@ -1,3 +1,5 @@
+"use client";
+
 import { Lock } from "lucide-react";
 import type { AndroidProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
@@ -5,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { AbstractVisual } from "./AbstractVisual";
 import { ScreensVisual } from "./ScreensVisual";
 import { ScreensGallery } from "./ScreensGallery";
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function FeaturedProjectCard({
   project,
@@ -13,6 +16,7 @@ export function FeaturedProjectCard({
   project: AndroidProject;
   reverse?: boolean;
 }) {
+  const { lang, t } = useLanguage();
   const hasGallery = project.images && project.images.length >= 3;
 
   const header = (
@@ -23,13 +27,13 @@ export function FeaturedProjectCard({
         {project.confidential && (
           <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
             <Lock size={11} />
-            Details limited
+            {t.android.limited}
           </span>
         )}
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        {project.category.map((c) => (
+        {pick(lang, project.category, project.categoryAr).map((c) => (
           <Tag key={c} accent="android">
             {c}
           </Tag>
@@ -42,20 +46,20 @@ export function FeaturedProjectCard({
 
       {project.context && (
         <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
-          {project.context}
+          {pick(lang, project.context, project.contextAr)}
         </p>
       )}
 
       <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)]">
-        {project.overview}
+        {pick(lang, project.overview, project.overviewAr)}
       </p>
 
       <div className="mt-7">
         <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-          Areas of work
+          {t.android.areas}
         </p>
         <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-          {project.focusAreas.map((area) => (
+          {pick(lang, project.focusAreas, project.focusAreasAr).map((area) => (
             <li key={area} className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--color-android)]" />
               {area}
@@ -82,7 +86,7 @@ export function FeaturedProjectCard({
 
           <div className="mt-10">
             <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-              App screens
+              {t.android.screens}
             </p>
             <ScreensGallery
               images={project.images!}

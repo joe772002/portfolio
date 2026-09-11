@@ -3,10 +3,12 @@ import type { SkillGroup } from "@/types";
 export const androidSkills: SkillGroup[] = [
   {
     title: "Android Development",
+    titleAr: "تطوير الأندرويد",
     skills: ["Kotlin", "Java", "Jetpack Compose", "Android SDK", "Material Design 3"],
   },
   {
     title: "Architecture",
+    titleAr: "المعمارية",
     skills: [
       "MVVM",
       "Repository Pattern",
@@ -18,14 +20,17 @@ export const androidSkills: SkillGroup[] = [
   },
   {
     title: "Dependency Injection",
+    titleAr: "حقن التبعيات",
     skills: ["Hilt", "Koin"],
   },
   {
     title: "Networking",
+    titleAr: "الشبكات",
     skills: ["Ktor", "Retrofit", "REST APIs", "API Integration"],
   },
   {
     title: "Authentication & Security",
+    titleAr: "المصادقة والأمان",
     skills: [
       "OAuth",
       "Authentication",
@@ -38,10 +43,12 @@ export const androidSkills: SkillGroup[] = [
   },
   {
     title: "Local Data",
+    titleAr: "البيانات المحلية",
     skills: ["Room", "DataStore"],
   },
   {
     title: "Background Work",
+    titleAr: "الشغل في الخلفية",
     skills: ["WorkManager"],
   },
   {
@@ -63,6 +70,7 @@ export const aiSkills: SkillGroup[] = [
   },
   {
     title: "Product Development",
+    titleAr: "تطوير المنتجات",
     skills: [
       "Rapid Prototyping",
       "MVP Development",
@@ -73,6 +81,7 @@ export const aiSkills: SkillGroup[] = [
   },
   {
     title: "Engineering Workflow",
+    titleAr: "منهجية الشغل الهندسية",
     skills: [
       "Architecture Exploration",
       "Problem Solving",

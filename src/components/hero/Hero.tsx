@@ -5,9 +5,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { profile } from "@/data/profile";
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
+  const { lang, t } = useLanguage();
 
   const fadeUp = (delay: number) =>
     shouldReduceMotion
@@ -42,10 +44,10 @@ export function Hero() {
               className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-secondary)]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-android)]" />
-              Mobile
+              {t.hero.badgeA}
               <span className="text-[var(--color-text-tertiary)]">/</span>
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-ai)]" />
-              Vibe Coding
+              {t.hero.badgeB}
             </motion.div>
 
             <h1 className="font-display text-[15vw] leading-[0.95] font-medium tracking-tight text-[var(--color-text-primary)] sm:text-7xl lg:text-[5.5rem]">
@@ -61,16 +63,16 @@ export function Hero() {
               {...fadeUp(0.24)}
               className="mt-7 text-balance font-display text-xl font-medium leading-snug text-[var(--color-text-primary)] sm:text-2xl"
             >
-              <span className="text-[var(--color-android)]">Android Developer</span>
+              <span className="text-[var(--color-android)]">{t.hero.roleA}</span>
               <span className="text-[var(--color-text-tertiary)]"> &amp; </span>
-              <span className="text-[var(--color-ai)]">Vibe Coder</span>
+              <span className="text-[var(--color-ai)]">{t.hero.roleB}</span>
             </motion.p>
 
             <motion.p
               {...fadeUp(0.32)}
               className="mt-5 max-w-lg text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg"
             >
-              {profile.heroSupport}
+              {pick(lang, profile.heroSupport, profile.heroSupportAr)}
             </motion.p>
 
             <motion.div {...fadeUp(0.4)} className="mt-9 flex flex-wrap items-center gap-4">
@@ -78,17 +80,17 @@ export function Hero() {
                 href="/work"
                 className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-primary)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-bg)] transition-transform hover:-translate-y-0.5"
               >
-                View Work
+                {t.hero.viewWork}
                 <ArrowRight
                   size={14}
-                  className="transition-transform group-hover:translate-x-0.5"
+                  className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5"
                 />
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)]"
               >
-                Get in Touch
+                {t.hero.getInTouch}
               </a>
             </motion.div>
 
@@ -101,7 +103,7 @@ export function Hero() {
                   {profile.androidExperience}
                 </span>
                 <span className="max-w-[110px] font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">
-                  {profile.androidExperienceLabel}
+                  {pick(lang, profile.androidExperienceLabel, profile.androidExperienceLabelAr)}
                 </span>
               </div>
               <span aria-hidden className="h-10 w-px bg-[var(--color-border)]" />
@@ -110,7 +112,7 @@ export function Hero() {
                   {profile.aiExperience}
                 </span>
                 <span className="max-w-[110px] font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">
-                  {profile.aiExperienceLabel}
+                  {pick(lang, profile.aiExperienceLabel, profile.aiExperienceLabelAr)}
                 </span>
               </div>
             </motion.div>
@@ -119,11 +121,11 @@ export function Hero() {
               {...fadeUp(0.55)}
               className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-tertiary)]"
             >
-              <span>Mobile</span>
-              <ArrowRight size={12} />
-              <span>Vibe Coding</span>
-              <ArrowRight size={12} />
-              <span>Shipping</span>
+              <span>{t.trail[0]}</span>
+              <ArrowRight size={12} className="rtl:rotate-180" />
+              <span>{t.trail[1]}</span>
+              <ArrowRight size={12} className="rtl:rotate-180" />
+              <span>{t.trail[2]}</span>
             </motion.div>
           </div>
 
@@ -154,7 +156,7 @@ export function Hero() {
           className="mt-20 hidden items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:flex"
         >
           <ArrowDown size={12} />
-          Scroll to explore
+          {t.hero.scroll}
         </motion.div>
       </Container>
     </section>

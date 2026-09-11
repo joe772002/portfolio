@@ -1,3 +1,5 @@
+"use client";
+
 import type { ComponentType } from "react";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -5,8 +7,10 @@ import { SectionKicker } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { FacebookIcon, GithubIcon, InstagramIcon, LinkedinIcon, WhatsappIcon } from "@/components/ui/icons";
 import { profile } from "@/data/profile";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface ContactLink {
+  labelKey: "email" | "social";
   label: string;
   value: string;
   href: string;
@@ -15,36 +19,42 @@ interface ContactLink {
 
 const contactLinks: ContactLink[] = [
   {
+    labelKey: "email",
     label: "Email",
     value: profile.contact.email,
     href: `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.contact.email}`,
     icon: Mail,
   },
   {
+    labelKey: "social",
     label: "WhatsApp",
     value: profile.contact.phone,
     href: profile.contact.whatsapp,
     icon: WhatsappIcon,
   },
   {
+    labelKey: "social",
     label: "LinkedIn",
     value: profile.contact.linkedinLabel,
     href: profile.contact.linkedin,
     icon: LinkedinIcon,
   },
   {
+    labelKey: "social",
     label: "GitHub",
     value: profile.contact.githubLabel,
     href: profile.contact.github,
     icon: GithubIcon,
   },
   {
+    labelKey: "social",
     label: "Facebook",
     value: profile.contact.facebookLabel,
     href: profile.contact.facebook,
     icon: FacebookIcon,
   },
   {
+    labelKey: "social",
     label: "Instagram",
     value: profile.contact.instagramLabel,
     href: profile.contact.instagram,
@@ -53,18 +63,18 @@ const contactLinks: ContactLink[] = [
 ];
 
 export function ContactSection() {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
       <Container>
         <Reveal>
           <div className="max-w-2xl">
-            <SectionKicker>Contact</SectionKicker>
+            <SectionKicker>{t.contact.kicker}</SectionKicker>
             <h2 className="mt-5 text-balance font-display text-3xl font-medium tracking-tight sm:text-5xl">
-              Let&apos;s build something reliable.
+              {t.contact.title}
             </h2>
             <p className="mt-5 max-w-lg text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg">
-              Open to conversations about mobile engineering, vibe-coded products, and rapid
-              prototyping.
+              {t.contact.desc}
             </p>
           </div>
         </Reveal>
@@ -87,7 +97,7 @@ export function ContactSection() {
                 </div>
                 <div className="mt-8">
                   <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-                    {link.label}
+                    {link.labelKey === "email" ? t.contact.email : link.label}
                   </p>
                   <p className="mt-1.5 break-all font-display text-sm text-[var(--color-text-primary)]">
                     {link.value}

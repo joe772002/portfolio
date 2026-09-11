@@ -20,7 +20,7 @@ export function WebGallery({
               <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-text-tertiary)]/40" />
               <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-text-tertiary)]/40" />
               <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-text-tertiary)]/40" />
-              <span className="ml-3 truncate font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+              <span className="ms-3 truncate font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
                 {panel.label}
               </span>
             </div>

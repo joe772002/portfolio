@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { FeaturedProjectCard } from "@/components/projects/FeaturedProjectCard";
@@ -8,16 +10,18 @@ import {
   otherProfessionalProjects,
   personalAndroidProjects,
 } from "@/data/androidProjects";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function AndroidProjectsSection() {
+  const { t } = useLanguage();
   return (
     <section id="work" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
       <Container>
         <SectionHeading
-          kicker="Projects"
+          kicker={t.android.kicker}
           kickerAccent="android"
-          title="Professional and personal mobile projects."
-          description="A mix of enterprise, government-related, and independent mobile applications. Some professional projects involve confidential or pre-release systems — implementation details are limited accordingly."
+          title={t.android.title}
+          description={t.android.desc}
         />
 
         <div className="mt-16 flex flex-col gap-8">
@@ -37,7 +41,7 @@ export function AndroidProjectsSection() {
         {personalAndroidProjects.length > 0 && (
           <div className="mt-16">
             <p className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
-              Personal Projects
+              {t.android.personal}
             </p>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {personalAndroidProjects.map((project) => (

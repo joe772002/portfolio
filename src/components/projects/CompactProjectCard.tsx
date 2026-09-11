@@ -1,8 +1,12 @@
+"use client";
+
 import type { AndroidProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function CompactProjectCard({ project }: { project: AndroidProject }) {
+  const { lang } = useLanguage();
   return (
     <Reveal>
       <article className="flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-7 sm:p-8">
@@ -14,7 +18,7 @@ export function CompactProjectCard({ project }: { project: AndroidProject }) {
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {project.category.map((c) => (
+          {pick(lang, project.category, project.categoryAr).map((c) => (
             <Tag key={c} accent="android" size="xs">
               {c}
             </Tag>
@@ -26,11 +30,11 @@ export function CompactProjectCard({ project }: { project: AndroidProject }) {
         </h3>
 
         <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-          {project.overview}
+          {pick(lang, project.overview, project.overviewAr)}
         </p>
 
         <p className="mt-5 text-balance text-sm font-medium leading-relaxed text-[var(--color-text-primary)]">
-          {project.portfolioFocus[0]}
+          {pick(lang, project.portfolioFocus, project.portfolioFocusAr)[0]}
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">

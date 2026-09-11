@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 type Theme = "dark" | "light";
 
 export function ThemeToggle() {
+  const { t } = useLanguage();
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
@@ -50,7 +52,7 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+      aria-label={isLight ? t.a11y.toDark : t.a11y.toLight}
       onClick={() => setTheme(isLight ? "dark" : "light")}
       className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)]"
     >

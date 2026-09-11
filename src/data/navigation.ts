@@ -1,10 +1,15 @@
-import type { NavItem } from "@/types";
+import type { NavKey } from "@/i18n/dictionary";
 
-export const navItems: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Mobile", href: "/engineering" },
-  { label: "Projects", href: "/work" },
-  { label: "Vibe Coding", href: "/builder" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+export interface NavLink {
+  id: NavKey;
+  href: string;
+}
+
+export const navLinks: NavLink[] = [
+  { id: "home", href: "/" },
+  { id: "mobile", href: "/engineering" },
+  { id: "projects", href: "/work" },
+  { id: "vibe", href: "/builder" },
+  { id: "about", href: "/about" },
+  { id: "contact", href: "/contact" },
 ];

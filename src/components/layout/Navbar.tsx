@@ -5,15 +5,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { navItems } from "@/data/navigation";
+import { navLinks } from "@/data/navigation";
 import { Container } from "@/components/ui/Container";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { LanguageToggle } from "@/components/ui/LanguageToggle";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -48,7 +51,7 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
+          {navLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -60,7 +63,7 @@ export function Navbar() {
                   : "text-[var(--color-text-secondary)]",
               )}
             >
-              {item.label}
+              {t.nav[item.id]}
             </Link>
           ))}
         </nav>
@@ -69,18 +72,20 @@ export function Navbar() {
           href="/contact"
           className="hidden rounded-full border border-[var(--color-border)] px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)] md:inline-flex"
         >
-          Get in touch
+          {t.cta}
         </Link>
 
         <div className="hidden items-center gap-2 md:flex">
+          <LanguageToggle />
           <ThemeToggle />
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle />
           <ThemeToggle />
           <button
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t.a11y.closeMenu : t.a11y.openMenu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-text-primary)]"
@@ -100,14 +105,14 @@ export function Navbar() {
             className="overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-bg)] md:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
-              {navItems.map((item) => (
+              {navLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-3 font-mono text-sm uppercase tracking-[0.12em] text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-bg-elevated)] hover:text-[var(--color-text-primary)]"
                 >
-                  {item.label}
+                  {t.nav[item.id]}
                 </Link>
               ))}
             </Container>

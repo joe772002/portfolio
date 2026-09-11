@@ -38,7 +38,7 @@ export function WebScreensGallery({
               <span className="h-2 w-2 rounded-full bg-black/15" />
               <span className="h-2 w-2 rounded-full bg-black/15" />
               {panel.label && (
-                <span className="ml-2.5 font-mono text-[9px] uppercase tracking-[0.14em] text-black/50">
+                <span className="ms-2.5 font-mono text-[9px] uppercase tracking-[0.14em] text-black/50">
                   {panel.label}
                 </span>
               )}

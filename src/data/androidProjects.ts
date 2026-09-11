@@ -6,8 +6,11 @@ export const androidProjects: AndroidProject[] = [
     index: "01",
     title: "Oman MTCIT Mobile Application",
     category: ["Professional", "Enterprise", "Government Digital Services"],
+    categoryAr: ["احترافي", "مؤسسات", "خدمات حكومية رقمية"],
     overview:
       "A large-scale Android application designed to support maritime and government-related digital services. The application contains multiple service types and complex workflows.",
+    overviewAr:
+      "تطبيق أندرويد كبير لخدمات رقمية بحرية وحكومية، فيه أنواع خدمات كتير ومسارات عمل معقدة.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -35,12 +38,31 @@ export const androidProjects: AndroidProject[] = [
       "Draft handling",
       "Secure communication",
     ],
+    focusAreasAr: [
+      "طلبات الخدمات الرقمية",
+      "مسارات عمل متعددة الخطوات",
+      "رفع المستندات",
+      "المصادقة",
+      "تكاملات الخدمات الحكومية",
+      "مسارات الدفع",
+      "مسارات التفتيش",
+      "مسارات الشهادات",
+      "التعامل مع المسودات",
+      "اتصال آمن",
+    ],
     portfolioFocus: [
       "Complex mobile architecture",
       "Large-scale application development",
       "Secure API integrations",
       "Multiple business processes",
       "Scalable Android development",
+    ],
+    portfolioFocusAr: [
+      "معمارية موبايل معقدة",
+      "تطوير تطبيقات كبيرة",
+      "تكاملات API آمنة",
+      "عمليات تجارية متعددة",
+      "تطوير أندرويد قابل للتوسع",
     ],
     confidential: true,
     featured: true,
@@ -59,9 +81,11 @@ export const androidProjects: AndroidProject[] = [
     index: "02",
     title: "Electronic Meetings Platform",
     category: ["Enterprise", "Government Platform", "Professional Project"],
+    categoryAr: ["مؤسسات", "منصة حكومية", "مشروع احترافي"],
     context: "Qatar General Secretariat",
     overview:
       "A mobile platform designed to support meeting-related workflows and organizational operations.",
+    overviewAr: "منصة موبايل لدعم مسارات عمل الاجتماعات والعمليات التنظيمية.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -83,12 +107,29 @@ export const androidProjects: AndroidProject[] = [
       "Authentication",
       "Enterprise workflows",
     ],
+    focusAreasAr: [
+      "إدارة الاجتماعات",
+      "مزامنة التقويم",
+      "طلبات الشهادات",
+      "إنشاء وعرض PDF",
+      "مرفقات المستندات",
+      "ملفات المستخدمين",
+      "المصادقة",
+      "مسارات عمل المؤسسات",
+    ],
     portfolioFocus: [
       "Modern Kotlin development",
       "Cross-platform thinking",
       "Shared architecture",
       "Document handling",
       "Calendar integration",
+    ],
+    portfolioFocusAr: [
+      "تطوير Kotlin حديث",
+      "تفكير متعدد المنصات",
+      "معمارية مشتركة",
+      "التعامل مع المستندات",
+      "تكامل التقويم",
     ],
     images: [
       "/images/projects/electronic-meetings/home-blurred-v2.jpg",
@@ -108,9 +149,13 @@ export const androidProjects: AndroidProject[] = [
     index: "03",
     title: "ShipFlow",
     category: ["Personal Project", "Product Design", "Maritime Platform"],
+    categoryAr: ["مشروع شخصي", "تصميم منتج", "منصة بحرية"],
     context: "Android Application",
+    contextAr: "تطبيق أندرويد",
     overview:
       "A maritime operations platform designed and built end-to-end — covering vessel registration, inspections, certificates, and fleet management, with a design system shared across web and mobile. The Android client puts a fleet dashboard, vessel registry, and inspection and certificate tracking in the hands of maritime operations teams.",
+    overviewAr:
+      "منصة عمليات بحرية متصممة ومبنية بالكامل — تسجيل السفن والتفتيش والشهادات وإدارة الأسطول، بنظام تصميم مشترك بين الويب والموبايل. تطبيق الأندرويد بيحط لوحة متابعة الأسطول وسجل السفن وتتبع التفتيش والشهادات في إيد فرق التشغيل البحري.",
     technologies: [
       "Kotlin",
       "Jetpack Compose",
@@ -129,11 +174,25 @@ export const androidProjects: AndroidProject[] = [
       "Certificate tracking",
       "Registration requests",
     ],
+    focusAreasAr: [
+      "لوحة الأسطول ومؤشرات الأداء",
+      "سجل السفن والبحث",
+      "ملف السفينة والمستندات",
+      "جدولة التفتيش",
+      "تتبع الشهادات",
+      "طلبات التسجيل",
+    ],
     portfolioFocus: [
       "End-to-end product design and development",
       "Custom design system implementation",
       "Real-time fleet dashboard",
       "Self-directed product build",
+    ],
+    portfolioFocusAr: [
+      "تصميم وتطوير منتج بالكامل",
+      "تنفيذ نظام تصميم مخصص",
+      "لوحة أسطول لحظية",
+      "بناء منتج مستقل",
     ],
     images: [
       "/images/projects/shipflow/android-home.webp",
@@ -149,8 +208,11 @@ export const androidProjects: AndroidProject[] = [
     index: "04",
     title: "Want To Make Procurement",
     category: ["Professional", "Application Modernization"],
+    categoryAr: ["احترافي", "تحديث تطبيق"],
     overview:
       "Modernizing and improving an existing Android application — gradually moving older development approaches toward modern Android development.",
+    overviewAr:
+      "تحديث وتحسين تطبيق أندرويد موجود — نقل تدريجي من أساليب التطوير القديمة لتطوير الأندرويد الحديث.",
     technologies: ["Java to Kotlin Migration", "Jetpack Compose", "MVVM"],
     focusAreas: [
       "Java to Kotlin modernization",
@@ -159,8 +221,18 @@ export const androidProjects: AndroidProject[] = [
       "Maintainability",
       "Code modernization",
     ],
+    focusAreasAr: [
+      "التحديث من Java لـ Kotlin",
+      "واجهات حديثة",
+      "معمارية محسنة",
+      "قابلية الصيانة",
+      "تحديث الكود",
+    ],
     portfolioFocus: [
       "Modernizing legacy Android applications and gradually migrating them toward modern Kotlin and Jetpack Compose architecture.",
+    ],
+    portfolioFocusAr: [
+      "تحديث تطبيقات أندرويد قديمة ونقلها تدريجيًا لمعمارية Kotlin وJetpack Compose الحديثة.",
     ],
     confidential: true,
   },
@@ -169,10 +241,14 @@ export const androidProjects: AndroidProject[] = [
     index: "05",
     title: "Attendance System",
     category: ["Personal Project"],
+    categoryAr: ["مشروع شخصي"],
     overview: "An Android application focused on attendance-related functionality.",
+    overviewAr: "تطبيق أندرويد مركز على وظائف الحضور والانصراف.",
     technologies: ["Kotlin", "Retrofit", "LiveData", "Glide", "REST APIs"],
     focusAreas: ["API integration", "Data handling", "Android architecture", "UI development"],
+    focusAreasAr: ["تكامل API", "التعامل مع البيانات", "معمارية الأندرويد", "تطوير الواجهات"],
     portfolioFocus: ["API integration", "Android architecture"],
+    portfolioFocusAr: ["تكامل API", "معمارية الأندرويد"],
     personal: true,
   },
   {
@@ -180,7 +256,9 @@ export const androidProjects: AndroidProject[] = [
     index: "06",
     title: "Best Food",
     category: ["Personal Project"],
+    categoryAr: ["مشروع شخصي"],
     overview: "A mobile application for discovering meals and managing favorite items.",
+    overviewAr: "تطبيق موبايل لاكتشاف الوجبات وإدارة المفضلة.",
     technologies: ["Kotlin", "REST APIs", "Room Database"],
     focusAreas: [
       "Meal discovery",
@@ -189,7 +267,15 @@ export const androidProjects: AndroidProject[] = [
       "Local database storage",
       "Offline data handling",
     ],
+    focusAreasAr: [
+      "اكتشاف الوجبات",
+      "تكامل API",
+      "الوجبات المفضلة",
+      "تخزين محلي",
+      "التعامل مع البيانات بدون إنترنت",
+    ],
     portfolioFocus: ["Local persistence", "Offline-first data handling"],
+    portfolioFocusAr: ["الحفظ المحلي", "التعامل مع البيانات بدون إنترنت أولًا"],
     personal: true,
   },
   {
@@ -197,8 +283,10 @@ export const androidProjects: AndroidProject[] = [
     index: "07",
     title: "Smart Attendance",
     category: ["Personal Project"],
+    categoryAr: ["مشروع شخصي"],
     overview:
       "An independent mobile application concept focused on attendance management and workflow automation.",
+    overviewAr: "فكرة تطبيق موبايل مستقل مركز على إدارة الحضور وأتمتة مسارات العمل.",
     technologies: ["Android", "Kotlin", "REST APIs"],
     focusAreas: [
       "User experience",
@@ -207,7 +295,15 @@ export const androidProjects: AndroidProject[] = [
       "API integration",
       "Practical problem solving",
     ],
+    focusAreasAr: [
+      "تجربة المستخدم",
+      "مسارات الحضور",
+      "معمارية الموبايل",
+      "تكامل API",
+      "حل المشاكل العملية",
+    ],
     portfolioFocus: ["Workflow automation", "Practical problem solving"],
+    portfolioFocusAr: ["أتمتة مسارات العمل", "حل المشاكل العملية"],
     personal: true,
   },
 ];

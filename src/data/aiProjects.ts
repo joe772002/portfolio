@@ -6,8 +6,11 @@ export const aiProjects: AIProject[] = [
     title: "ShipFlow",
     status: "Live",
     context: "Web Platform",
+    contextAr: "منصة ويب",
     overview:
       "The web platform for ShipFlow — the same maritime operations product built for desktop: a fleet dashboard, vessel registry, inspection and certificate workflows, and registration requests, sharing one design system with the Android app.",
+    overviewAr:
+      "منصة الويب لـ ShipFlow — نفس منتج العمليات البحرية للديسكتوب: لوحة أسطول وسجل سفن ومسارات تفتيش وشهادات وطلبات تسجيل، بنظام تصميم واحد مع تطبيق الأندرويد.",
     focus: [
       "Fleet dashboard & KPIs",
       "Vessel registry & search",
@@ -16,6 +19,15 @@ export const aiProjects: AIProject[] = [
       "Document management",
       "Payments & financial tracking",
       "Analytics & reporting",
+    ],
+    focusAr: [
+      "لوحة الأسطول ومؤشرات الأداء",
+      "سجل السفن والبحث",
+      "مسارات التفتيش والشهادات",
+      "التعامل مع طلبات التسجيل",
+      "إدارة المستندات",
+      "المدفوعات والمتابعة المالية",
+      "التحليلات والتقارير",
     ],
     technicalDirection: ["Next.js", "TypeScript", "Tailwind CSS", "REST API Integration"],
     images: [
@@ -97,12 +109,21 @@ export const aiProjects: AIProject[] = [
     status: "Concept / Upcoming MVP",
     overview:
       "A product concept designed as a smart reminder and information storage assistant — focused on reminder management, information storage, smart organization, and a modern product experience.",
+    overviewAr:
+      "فكرة منتج كمساعد ذكي للتذكير وتخزين المعلومات — مركز على إدارة التذكيرات وتخزين المعلومات والتنظيم الذكي وتجربة منتج حديثة.",
     focus: [
       "Reminder management",
       "Information storage",
       "Smart organization",
       "Modern product experience",
       "Vibe-coded product development",
+    ],
+    focusAr: [
+      "إدارة التذكيرات",
+      "تخزين المعلومات",
+      "تنظيم ذكي",
+      "تجربة منتج حديثة",
+      "تطوير منتج بالفايب كودنج",
     ],
     technicalDirection: [
       "Android",
@@ -116,15 +137,19 @@ export const aiProjects: AIProject[] = [
   {
     id: "coming-soon-1",
     title: "Coming Soon",
+    titleAr: "قريبًا",
     status: "Coming Soon",
     overview: "A future vibe-coded product experiment.",
+    overviewAr: "تجربة منتج قادمة بالفايب كودنج.",
     placeholder: true,
   },
   {
     id: "coming-soon-2",
     title: "Coming Soon",
+    titleAr: "قريبًا",
     status: "Coming Soon",
     overview: "A future MVP built with vibe coding.",
+    overviewAr: "MVP قادم معمول بالفايب كودنج.",
     placeholder: true,
   },
 ];

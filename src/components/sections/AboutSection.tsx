@@ -1,28 +1,24 @@
+"use client";
+
 import { Container } from "@/components/ui/Container";
 import { SectionKicker } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { profile } from "@/data/profile";
-
-const strengths = [
-  "3+ years of real Android development experience",
-  "Strong Kotlin and Jetpack Compose knowledge",
-  "Experience with professional enterprise applications",
-  "Experience with government-related digital platforms",
-  "Secure API and authentication workflows",
-  "Vibe coding workflows for rapid prototyping and MVPs",
-];
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function AboutSection() {
+  const { lang, t } = useLanguage();
+  const strengths = t.about.strengths;
   return (
     <section id="about" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal>
-              <h2 className="sr-only">About</h2>
-              <SectionKicker>About</SectionKicker>
+              <h2 className="sr-only">{t.about.kicker}</h2>
+              <SectionKicker>{t.about.kicker}</SectionKicker>
               <div className="mt-6 flex flex-col gap-5">
-                {profile.about.map((paragraph) => (
+                {pick(lang, profile.about, profile.aboutAr).map((paragraph) => (
                   <p
                     key={paragraph}
                     className="text-balance font-display text-xl leading-relaxed text-[var(--color-text-primary)] sm:text-2xl"
@@ -38,7 +34,7 @@ export function AboutSection() {
             <Reveal delay={0.1}>
               <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-7 sm:p-8">
                 <p className="mb-5 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
-                  Where mobile meets vibe coding
+                  {t.about.strengthsTitle}
                 </p>
                 <ul className="flex flex-col gap-3.5">
                   {strengths.map((item, i) => (

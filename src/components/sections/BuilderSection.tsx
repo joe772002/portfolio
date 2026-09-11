@@ -1,26 +1,21 @@
+"use client";
+
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { profile } from "@/data/profile";
-
-const aiFocusAreas = [
-  "Rapid prototyping",
-  "MVP development",
-  "Feature experimentation",
-  "AI-assisted debugging",
-  "AI-assisted refactoring",
-  "Architecture exploration",
-];
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function BuilderSection() {
+  const { lang, t } = useLanguage();
   return (
     <section id="builder" className="relative py-24 sm:py-32">
       <Container>
         <SectionHeading
-          kicker="Vibe Coding"
+          kicker={t.builder.kicker}
           kickerAccent="ai"
-          title="Turning ideas into prototypes and products with vibe coding."
-          description={profile.aiPhilosophy}
+          title={t.builder.title}
+          description={pick(lang, profile.aiPhilosophy, profile.aiPhilosophyAr)}
         />
 
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
@@ -31,14 +26,11 @@ export function BuilderSection() {
                   {profile.aiExperience}
                 </span>
                 <p className="mt-2 font-display text-lg text-[var(--color-text-primary)]">
-                  {profile.aiExperienceLabel}
+                  {pick(lang, profile.aiExperienceLabel, profile.aiExperienceLabelAr)}
                 </p>
               </div>
               <p className="mt-10 border-t border-[var(--color-border-soft)] pt-6 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                I use vibe coding — modern AI-powered tools and coding agents — to accelerate
-                development, explore solutions, and move faster from concept to working software.
-                My engineering knowledge remains the foundation — AI is a productivity multiplier,
-                not a replacement for judgment.
+                {t.builder.paragraph}
               </p>
             </div>
           </Reveal>
@@ -46,10 +38,10 @@ export function BuilderSection() {
           <Reveal delay={0.12} className="lg:col-span-7">
             <div className="flex h-full flex-col justify-center rounded-2xl border border-[var(--color-border)] p-8 sm:p-10">
               <p className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
-                What vibe coding accelerates
+                {t.builder.accelerates}
               </p>
               <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {aiFocusAreas.map((item) => (
+                {t.builder.focus.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-3 rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-bg-elevated)]/40 px-4 py-3.5 text-sm leading-relaxed text-[var(--color-text-secondary)]"

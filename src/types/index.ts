@@ -9,6 +9,7 @@ export type ProjectStatus =
 
 export interface SkillGroup {
   title: string;
+  titleAr?: string;
   skills: string[];
 }
 
@@ -28,6 +29,11 @@ export interface AndroidProject {
   /** Real product screenshots (when available and not confidential) shown instead of the abstract conceptual visual. */
   images?: string[];
   imageAlt?: string;
+  overviewAr?: string;
+  focusAreasAr?: string[];
+  portfolioFocusAr?: string[];
+  categoryAr?: string[];
+  contextAr?: string;
 }
 
 export interface ImagePanel {
@@ -41,6 +47,7 @@ export interface ImagePanel {
 export interface AIProject {
   id: string;
   title: string;
+  titleAr?: string;
   status: ProjectStatus;
   context?: string;
   overview: string;
@@ -52,13 +59,19 @@ export interface AIProject {
   imageAlt?: string;
   /** Multiple labeled screenshots/panels (e.g. design-system sections) shown as a gallery instead of a single image. */
   images?: ImagePanel[];
+  overviewAr?: string;
+  focusAr?: string[];
+  contextAr?: string;
 }
 
 export interface WorkflowStep {
   index: string;
   title: string;
+  titleAr?: string;
   description: string;
+  descriptionAr?: string;
   items?: string[];
+  itemsAr?: string[];
 }
 
 export interface NavItem {
