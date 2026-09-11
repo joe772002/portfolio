@@ -6,17 +6,18 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/navigation";
+import { profile } from "@/data/profile";
 import { Container } from "@/components/ui/Container";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
-import { useLanguage } from "@/i18n/LanguageContext";
+import { pick, useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -47,7 +48,7 @@ export function Navbar() {
           className="font-display text-sm font-medium tracking-tight text-[var(--color-text-primary)]"
           onClick={() => setOpen(false)}
         >
-          Youssef Osama Ali
+          {pick(lang, profile.name, profile.nameAr)}
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

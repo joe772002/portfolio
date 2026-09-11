@@ -50,12 +50,12 @@ export function Hero() {
               {t.hero.badgeB}
             </motion.div>
 
-            <h1 className="font-display text-[15vw] leading-[0.95] font-medium tracking-tight text-[var(--color-text-primary)] sm:text-7xl lg:text-[5.5rem]">
+            <h1 className={`font-display text-[15vw] font-medium tracking-tight text-[var(--color-text-primary)] sm:text-7xl lg:text-[5.5rem] ${lang === "ar" ? "leading-[1.15]" : "leading-[0.95]"}`}>
               <motion.span {...fadeUp(0.05)} className="block">
-                {profile.firstName}
+                {pick(lang, profile.firstName, profile.firstNameAr)}
               </motion.span>
-              <motion.span {...fadeUp(0.14)} className="block text-[var(--color-text-secondary)]">
-                {profile.lastName}
+              <motion.span {...fadeUp(0.14)} className={`block text-[var(--color-text-secondary)] ${lang === "ar" ? "mt-3 sm:mt-4" : ""}`}>
+                {pick(lang, profile.lastName, profile.lastNameAr)}
               </motion.span>
             </h1>
 

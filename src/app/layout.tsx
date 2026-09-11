@@ -7,7 +7,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
 // Self-hosted variable fonts (no runtime dependency on Google Fonts).
-// Cairo is loaded via @font-face in globals.css; JetBrains Mono via next/font.
+// Cairo Play is loaded via @font-face in globals.css; JetBrains Mono via next/font.
 const jetbrainsMono = localFont({
   src: "../assets/fonts/jetbrains-mono-variable.woff2",
   variable: "--font-jetbrains-mono",

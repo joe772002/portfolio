@@ -1,7 +1,10 @@
 export const profile = {
   name: "Youssef Osama Ali",
+  nameAr: "يوسف أسامة علي",
   firstName: "Youssef",
+  firstNameAr: "يوسف",
   lastName: "Osama Ali",
+  lastNameAr: "أسامة علي",
   primaryRole: "Android Developer",
   secondaryRole: "Vibe Coder & Product Builder",
   positioning: "Android Developer & Vibe Coder",
