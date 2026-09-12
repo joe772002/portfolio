@@ -57,6 +57,13 @@ export interface Dictionary {
     title: string;
     desc: string;
     items: { title: string; desc: string }[];
+    independent: {
+      role: string;
+      period: string;
+      type: string;
+      desc: string;
+      bullets: string[];
+    };
     timeline: {
       role: string;
       company: string;

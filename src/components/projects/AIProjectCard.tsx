@@ -71,39 +71,33 @@ export function AIProjectCard({
     </>
   );
 
-  if (hasGallery) {
+  if (hasGallery || (project.phoneImages && project.phoneImages.length > 0)) {
     return (
       <Reveal delay={delay}>
         <article className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8 lg:p-12">
           {header}
 
-          <div className="mt-10">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-              {t.ai.screens}
-            </p>
-            <WebScreensGallery panels={project.images!} />
-          </div>
-        </article>
-      </Reveal>
-    );
-  }
+          {hasGallery && (
+            <div className="mt-10">
+              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+                {lang === "ar" ? "شاشات منصة الويب" : "Web Platform — Product screens"}
+              </p>
+              <WebScreensGallery panels={project.images!} />
+            </div>
+          )}
 
-  if (project.phoneImages && project.phoneImages.length > 0) {
-    return (
-      <Reveal delay={delay}>
-        <article className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8 lg:p-12">
-          {header}
-
-          <div className="mt-10">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-              {t.ai.screens}
-            </p>
-            <ScreensGallery
-              images={project.phoneImages}
-              alt={project.imageAlt ?? project.title}
-              accent="ai"
-            />
-          </div>
+          {project.phoneImages && project.phoneImages.length > 0 && (
+            <div className="mt-10">
+              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+                {lang === "ar" ? "تطبيق الأندرويد" : "Android Client — Product screens"}
+              </p>
+              <ScreensGallery
+                images={project.phoneImages}
+                alt={project.imageAlt ?? project.title}
+                accent="ai"
+              />
+            </div>
+          )}
         </article>
       </Reveal>
     );

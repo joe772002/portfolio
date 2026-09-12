@@ -16,7 +16,7 @@ export const en: Dictionary = {
     badgeA: "Android Engineer",
     badgeB: "AI-assisted product building",
     roleA: "Android Engineer",
-    roleB: "3+ years building production Android applications",
+    roleB: "3+ years of hands-on Android development",
     viewWork: "View Selected Work",
     downloadCv: "Download CV",
     getInTouch: "Contact Me",
@@ -82,7 +82,18 @@ export const en: Dictionary = {
   experience: {
     kicker: "Professional Experience",
     title: "Production experience, not demos.",
-    desc: "Full-time Android engineering on enterprise and government platforms.",
+    desc: "3+ years of hands-on Android development experience across independent projects and professional production applications.",
+    independent: {
+      role: "Independent Android Development",
+      period: "Before July 2024",
+      type: "Personal Android Projects",
+      desc: "Personal development, experimentation, and Android projects — continuous Android development before joining Informatique.",
+      bullets: [
+        "Kotlin, Java, and Android SDK fundamentals",
+        "REST API integration and local data handling",
+        "Android UI and independent application development",
+      ],
+    },
     timeline: {
       role: "Android Developer",
       company: "Informatique",
@@ -91,7 +102,7 @@ export const en: Dictionary = {
       bullets: [
         "Building and maintaining production Android applications with Kotlin and Jetpack Compose for enterprise and government clients.",
         "Working on the MTCIT Maritime Platform and the Electronic Meetings Platform — complex workflows, authentication, documents, and multilingual experiences.",
-        "Improving existing production apps (including a published Play Store app) — debugging, feature development, and incremental modernization.",
+        "Improving existing production apps (including Tawseek — Want To Make Procurement, a published Play Store app) — debugging, feature development, and incremental modernization.",
         "Integrating REST APIs with secure token-based authentication and handling multi-step, multi-role workflows.",
       ],
     },
@@ -141,7 +152,7 @@ export const en: Dictionary = {
     desc: "Enterprise and government Android applications first — then personal builds. Some professional projects involve confidential systems, so implementation details are limited accordingly.",
     areas: "Engineering highlights",
     screens: "App screens",
-    personal: "Android Projects — Personal",
+    personal: "Additional Android Projects",
     personalOne: "Personal Project",
     limited: "Details limited",
     featured: "Featured Professional Work",

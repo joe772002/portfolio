@@ -90,6 +90,12 @@ export function Hero() {
               <span className="text-[var(--color-android)]">{t.hero.roleA}</span>
             </motion.p>
             <motion.p
+              {...fadeUp(0.26)}
+              className="mt-3 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-secondary)] sm:text-sm"
+            >
+              Kotlin • Jetpack Compose • MVVM
+            </motion.p>
+            <motion.p
               {...fadeUp(0.28)}
               className="mt-2 text-balance font-display text-base font-medium leading-snug text-[var(--color-text-secondary)] sm:text-lg"
             >
@@ -97,11 +103,14 @@ export function Hero() {
             </motion.p>
             <motion.p
               {...fadeUp(0.3)}
-              className="mt-2 text-sm leading-relaxed text-[var(--color-text-tertiary)]"
+              className="mt-3 text-sm font-medium leading-relaxed text-[var(--color-text-primary)]"
             >
-              {lang === "ar"
-                ? "بناء منتجات بمساعدة الذكاء الاصطناعي والنماذج الأولية السريعة"
-                : "AI-assisted product building & rapid prototyping"}
+              <span className="text-[var(--color-android)]">
+                {lang === "ar" ? "الأندرويد أولًا." : "Android First."}
+              </span>{" "}
+              <span className="text-[var(--color-text-secondary)]">
+                {lang === "ar" ? "الذكاء الاصطناعي للتسريع." : "AI Accelerated."}
+              </span>
             </motion.p>
 
             <motion.p

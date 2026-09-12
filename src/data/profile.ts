@@ -15,14 +15,14 @@ export const profile = {
   heroSupportAr:
     "مطوّر أندرويد أبني تطبيقات موبايل إنتاجية بـ Kotlin وJetpack Compose. أكثر من 3 سنوات في منصات المؤسسات والجهات الحكومية — مسارات عمل معقدة وتكامل API آمن ومصادقة والتعامل مع المستندات ومعمارية موبايل قابلة للتوسع.",
   androidExperience: "3+",
-  androidExperienceLabel: "Years Building Production Android Apps",
+  androidExperienceLabel: "Years Hands-On Android Development",
   androidExperienceLabelAr: "سنوات في تطوير تطبيقات أندرويد",
   aiExperience: "1+",
   aiExperienceLabel: "Year AI-Powered Building",
   aiExperienceLabelAr: "سنة في البناء المدعوم بالذكاء الاصطناعي",
   about: [
-    "I'm an Android Developer focused on building reliable mobile applications with modern Android technologies.",
-    "Over the past 3+ years, I have worked on Android applications involving complex workflows, APIs, authentication, multilingual experiences, documents, and enterprise-oriented requirements. Alongside Android development, I explore AI-powered workflows that help accelerate the journey from an idea to a working product.",
+    "I'm an Android Engineer focused on building reliable mobile applications with modern Android technologies.",
+    "3+ years of hands-on Android development experience across independent projects and professional production applications — complex workflows, APIs, authentication, multilingual experiences, documents, and enterprise-oriented requirements. I use AI-assisted development to accelerate product exploration, prototyping, and implementation.",
   ],
   aboutAr: [
     "أنا مطوّر أندرويد أركز على بناء تطبيقات موثوقة باستخدام تقنيات أندرويد الحديثة.",
