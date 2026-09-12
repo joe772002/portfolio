@@ -80,9 +80,23 @@ export const en: Dictionary = {
     desc: "Not just library names — how I organize real applications so they stay maintainable as they grow.",
   },
   experience: {
-    kicker: "Professional Experience",
+    kicker: "Experience & Engineering",
     title: "Production experience, not demos.",
-    desc: "3+ years of hands-on Android development experience across independent projects and professional production applications.",
+    desc: "3+ years of hands-on Android development — from independent projects into full-time professional production work — with a broader software engineering scope built around that foundation.",
+    metrics: [
+      {
+        value: "3+",
+        label: "Years — Android Engineering",
+        hint: "Hands-on Android development overall",
+      },
+      {
+        value: "2+",
+        label: "Years — Software Engineering",
+        hint: "Broader engineering scope, not a separate job",
+      },
+    ],
+    foundation:
+      "Android engineering is my foundation. Software engineering helps me build reliable products end to end.",
     independent: {
       role: "Independent Android Development",
       period: "Before July 2024",
@@ -107,15 +121,18 @@ export const en: Dictionary = {
       ],
     },
     software: {
-      role: "Software Engineer — End-to-End Product Work",
+      role: "Software Engineering & Product Development",
       period: "Ongoing",
-      type: "Alongside Android experience",
-      desc: "Broader software engineering work alongside Android development — turning ideas into reliable, working products through architecture, implementation, and iteration.",
+      type: "Across personal and professional work",
+      scopeLabel: "Engineering scope",
+      desc: "A broader engineering scope across my work — beyond Android — covering how I think through and build products end to end.",
       bullets: [
-        "Product concepts, MVPs, and experiments engineered with clean architecture and maintainable code.",
-        "Architecture, state management, and API integration with end-to-end product thinking.",
-        "AI-assisted prototyping and iteration, with architecture, technical decisions, and code quality remaining engineering-driven.",
+        "Architecture, application structure, state management, and API integration with end-to-end product thinking.",
+        "Product concepts, MVPs, prototypes, and experiments engineered with clean architecture and maintainable code.",
+        "Prototyping, debugging, and iteration across web and mobile product concepts.",
       ],
+      aiNote:
+        "AI is part of my engineering workflow — helping me research, prototype, implement, debug, and iterate faster, while architecture, technical decisions, and code quality remain engineering-driven.",
     },
     items: [
       {

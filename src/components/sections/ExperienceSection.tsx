@@ -22,7 +22,38 @@ export function ExperienceSection() {
           title={t.experience.title}
           description={t.experience.desc}
         />
-        <div className="relative mt-10 flex flex-col gap-6">
+        <Reveal delay={0.05}>
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {t.experience.metrics.map((m, i) => (
+              <div
+                key={m.label}
+                className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 sm:p-8"
+              >
+                <span
+                  className={
+                    i === 0
+                      ? "font-display text-5xl font-semibold tracking-tight text-[var(--color-android)] sm:text-6xl"
+                      : "font-display text-5xl font-semibold tracking-tight text-[var(--color-ai)] sm:text-6xl"
+                  }
+                >
+                  {m.value}
+                </span>
+                <p className="mt-2 font-display text-base text-[var(--color-text-primary)] sm:text-lg">
+                  {m.label}
+                </p>
+                <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
+                  {m.hint}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <p className="mt-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 font-display text-base leading-relaxed text-[var(--color-text-primary)] sm:p-8 sm:text-lg">
+            {t.experience.foundation}
+          </p>
+        </Reveal>
+        <div className="relative mt-6 flex flex-col gap-6">
           <div aria-hidden className="absolute top-2 bottom-2 left-[7px] w-px bg-[var(--color-border)] sm:left-[7px]" />
           <Reveal>
             <article className="relative ps-8">
@@ -93,6 +124,9 @@ export function ExperienceSection() {
                       {sw.period} · {sw.type}
                     </p>
                   </div>
+                  <span className="rounded-full border border-[var(--color-border)] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+                    {sw.scopeLabel}
+                  </span>
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
                   {sw.desc}
@@ -105,6 +139,9 @@ export function ExperienceSection() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-6 border-t border-[var(--color-border-soft)] pt-5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  {sw.aiNote}
+                </p>
               </div>
             </article>
           </Reveal>

@@ -56,6 +56,8 @@ export interface Dictionary {
     kicker: string;
     title: string;
     desc: string;
+    metrics: { value: string; label: string; hint: string }[];
+    foundation: string;
     items: { title: string; desc: string }[];
     independent: {
       role: string;
@@ -77,6 +79,8 @@ export interface Dictionary {
       type: string;
       desc: string;
       bullets: string[];
+      scopeLabel: string;
+      aiNote: string;
     };
   };
   builder: {
