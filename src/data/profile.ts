@@ -18,8 +18,8 @@ export const profile = {
   androidExperienceLabel: "Years Hands-On Android Development",
   androidExperienceLabelAr: "سنوات في تطوير تطبيقات أندرويد",
   aiExperience: "2+",
-  aiExperienceLabel: "Software Engineering Projects",
-  aiExperienceLabelAr: "مشاريع هندسة برمجية",
+  aiExperienceLabel: "Years of Software Engineering",
+  aiExperienceLabelAr: "سنوات في هندسة البرمجيات",
   about: [
     "I'm a Software Engineer specializing in Android development, focused on building reliable, maintainable applications and products.",
     "My professional experience is centered on Android, with 3+ years of hands-on Android development across independent projects and professional production applications — complex workflows, APIs, authentication, multilingual experiences, documents, and enterprise-oriented requirements — with broader software engineering work across product concepts, web platforms, APIs, architecture, and end-to-end development. I also use AI tools to accelerate prototyping, implementation, debugging, and iteration without replacing engineering judgment.",

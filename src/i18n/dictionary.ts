@@ -71,6 +71,13 @@ export interface Dictionary {
       type: string;
       bullets: string[];
     };
+    software: {
+      role: string;
+      period: string;
+      type: string;
+      desc: string;
+      bullets: string[];
+    };
   };
   builder: {
     kicker: string;

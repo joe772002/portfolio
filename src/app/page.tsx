@@ -27,7 +27,6 @@ export default function Home() {
       <HowIBuildSection />
       <BuilderSection />
       <AIProjectsSection />
-      <AndroidProjectsSection mode="personal" />
       <AboutSection />
       <ContactSection />
     </>

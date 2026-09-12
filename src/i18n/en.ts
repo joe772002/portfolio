@@ -106,6 +106,17 @@ export const en: Dictionary = {
         "Integrating REST APIs with secure token-based authentication and handling multi-step, multi-role workflows.",
       ],
     },
+    software: {
+      role: "Software Engineer — End-to-End Product Work",
+      period: "Ongoing",
+      type: "Alongside Android experience",
+      desc: "Broader software engineering work alongside Android development — turning ideas into reliable, working products through architecture, implementation, and iteration.",
+      bullets: [
+        "Product concepts, MVPs, and experiments engineered with clean architecture and maintainable code.",
+        "Architecture, state management, and API integration with end-to-end product thinking.",
+        "AI-assisted prototyping and iteration, with architecture, technical decisions, and code quality remaining engineering-driven.",
+      ],
+    },
     items: [
       {
         title: "Android Development",

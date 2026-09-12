@@ -9,6 +9,7 @@ export function ExperienceSection() {
   const { lang, t } = useLanguage();
   const ind = t.experience.independent;
   const tl = t.experience.timeline;
+  const sw = t.experience.software;
   return (
     <section
       id="experience"
@@ -72,6 +73,34 @@ export function ExperienceSection() {
                   {tl.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-android)]" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <article className="relative ps-8">
+              <span aria-hidden className="absolute top-2 left-0 h-[15px] w-[15px] rounded-full bg-[var(--color-ai)]" />
+              <div className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8">
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <div>
+                    <h3 className="font-display text-lg font-medium text-[var(--color-text-primary)] sm:text-xl">
+                      {sw.role}
+                    </h3>
+                    <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
+                      {sw.period} · {sw.type}
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
+                  {sw.desc}
+                </p>
+                <ul className="mt-4 flex flex-col gap-2.5">
+                  {sw.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-text-tertiary)]" />
                       {b}
                     </li>
                   ))}
