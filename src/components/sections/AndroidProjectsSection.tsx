@@ -15,7 +15,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 type Mode = "all" | "featured" | "personal";
 
 export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   if (mode === "personal") {
     return (
@@ -73,10 +73,27 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
                 {t.android.selected}
               </p>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {otherProfessionalProjects.map((project) => (
-                  <CompactProjectCard key={project.id} project={project} />
-                ))}
+                {[...otherProfessionalProjects]
+                  .sort((a, b) => (a.id === "procurement" ? -1 : b.id === "procurement" ? 1 : 0))
+                  .map((project) => (
+                    <CompactProjectCard key={project.id} project={project} />
+                  ))}
               </div>
+              <a
+                href="#ai-builds"
+                className="group mt-6 flex flex-col gap-2 rounded-2xl border border-dashed border-[var(--color-border)] p-6 transition-colors hover:border-[var(--color-ai-line)] sm:p-7"
+              >
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+                  {lang === "ar" ? "تجربة منتج — انظر قسم البناء بالذكاء الاصطناعي" : "Product experiment — see AI-Powered Building"}
+                </span>
+                <span className="font-display text-lg font-medium text-[var(--color-text-primary)]">
+                  ShipFlow Maritime Platform
+                  <span className="text-[var(--color-text-tertiary)]"> — </span>
+                  <span className="text-[var(--color-text-secondary)]">
+                    {lang === "ar" ? "مفهوم منتج، وليس نظامًا إنتاجيًا" : "Product concept, not a production deployment"}
+                  </span>
+                </span>
+              </a>
             </div>
           )}
         </Container>

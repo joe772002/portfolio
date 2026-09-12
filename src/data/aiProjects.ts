@@ -4,11 +4,11 @@ export const aiProjects: AIProject[] = [
   {
     id: "shipflow",
     title: "ShipFlow",
-    status: "Live",
-    context: "Personal Product — Android + Web",
-    contextAr: "منتج شخصي — أندرويد + ويب",
+    status: "Product Experiment",
+    context: "Product Experiment — Portfolio / Product Concept · Not a production deployment",
+    contextAr: "تجربة منتج — مفهوم للمعرض · ليست نظامًا إنتاجيًا",
     overview:
-      "A personal product build demonstrating product thinking end-to-end — Idea → Product Concept → Working Experience. A maritime operations concept with a fleet dashboard, vessel registry, inspection and certificate workflows, registration requests, document management, and payment-related concepts, sharing one design system across Android and web.",
+      "A portfolio product experiment demonstrating product thinking end-to-end — Idea → Product Concept → Working Experience. A maritime operations concept with a fleet dashboard, vessel registry, inspection and certificate workflows, registration requests, document management, and payment-related concepts, sharing one design system across Android and web. Not presented as a production deployment.",
     overviewAr:
       "منتج شخصي يوضح التفكير في المنتج من البداية للنهاية — من الفكرة إلى المفهوم إلى تجربة عملية. مفهوم عمليات بحرية فيه لوحة أسطول وسجل سفن ومسارات تفتيش وشهادات وطلبات تسجيل وإدارة مستندات ومفاهيم مدفوعات، بنظام تصميم واحد بين الأندرويد والويب.",
     focus: [
@@ -108,9 +108,9 @@ export const aiProjects: AIProject[] = [
   {
     id: "shipflow-android",
     title: "ShipFlow — Android Client",
-    status: "Live",
-    context: "Personal Product — Android",
-    contextAr: "منتج شخصي — أندرويد",
+    status: "Product Experiment",
+    context: "Product Experiment — Android Concept",
+    contextAr: "تجربة منتج — مفهوم أندرويد",
     overview:
       "The Android client for the ShipFlow product concept — fleet dashboard, vessel registry, vessel profiles, and inspection and certificate tracking for maritime operations teams, built with Kotlin and Jetpack Compose.",
     overviewAr:

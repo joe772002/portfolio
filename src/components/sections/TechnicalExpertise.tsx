@@ -22,7 +22,7 @@ export function TechnicalExpertise() {
           </p>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-border-soft)] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-border-soft)] sm:grid-cols-2 lg:grid-cols-3">
           {androidSkills.map((group, i) => (
             <Reveal key={group.title} delay={Math.min(i * 0.05, 0.3)}>
               <div className="h-full bg-[var(--color-bg)] p-6 transition-colors hover:bg-[var(--color-bg-elevated)]">

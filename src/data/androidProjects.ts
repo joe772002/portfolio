@@ -237,10 +237,10 @@ export const androidProjects: AndroidProject[] = [
     category: ["Professional", "Application Modernization"],
     categoryAr: ["احترافي", "تحديث تطبيق"],
     overview:
-      "Modernizing and improving an existing Android application — gradually improving older development approaches toward modern Android development practices.",
+      "Android modernization project — migrating an existing Java codebase toward Kotlin and Jetpack Compose with MVVM, modern architecture, and UI modernization focused on maintainability and production-oriented development.",
     overviewAr:
-      "تحديث وتحسين تطبيق أندرويد موجود — تحسين تدريجي من أساليب التطوير القديمة نحو ممارسات تطوير الأندرويد الحديثة.",
-    technologies: ["Java to Kotlin Migration", "Jetpack Compose", "MVVM"],
+      "مشروع تحديث أندرويد — نقل قاعدة كود Java موجودة نحو Kotlin وJetpack Compose مع MVVM ومعمارية حديثة وتحديث للواجهات مع التركيز على قابلية الصيانة والتطوير الإنتاجي.",
+    technologies: ["Java to Kotlin Migration", "Kotlin", "Jetpack Compose", "MVVM", "Modern Android Architecture"],
     focusAreas: [
       "Java to Kotlin modernization",
       "Modern UI",
@@ -271,8 +271,8 @@ export const androidProjects: AndroidProject[] = [
     platformAr: "أندرويد (Kotlin)",
     category: ["Personal Project"],
     categoryAr: ["مشروع شخصي"],
-    overview: "An Android application focused on attendance management with API integration and local data handling.",
-    overviewAr: "تطبيق أندرويد مركز على إدارة الحضور مع تكامل API والتعامل مع البيانات المحلية.",
+    overview: "Android attendance application integrating REST APIs with local/UI data handling and image presentation.",
+    overviewAr: "تطبيق حضور أندرويد يدمج REST APIs مع التعامل مع البيانات المحلية والواجهات وعرض الصور.",
     technologies: ["Kotlin", "Retrofit", "LiveData", "Glide", "REST APIs"],
     focusAreas: ["API integration", "Data handling", "Android architecture", "UI development"],
     focusAreasAr: ["تكامل API", "التعامل مع البيانات", "معمارية الأندرويد", "تطوير الواجهات"],
@@ -288,8 +288,8 @@ export const androidProjects: AndroidProject[] = [
     platformAr: "أندرويد (Kotlin)",
     category: ["Personal Project"],
     categoryAr: ["مشروع شخصي"],
-    overview: "A mobile application for discovering meals and managing favorite items with offline support.",
-    overviewAr: "تطبيق موبايل لاكتشاف الوجبات وإدارة المفضلة مع دعم العمل دون اتصال.",
+    overview: "Meal discovery Android application using REST APIs and Room for locally persisted favorites.",
+    overviewAr: "تطبيق أندرويد لاكتشاف الوجبات يستخدم REST APIs وRoom لحفظ المفضلة محليًا.",
     technologies: ["Kotlin", "REST APIs", "Room Database"],
     focusAreas: [
       "Meal discovery",
@@ -318,7 +318,7 @@ export const androidProjects: AndroidProject[] = [
     category: ["Personal Project"],
     categoryAr: ["مشروع شخصي"],
     overview:
-      "An independent mobile application concept focused on attendance management and workflow automation.",
+      "Independent Android application concept focused on attendance workflows and mobile-first user experience.",
     overviewAr: "فكرة تطبيق موبايل مستقل مركز على إدارة الحضور وأتمتة مسارات العمل.",
     technologies: ["Android", "Kotlin", "REST APIs"],
     focusAreas: [

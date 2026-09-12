@@ -46,8 +46,9 @@ export function Hero() {
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-android)]" />
               {t.hero.badgeA}
               <span className="text-[var(--color-text-tertiary)]">/</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-ai)]" />
-              {t.hero.badgeB}
+              <span className="font-normal normal-case tracking-normal text-[var(--color-text-tertiary)]">
+                {t.hero.badgeB}
+              </span>
             </motion.div>
 
             <div className="flex items-center gap-4 sm:gap-8">
@@ -92,12 +93,20 @@ export function Hero() {
               {...fadeUp(0.28)}
               className="mt-2 text-balance font-display text-base font-medium leading-snug text-[var(--color-text-secondary)] sm:text-lg"
             >
-              <span className="text-[var(--color-ai)]">{t.hero.roleB}</span>
+              {t.hero.roleB}
+            </motion.p>
+            <motion.p
+              {...fadeUp(0.3)}
+              className="mt-2 text-sm leading-relaxed text-[var(--color-text-tertiary)]"
+            >
+              {lang === "ar"
+                ? "بناء منتجات بمساعدة الذكاء الاصطناعي والنماذج الأولية السريعة"
+                : "AI-assisted product building & rapid prototyping"}
             </motion.p>
 
             <motion.p
               {...fadeUp(0.32)}
-              className="mt-5 max-w-lg text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg"
+              className="mt-5 max-w-xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg"
             >
               {pick(lang, profile.heroSupport, profile.heroSupportAr)}
             </motion.p>
@@ -121,10 +130,12 @@ export function Hero() {
                 {t.hero.downloadCv}
               </a>
               <a
-                href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)]"
+                href={profile.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
               >
-                {t.hero.getInTouch}
+                {t.hero.linkedin}
               </a>
             </motion.div>
 

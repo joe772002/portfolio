@@ -30,6 +30,7 @@ export interface Dictionary {
     viewWork: string;
     downloadCv: string;
     getInTouch: string;
+    linkedin: string;
     scroll: string;
   };
   trail: [string, string, string];
@@ -122,6 +123,8 @@ export interface Dictionary {
     challenges: string;
     decisions: string;
     takeaways: string;
+    outcome: string;
+    confidentiality: string;
     confidential: string;
   };
   footer: { tagline: string };

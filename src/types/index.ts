@@ -5,7 +5,8 @@ export type ProjectStatus =
   | "In Development"
   | "Modernization"
   | "Concept / Upcoming MVP"
-  | "Coming Soon";
+  | "Coming Soon"
+  | "Product Experiment";
 
 export interface SkillGroup {
   title: string;

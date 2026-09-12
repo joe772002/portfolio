@@ -2,9 +2,9 @@ import type { SkillGroup } from "@/types";
 
 export const androidSkills: SkillGroup[] = [
   {
-    title: "Android Development",
-    titleAr: "تطوير الأندرويد",
-    skills: ["Kotlin", "Java", "Jetpack Compose", "Android SDK", "Material Design 3"],
+    title: "Android",
+    titleAr: "أندرويد",
+    skills: ["Kotlin", "Jetpack Compose", "Material 3", "Android SDK", "Java", "Coroutines & Flow"],
   },
   {
     title: "Architecture",
@@ -12,16 +12,10 @@ export const androidSkills: SkillGroup[] = [
     skills: [
       "MVVM",
       "Repository Pattern",
-      "Clean Architecture Principles",
-      "Separation of Concerns",
-      "UI State Management",
-      "Scalable Application Architecture",
+      "Clean Architecture concepts",
+      "State-driven UI",
+      "Dependency Injection (Hilt, Koin)",
     ],
-  },
-  {
-    title: "Dependency Injection",
-    titleAr: "حقن التبعيات",
-    skills: ["Hilt", "Koin"],
   },
   {
     title: "Networking",
@@ -29,31 +23,25 @@ export const androidSkills: SkillGroup[] = [
     skills: ["Ktor", "Retrofit", "REST APIs", "API Integration"],
   },
   {
-    title: "Authentication & Security",
-    titleAr: "المصادقة والأمان",
+    title: "Data",
+    titleAr: "البيانات",
+    skills: ["Room", "DataStore", "WorkManager"],
+  },
+  {
+    title: "Security",
+    titleAr: "الأمان",
     skills: [
-      "OAuth",
-      "Authentication",
-      "Authorization",
-      "Token Lifecycle Management",
-      "Secure API Communication",
-      "Secure Storage",
-      "Optional SSL Pinning",
+      "OAuth / Keycloak",
+      "Token lifecycle",
+      "Secure API communication",
+      "Secure storage",
+      "SSL pinning where applicable",
     ],
   },
   {
-    title: "Local Data",
-    titleAr: "البيانات المحلية",
-    skills: ["Room", "DataStore"],
-  },
-  {
-    title: "Background Work",
-    titleAr: "الشغل في الخلفية",
-    skills: ["WorkManager"],
-  },
-  {
-    title: "Kotlin",
-    skills: ["Coroutines", "Flow", "StateFlow", "LiveData"],
+    title: "Tools",
+    titleAr: "الأدوات",
+    skills: ["Git", "GitHub", "Android Studio", "Gradle"],
   },
 ];
 

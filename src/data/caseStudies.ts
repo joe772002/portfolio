@@ -153,6 +153,24 @@ export const caseStudies: Record<string, CaseStudy> = {
         bodyEn: ["Production government platforms reward disciplined architecture, careful state handling, and respectful handling of confidential systems."],
         bodyAr: ["منصات الحكومة الإنتاجية تكافئ المعمارية المنضبطة وإدارة الحالة الدقيقة والتعامل المسؤول مع الأنظمة السرية."],
       },
+      {
+        key: "outcome",
+        bodyEn: [
+          "A production Android client supporting real government maritime service workflows — service requests, inspections, certificates, documents, and payments — with secure authentication, bilingual RTL/English experience, and resilient offline behavior.",
+        ],
+        bodyAr: [
+          "تطبيق أندرويد إنتاجي يدعم مسارات خدمية بحرية حكومية حقيقية — طلبات الخدمات والتفتيش والشهادات والمستندات والمدفوعات — مع مصادقة آمنة وتجربة ثنائية اللغة RTL/إنجليزية وسلوك مرن دون اتصال.",
+        ],
+      },
+      {
+        key: "confidentiality",
+        bodyEn: [
+          "Due to the confidential nature of the project, source code and internal business data are not publicly available. Screens shown have sensitive data blurred or omitted.",
+        ],
+        bodyAr: [
+          "نظرًا لطبيعة المشروع السرية، لا يتوفر الكود المصدري وبيانات العمل الداخلية للعرض العام. والشاشات المعروضة تم إخفاء البيانات الحساسة فيها.",
+        ],
+      },
     ],
   },
   "electronic-meetings": {
@@ -276,6 +294,22 @@ export const caseStudies: Record<string, CaseStudy> = {
         key: "takeaways",
         bodyEn: ["Enterprise platforms reward consistency, careful integration, and respect for confidential systems."],
         bodyAr: ["منصات المؤسسات تكافئ الاتساق والتكامل الدقيق واحترام الأنظمة السرية."],
+      },
+      {
+        key: "outcome",
+        bodyEn: [
+          "A production enterprise Android application supporting meeting management, calendar synchronization, certificate requests, PDF and document flows, and profile persistence across complex enterprise workflows.",
+        ],
+        bodyAr: [
+          "تطبيق أندرويد إنتاجي للمؤسسات يدعم إدارة الاجتماعات ومزامنة التقويم وطلبات الشهادات ومسارات PDF والمستندات وحفظ البروفايل عبر مسارات عمل معقدة.",
+        ],
+      },
+      {
+        key: "confidentiality",
+        bodyEn: [
+          "Due to the confidential nature of the project, source code and internal business data are not publicly available.",
+        ],
+        bodyAr: ["نظرًا لطبيعة المشروع السرية، لا يتوفر الكود المصدري وبيانات العمل الداخلية للعرض العام."],
       },
     ],
   },

@@ -5,17 +5,17 @@ export const profile = {
   firstNameAr: "يوسف",
   lastName: "Osama Ali",
   lastNameAr: "أسامة علي",
-  primaryRole: "Android Developer",
+  primaryRole: "Android Engineer",
   secondaryRole: "AI-Powered Product Builder",
-  positioning: "Android Developer",
+  positioning: "Android Engineer",
   tagline:
-    "Android Developer with 3+ years of experience building reliable applications with Kotlin and Jetpack Compose — and using AI-powered workflows to turn ideas into working products faster.",
+    "Android Engineer with 3+ years of experience building reliable applications with Kotlin and Jetpack Compose — and using AI-powered workflows to turn ideas into working products faster.",
   heroSupport:
-    "Building reliable Android applications with Kotlin and Jetpack Compose — and using AI-powered workflows to turn ideas into working products faster.",
+    "Android Engineer building production-grade mobile applications with Kotlin and Jetpack Compose. 3+ years across enterprise and government platforms — complex workflows, secure API integration, authentication, document handling, and scalable mobile architecture.",
   heroSupportAr:
-    "أبني تطبيقات أندرويد موثوقة باستخدام Kotlin وJetpack Compose، وأستخدم أدوات وأساليب التطوير المدعومة بالذكاء الاصطناعي لتسريع تحويل الأفكار إلى منتجات حقيقية.",
+    "مطوّر أندرويد أبني تطبيقات موبايل إنتاجية بـ Kotlin وJetpack Compose. أكثر من 3 سنوات في منصات المؤسسات والجهات الحكومية — مسارات عمل معقدة وتكامل API آمن ومصادقة والتعامل مع المستندات ومعمارية موبايل قابلة للتوسع.",
   androidExperience: "3+",
-  androidExperienceLabel: "Years Building Android Applications",
+  androidExperienceLabel: "Years Building Production Android Apps",
   androidExperienceLabelAr: "سنوات في تطوير تطبيقات أندرويد",
   aiExperience: "1+",
   aiExperienceLabel: "Year AI-Powered Building",
