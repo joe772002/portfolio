@@ -15,7 +15,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 type Mode = "all" | "featured" | "personal";
 
 export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
-  const { lang, t } = useLanguage();
+  const { t } = useLanguage();
 
   if (mode === "personal") {
     return (
@@ -79,24 +79,6 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
               </div>
             </div>
           )}
-          <a
-            href="#ai-builds"
-            className="group mt-8 flex flex-col gap-2 rounded-2xl border border-dashed border-[var(--color-border)] p-6 transition-colors hover:border-[var(--color-ai-line)] sm:p-7"
-            aria-label={lang === "ar" ? "ShipFlow — انتقل إلى مشاريع الهندسة البرمجية" : "ShipFlow — go to Software Engineering Projects"}
-          >
-            <span className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-              <span>04</span>
-              <span aria-hidden className="h-px flex-1 bg-[var(--color-border-soft)]" />
-              {lang === "ar" ? "تجربة منتج شخصي — انظر مشاريع الهندسة البرمجية" : "Personal product experiment — see Software Engineering Projects"}
-            </span>
-            <span className="font-display text-lg font-medium text-[var(--color-text-primary)]">
-              ShipFlow Maritime Platform
-              <span className="text-[var(--color-text-tertiary)]"> — </span>
-              <span className="text-[var(--color-text-secondary)]">
-                {lang === "ar" ? "منصة ويب + تطبيق أندرويد — مفهوم منتج، وليس نظامًا إنتاجيًا" : "Web Platform + Android Client — product concept, not a production deployment"}
-              </span>
-            </span>
-          </a>
         </Container>
       </section>
     );

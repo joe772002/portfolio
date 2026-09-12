@@ -7,7 +7,7 @@ export const profile = {
   lastNameAr: "أسامة علي",
   primaryRole: "Android Engineer",
   secondaryRole: "Software Engineer",
-  positioning: "Android Engineer",
+  positioning: "Android Engineer & Software Engineer",
   tagline:
     "Android Engineer & Software Engineer with 3+ years of experience building reliable applications with Kotlin and Jetpack Compose — clean architecture, scalable mobile systems, and end-to-end product thinking.",
   heroSupport:
@@ -21,21 +21,21 @@ export const profile = {
   aiExperienceLabel: "Software Engineering Projects",
   aiExperienceLabelAr: "مشاريع هندسة برمجية",
   about: [
-    "I'm an Android Engineer focused on building reliable mobile applications with modern Android technologies.",
-    "3+ years of hands-on Android development experience across independent projects and professional production applications — complex workflows, APIs, authentication, multilingual experiences, documents, and enterprise-oriented requirements. I apply software engineering principles — architecture, maintainability, and end-to-end product thinking — with AI tools used to accelerate prototyping and implementation where helpful.",
+    "I'm a Software Engineer specializing in Android development, focused on building reliable, maintainable applications and products.",
+    "My professional experience is centered on Android, with 3+ years of hands-on Android development across independent projects and professional production applications — complex workflows, APIs, authentication, multilingual experiences, documents, and enterprise-oriented requirements — with broader software engineering work across product concepts, web platforms, APIs, architecture, and end-to-end development. I also use AI tools to accelerate prototyping, implementation, debugging, and iteration without replacing engineering judgment.",
   ],
   aboutAr: [
-    "أنا مطوّر أندرويد أركز على بناء تطبيقات موثوقة باستخدام تقنيات أندرويد الحديثة.",
-    "خلال أكثر من 3 سنوات في تطوير تطبيقات أندرويد، عملت على تطبيقات تتضمن مسارات عمل معقدة، والتكامل مع APIs، وأنظمة المصادقة، ودعم اللغتين العربية والإنجليزية، والتعامل مع المستندات والمتطلبات الاحترافية. وأطبق مبادئ هندسة البرمجيات — المعمارية وقابلية الصيانة والتفكير الشامل في المنتج — مع استخدام أدوات الذكاء الاصطناعي لتسريع بناء النماذج الأولية والتنفيذ عند الحاجة.",
+    "أنا مهندس برمجيات متخصص في تطوير تطبيقات أندرويد، أركز على بناء تطبيقات ومنتجات موثوقة وقابلة للصيانة.",
+    "خبرتي المهنية متمركزة حول الأندرويد، مع أكثر من 3 سنوات في تطوير تطبيقات أندرويد عبر مشاريع مستقلة وتطبيقات إنتاجية احترافية — مسارات عمل معقدة، والتكامل مع APIs، وأنظمة المصادقة، ودعم اللغتين العربية والإنجليزية، والتعامل مع المستندات والمتطلبات الاحترافية — مع عمل أوسع في هندسة البرمجيات عبر مفاهيم المنتجات ومنصات الويب وواجهات API والمعمارية والتطوير الشامل. كما أستخدم أدوات الذكاء الاصطناعي لتسريع بناء النماذج الأولية والتنفيذ وتصحيح الأخطاء والتكرار دون استبدال الحكم الهندسي.",
   ],
   philosophy:
     "I build Android applications with a focus on maintainability, scalable architecture, secure integrations, and reliable user experiences.",
   philosophyAr:
     "أبني تطبيقات أندرويد مع التركيز على قابلية الصيانة، والمعمارية القابلة للتوسع، والتكاملات الآمنة، وتجربة استخدام موثوقة.",
   aiPhilosophy:
-    "Software engineering judgment comes first. AI tools are used to accelerate exploration, prototyping, iteration, and problem solving where helpful.",
+    "AI tools are part of my workflow — helping me research, prototype, implement, debug, and iterate faster, while architecture, technical decisions, and code quality remain engineering-driven.",
   aiPhilosophyAr:
-    "الحكم الهندسي البرمجي أولًا. تُستخدم أدوات الذكاء الاصطناعي لتسريع الاستكشاف وبناء النماذج الأولية والتكرار وحل المشكلات عند الحاجة.",
+    "أدوات الذكاء الاصطناعي جزء من منهجية عملي — تساعدني على البحث وبناء النماذج الأولية والتنفيذ وتصحيح الأخطاء والتكرار بشكل أسرع، بينما تبقى المعمارية والقرارات التقنية وجودة الكود مسؤولية هندسية.",
   contact: {
     linkedin: "https://linkedin.com/in/youssef-osama-775302343",
     linkedinLabel: "linkedin.com/in/youssef-osama-775302343",

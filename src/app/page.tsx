@@ -11,9 +11,9 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Youssef Osama Ali | Android Engineer — Kotlin, Jetpack Compose",
+  title: "Youssef Osama Ali | Android Engineer & Software Engineer — Kotlin, Jetpack Compose",
   description:
-    "Android Engineer with 3+ years of hands-on Android development across independent projects and professional production apps since July 2024 — Kotlin, Jetpack Compose, MVVM, secure APIs, enterprise and government platforms.",
+    "Software Engineer specializing in Android development with 3+ years of hands-on Android development across independent projects and professional production apps since July 2024 — Kotlin, Jetpack Compose, MVVM, secure APIs, enterprise and government platforms. Building reliable software across Mobile, Web & Desktop with an AI-assisted workflow.",
 };
 
 export default function Home() {

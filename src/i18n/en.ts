@@ -25,7 +25,7 @@ export const en: Dictionary = {
   },
   trail: ["Android", "Software Engineering", "Shipping"],
   transition: {
-    kicker: "Building Reliable Software. Across Every Platform.",
+    kicker: "Building Reliable Software. Across Mobile, Web & Desktop.",
     aAccent: "Android engineering",
     aRest: " is my foundation.",
     bAccent: "Software engineering",
@@ -130,10 +130,10 @@ export const en: Dictionary = {
     ],
   },
   builder: {
-    kicker: "Software Engineering",
-    title: "Using software engineering practices to take ideas from concept to working product.",
+    kicker: "Software Engineering & Product Building",
+    title: "Turning ideas into reliable, working products through architecture, implementation, iteration, and product thinking.",
     paragraph:
-      "Android engineering is my foundation. I apply software engineering principles — architecture, state management, API integration, and maintainability — to move from an idea to a working product: prototyping, interface exploration, MVPs, and iteration. AI tools are used to accelerate prototyping and implementation where helpful, without replacing engineering judgment. The goal is reducing the distance between IDEA → PROTOTYPE → PRODUCT.",
+      "Android engineering is my foundation. Software engineering helps me build reliable products end to end — architecture, state management, API integration, and maintainability — from idea to working product: prototyping, interface exploration, MVPs, and iteration. AI tools are part of my workflow — helping me research, prototype, implement, debug, and iterate faster, while architecture, technical decisions, and code quality remain engineering-driven. The goal is reducing the distance between IDEA → PROTOTYPE → PRODUCT.",
     accelerates: "What this approach covers",
     focus: [
       "Rapid prototyping",
@@ -216,7 +216,7 @@ export const en: Dictionary = {
     kicker: "About",
     strengthsTitle: "Highlights",
     strengths: [
-      "Android Developer with 3+ years of experience",
+      "Software Engineer specializing in Android — 3+ years of Android experience",
       "Strong Kotlin and Jetpack Compose knowledge",
       "Experience with professional enterprise applications",
       "Experience with government-oriented digital platforms",
@@ -226,8 +226,8 @@ export const en: Dictionary = {
   },
   contact: {
     kicker: "Contact",
-    title: "Open to Android engineering opportunities.",
-    desc: "Interested in working together or discussing an Android role? Let's talk.",
+    title: "Open to Software Engineering & Android opportunities.",
+    desc: "Interested in building reliable products, solving complex engineering problems, or discussing an Android / Software Engineering opportunity? Let's talk.",
     email: "Email",
     downloadCv: "Download CV",
   },
@@ -253,7 +253,7 @@ export const en: Dictionary = {
     confidentiality: "Confidentiality note",
     confidential: "Details limited due to project confidentiality.",
   },
-  footer: { tagline: "Android • Software Engineering • Shipping" },
+  footer: { tagline: "Software Engineering • Android • AI-Assisted Development" },
   a11y: {
     openMenu: "Open menu",
     closeMenu: "Close menu",

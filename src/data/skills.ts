@@ -88,6 +88,6 @@ export const aiTools: string[] = [
   "Claude",
   "ChatGPT",
   "Coding Agents",
-  "AI-Powered IDE Tools",
+  "AI-assisted IDE Tools",
   "Local AI Models",
 ];

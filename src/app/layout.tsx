@@ -16,9 +16,9 @@ const jetbrainsMono = localFont({
 });
 
 const siteUrl = "https://yosama.vercel.app";
-const title = "Youssef Osama Ali | Android Engineer — Kotlin, Jetpack Compose";
+const title = "Youssef Osama Ali | Android Engineer & Software Engineer — Kotlin, Jetpack Compose";
 const description =
-  "Youssef Osama Ali — Android Engineer with 3+ years of hands-on Android development experience across independent projects and professional production applications since July 2024. Enterprise and government platforms: Kotlin, Jetpack Compose, MVVM, secure API integration, and complex business workflows.";
+  "Youssef Osama Ali — Software Engineer specializing in Android development with 3+ years of hands-on Android development experience across independent projects and professional production applications since July 2024. Enterprise and government platforms: Kotlin, Jetpack Compose, MVVM, secure API integration, and complex business workflows. Broader software engineering across Mobile, Web & Desktop with an AI-assisted development workflow.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
