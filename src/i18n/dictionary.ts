@@ -43,14 +43,6 @@ export interface Dictionary {
     para: string;
   };
   homeCards: HomeCard[];
-  engineer: {
-    kicker: string;
-    title: string;
-    workingOn: string;
-    cares: string;
-    context: string[];
-    focus: string[];
-  };
   expertise: { kicker: string; title: string; desc: string };
   experience: {
     kicker: string;
@@ -83,15 +75,6 @@ export interface Dictionary {
       aiNote: string;
     };
   };
-  builder: {
-    kicker: string;
-    title: string;
-    paragraph: string;
-    accelerates: string;
-    focus: string[];
-  };
-  workflow: { kicker: string; title: string };
-  skills: { kicker: string; toolsTitle: string };
   android: {
     kicker: string;
     title: string;

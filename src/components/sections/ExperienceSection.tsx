@@ -61,7 +61,10 @@ export function ExperienceSection() {
               <div className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <div>
-                    <h3 className="font-display text-lg font-medium text-[var(--color-text-primary)] sm:text-xl">
+                    <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
+                      01
+                    </span>
+                    <h3 className="mt-2 font-display text-lg font-medium text-[var(--color-text-primary)] sm:text-xl">
                       {ind.role}
                     </h3>
                     <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
@@ -89,7 +92,10 @@ export function ExperienceSection() {
               <div className="rounded-3xl border border-[var(--color-android-line)] bg-[var(--color-bg-elevated)] p-6 sm:p-8 lg:p-10">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <div>
-                    <h3 className="font-display text-xl font-medium text-[var(--color-text-primary)] sm:text-2xl">
+                    <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-android)]">
+                      02
+                    </span>
+                    <h3 className="mt-2 font-display text-xl font-medium text-[var(--color-text-primary)] sm:text-2xl">
                       {tl.role} — {tl.company}
                     </h3>
                     <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">
@@ -117,7 +123,10 @@ export function ExperienceSection() {
               <div className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8">
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <div>
-                    <h3 className="font-display text-lg font-medium text-[var(--color-text-primary)] sm:text-xl">
+                    <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-ai)]">
+                      03
+                    </span>
+                    <h3 className="mt-2 font-display text-lg font-medium text-[var(--color-text-primary)] sm:text-xl">
                       {sw.role}
                     </h3>
                     <p className="mt-1.5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-tertiary)]">

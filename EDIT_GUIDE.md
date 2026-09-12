@@ -27,8 +27,8 @@ git push
 | تغيّر اسمك، نبذة، سنوات الخبرة، الإيميل، واتساب، فيسبوك، إنستجرام، لينكدإن، جيتهاب | `src/data/profile.ts` |
 | تضيف/تعدل مشروع أندرويد | `src/data/androidProjects.ts` |
 | تضيف/تعدل مشروع AI أو ويب | `src/data/aiProjects.ts` |
-| تضيف مهارة أو أداة | `src/data/skills.ts` (`androidSkills` / `aiSkills` / `aiTools`) |
-| تعدل خطوات الشغل (Idea → Ship) | `src/data/workflow.ts` |
+| تضيف مهارة أو أداة | `src/data/skills.ts` (`androidSkills`) |
+| تعدل قسم Experience & Engineering | `src/components/sections/ExperienceSection.tsx` + نصوصه في `src/i18n/ar.ts` و `src/i18n/en.ts` (مفتاح `experience`) |
 | تعدل أزرار النافبار (الروابط) | `src/data/navigation.ts` (الـ labels نفسها في `src/i18n/ar.ts` و `src/i18n/en.ts`) |
 | تغيّر أي نص عربي/إنجليزي في الواجهة | `src/i18n/ar.ts` للعربي و `src/i18n/en.ts` للإنجليزي (نفس المفاتيح) |
 | تضيف نص عربي لمشروع/مهارة/خطوة | حقول `...Ar` جنب الحقل الإنجليزي في نفس ملف الداتا (`overviewAr`، `focusAreasAr`، `titleAr`...) |

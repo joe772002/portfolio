@@ -73,7 +73,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${jetbrainsMono.variable}`}
     >
-      <body className="min-h-screen bg-[var(--color-bg)] font-sans text-[var(--color-text-primary)] antialiased">
+      <body suppressHydrationWarning className="min-h-screen bg-[var(--color-bg)] font-sans text-[var(--color-text-primary)] antialiased">
         <LanguageProvider>
           <Navbar />
           <main>{children}</main>

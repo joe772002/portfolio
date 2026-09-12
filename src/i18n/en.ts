@@ -52,28 +52,6 @@ export const en: Dictionary = {
       desc: "Product concepts, MVPs, and experiments engineered with clean architecture and maintainable code — AI tools used to accelerate prototyping where helpful.",
     },
   ],
-  engineer: {
-    kicker: "Profile",
-    title: "Android Developer with 3+ years of experience.",
-    workingOn: "What I work on",
-    cares: "What I care about",
-    context: [
-      "Enterprise applications",
-      "Government digital platforms",
-      "Modern Android applications",
-      "Kotlin and Jetpack Compose",
-      "Application modernization",
-      "Complex workflows",
-    ],
-    focus: [
-      "Maintainable code",
-      "Scalable architecture",
-      "Clean separation of responsibilities",
-      "Secure API integrations",
-      "Reliable user experiences",
-      "Clear state management",
-    ],
-  },
   expertise: {
     kicker: "Technical Expertise",
     title: "How my Android apps are structured.",
@@ -157,23 +135,6 @@ export const en: Dictionary = {
       },
     ],
   },
-  builder: {
-    kicker: "Software Engineering & Product Building",
-    title: "Turning ideas into reliable, working products through architecture, implementation, iteration, and product thinking.",
-    paragraph:
-      "Android engineering is my foundation. Software engineering helps me build reliable products end to end — architecture, state management, API integration, and maintainability — from idea to working product: prototyping, interface exploration, MVPs, and iteration. AI tools are part of my workflow — helping me research, prototype, implement, debug, and iterate faster, while architecture, technical decisions, and code quality remain engineering-driven. The goal is reducing the distance between IDEA → PROTOTYPE → PRODUCT.",
-    accelerates: "What this approach covers",
-    focus: [
-      "Rapid prototyping",
-      "MVP development",
-      "UI exploration",
-      "Product experimentation",
-      "Faster iteration",
-      "Exploring new ideas",
-    ],
-  },
-  workflow: { kicker: "Software Engineering Workflow", title: "From idea to working product." },
-  skills: { kicker: "Software Engineering Toolkit", toolsTitle: "Tools & evolving toolkit" },
   android: {
     kicker: "Featured Professional Projects",
     title: "Production Android applications.",
