@@ -70,7 +70,7 @@ export function ExperienceExpertiseSection() {
             {!reduce && (
               <motion.div
                 aria-hidden
-                className="absolute top-2 bottom-2 left-[7px] w-px origin-top bg-[var(--color-android)] opacity-70 sm:left-[7px]"
+                className="absolute top-2 bottom-2 left-[7px] w-px origin-top bg-gradient-to-b from-[var(--color-android)] via-[var(--color-android)] to-[var(--color-ai)] opacity-70 sm:left-[7px]"
                 style={{ scaleY: lineProgress }}
               />
             )}
@@ -162,7 +162,7 @@ export function ExperienceExpertiseSection() {
                   <ul className="mt-4 flex flex-col gap-2.5">
                     {sw.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-text-tertiary)]" />
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-ai)]" />
                         {b}
                       </li>
                     ))}

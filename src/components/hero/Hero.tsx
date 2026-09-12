@@ -68,15 +68,19 @@ export function Hero() {
           <div className="min-w-0">
             <motion.div
               {...fadeUp(0)}
-              className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-secondary)]"
+              className="mb-7 inline-flex max-w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-3 py-2 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-secondary)] sm:rounded-full sm:px-4 sm:text-xs sm:tracking-[0.16em]"
             >
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-android)]" />
-              <span className="font-medium whitespace-nowrap text-[var(--color-text-secondary)]">
-                {t.hero.badgeA}
+              <span className="inline-flex items-center gap-2">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-android)]" />
+                <span className="font-medium whitespace-nowrap text-[var(--color-text-secondary)]">
+                  {t.hero.badgeA}
+                </span>
               </span>
-              <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-ai)]" />
-              <span className="font-medium whitespace-nowrap text-[var(--color-text-secondary)]">
-                {t.hero.badgeB}
+              <span className="inline-flex items-center gap-2">
+                <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-ai)]" />
+                <span className="font-medium whitespace-nowrap text-[var(--color-text-secondary)]">
+                  {t.hero.badgeB}
+                </span>
               </span>
             </motion.div>
 
