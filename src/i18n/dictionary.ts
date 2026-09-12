@@ -61,7 +61,15 @@ export interface Dictionary {
     personal: string;
     personalOne: string;
     limited: string;
+    featured: string;
+    role: string;
+    platform: string;
+    challenges: string;
+    approach: string;
+    viewCase: string;
+    close: string;
   };
+  how: { kicker: string; title: string; desc: string; items: { title: string; desc: string }[] };
   ai: {
     kicker: string;
     title: string;

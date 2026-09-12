@@ -24,7 +24,10 @@ export function AndroidProjectsSection() {
           description={t.android.desc}
         />
 
-        <div className="mt-16 flex flex-col gap-8">
+        <p className="mt-16 mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
+          {t.android.featured}
+        </p>
+        <div className="flex flex-col gap-8">
           {featuredAndroidProjects.map((project, i) => (
             <FeaturedProjectCard key={project.id} project={project} reverse={i % 2 === 1} />
           ))}

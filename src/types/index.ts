@@ -19,10 +19,18 @@ export interface AndroidProject {
   title: string;
   category: string[];
   context?: string;
+  platform?: string;
+  platformAr?: string;
+  role?: string;
+  roleAr?: string;
   overview: string;
   technologies: string[];
   focusAreas: string[];
   portfolioFocus: string[];
+  challenges?: string[];
+  challengesAr?: string[];
+  approach?: string;
+  approachAr?: string;
   confidential?: boolean;
   featured?: boolean;
   personal?: boolean;

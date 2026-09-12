@@ -1,12 +1,14 @@
 "use client";
 
-import { Lock } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Lock } from "lucide-react";
 import type { AndroidProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
 import { AbstractVisual } from "./AbstractVisual";
 import { ScreensVisual } from "./ScreensVisual";
 import { ScreensGallery } from "./ScreensGallery";
+import { CaseStudyModal } from "./CaseStudyModal";
 import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function FeaturedProjectCard({
@@ -17,6 +19,7 @@ export function FeaturedProjectCard({
   reverse?: boolean;
 }) {
   const { lang, t } = useLanguage();
+  const [open, setOpen] = useState(false);
   const hasGallery = project.images && project.images.length >= 3;
 
   const header = (
@@ -50,6 +53,31 @@ export function FeaturedProjectCard({
         </p>
       )}
 
+      {(project.role || project.platform) && (
+        <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-2">
+          {project.role && (
+            <div className="flex items-baseline gap-2">
+              <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+                {t.android.role}
+              </dt>
+              <dd className="text-sm text-[var(--color-text-primary)]">
+                {pick(lang, project.role, project.roleAr)}
+              </dd>
+            </div>
+          )}
+          {project.platform && (
+            <div className="flex items-baseline gap-2">
+              <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+                {t.android.platform}
+              </dt>
+              <dd className="text-sm text-[var(--color-text-primary)]">
+                {pick(lang, project.platform, project.platformAr)}
+              </dd>
+            </div>
+          )}
+        </dl>
+      )}
+
       <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)]">
         {pick(lang, project.overview, project.overviewAr)}
       </p>
@@ -75,6 +103,17 @@ export function FeaturedProjectCard({
           </Tag>
         ))}
       </div>
+
+      <div className="mt-7">
+        <button
+          onClick={() => setOpen(true)}
+          className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+        >
+          {t.android.viewCase}
+          <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+        </button>
+      </div>
+      {open && <CaseStudyModal project={project} onClose={() => setOpen(false)} />}
     </>
   );
 

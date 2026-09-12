@@ -11,9 +11,9 @@ export const profile = {
   tagline:
     "I combine professional mobile engineering with vibe coding to build reliable software and move faster from idea to product.",
   heroSupport:
-    "Building reliable Android applications and turning ideas into products with vibe coding.",
+    "Building reliable Android applications and turning ideas into real products with modern AI-powered development workflows.",
   heroSupportAr:
-    "ببني تطبيقات أندرويد موثوقة، وبحوّل الأفكار لمنتجات حقيقية بالفايب كودنج.",
+    "ببني تطبيقات أندرويد موثوقة، وبحوّل الأفكار لمنتجات حقيقية بأساليب تطوير حديثة مدعومة بالذكاء الاصطناعي.",
   androidExperience: "3+",
   androidExperienceLabel: "Years Building Android Applications",
   androidExperienceLabelAr: "سنين خبرة في تطبيقات الأندرويد",

@@ -4,11 +4,15 @@ export const androidProjects: AndroidProject[] = [
   {
     id: "oman-mtcit",
     index: "01",
-    title: "Oman MTCIT Mobile Application",
+    title: "MTCIT Maritime Platform",
+    platform: "Android (Kotlin)",
+    platformAr: "أندرويد (Kotlin)",
+    role: "Android Developer",
+    roleAr: "مطوّر أندرويد",
     category: ["Professional", "Enterprise", "Government Digital Services"],
     categoryAr: ["احترافي", "مؤسسات", "خدمات حكومية رقمية"],
     overview:
-      "A large-scale Android application designed to support maritime and government-related digital services. The application contains multiple service types and complex workflows.",
+      "A government maritime services platform supporting digital vessel and maritime transactions — service requests, inspections, certificates, documents, and payments, in Arabic (RTL) and English.",
     overviewAr:
       "تطبيق أندرويد كبير لخدمات رقمية بحرية وحكومية، فيه أنواع خدمات كتير ومسارات عمل معقدة.",
     technologies: [
@@ -64,6 +68,20 @@ export const androidProjects: AndroidProject[] = [
       "عمليات تجارية متعددة",
       "تطوير أندرويد قابل للتوسع",
     ],
+    challenges: [
+      "Secure OAuth authentication and token lifecycle across long multi-step flows",
+      "Multipart document and PDF uploads with unreliable networks",
+      "Offline-first drafts and request state for complex government APIs",
+      "Full Arabic RTL + English localization without breaking layouts",
+    ],
+    challengesAr: [
+      "مصادقة OAuth آمنة وإدارة التوكن في مسارات طويلة متعددة الخطوات",
+      "رفع مستندات وPDF مع شبكة غير مستقرة",
+      "مسودات أوفلاين وحالة الطلبات مع APIs حكومية معقدة",
+      "تعريب كامل عربي RTL وإنجليزي من غير ما التصميم يتكسر",
+    ],
+    approach: "MVVM + Repository — UI → ViewModel → Business logic → Repository → Remote API / Room",
+    approachAr: "MVVM مع Repository — واجهة ← ViewModel ← منطق ← مستودع ← شبكة / قاعدة محلية",
     confidential: true,
     featured: true,
     images: [
@@ -80,11 +98,15 @@ export const androidProjects: AndroidProject[] = [
     id: "electronic-meetings",
     index: "02",
     title: "Electronic Meetings Platform",
+    platform: "Android (Kotlin)",
+    platformAr: "أندرويد (Kotlin)",
+    role: "Android Developer",
+    roleAr: "مطوّر أندرويد",
     category: ["Enterprise", "Government Platform", "Professional Project"],
     categoryAr: ["مؤسسات", "منصة حكومية", "مشروع احترافي"],
     context: "Qatar General Secretariat",
     overview:
-      "A mobile platform designed to support meeting-related workflows and organizational operations.",
+      "A professional electronic meetings platform — meeting management, calendar sync, certificate requests, PDF viewing, attachments, and profile persistence across complex enterprise workflows.",
     overviewAr: "منصة موبايل لدعم مسارات عمل الاجتماعات والعمليات التنظيمية.",
     technologies: [
       "Kotlin",
@@ -131,6 +153,20 @@ export const androidProjects: AndroidProject[] = [
       "التعامل مع المستندات",
       "تكامل التقويم",
     ],
+    challenges: [
+      "Shared business logic and ViewModels across meeting workflows",
+      "Calendar synchronization with enterprise scheduling rules",
+      "PDF generation, viewing, and file attachments at scale",
+      "Profile persistence and enterprise auth session handling",
+    ],
+    challengesAr: [
+      "منطق مشترك وViewModels عبر مسارات الاجتماعات",
+      "مزامنة التقويم مع قواعد جدولة المؤسسات",
+      "إنشاء وعرض PDF ومرفقات الملفات",
+      "حفظ البروفايل وإدارة جلسات المصادقة",
+    ],
+    approach: "MVVM + shared business logic — UI → shared ViewModel → Repository → Enterprise APIs",
+    approachAr: "MVVM مع منطق مشترك — واجهة ← ViewModel مشترك ← مستودع ← أنظمة المؤسسة",
     images: [
       "/images/projects/electronic-meetings/home-blurred-v2.jpg",
       "/images/projects/electronic-meetings/login.jpg",
@@ -148,10 +184,14 @@ export const androidProjects: AndroidProject[] = [
     id: "shipflow-android",
     index: "03",
     title: "ShipFlow",
+    platform: "Android (Kotlin)",
+    platformAr: "أندرويد (Kotlin)",
+    role: "Designer & Android Developer — self-directed",
+    roleAr: "مصمم ومطوّر أندرويد — مشروع مستقل",
     category: ["Personal Project", "Product Design", "Maritime Platform"],
     categoryAr: ["مشروع شخصي", "تصميم منتج", "منصة بحرية"],
-    context: "Android Application",
-    contextAr: "تطبيق أندرويد",
+    context: "Android Application — product experiment",
+    contextAr: "تطبيق أندرويد — تجربة منتج",
     overview:
       "A maritime operations platform designed and built end-to-end — covering vessel registration, inspections, certificates, and fleet management, with a design system shared across web and mobile. The Android client puts a fleet dashboard, vessel registry, and inspection and certificate tracking in the hands of maritime operations teams.",
     overviewAr:
