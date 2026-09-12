@@ -68,10 +68,15 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
           </div>
 
           {otherProfessionalProjects.length > 0 && (
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {otherProfessionalProjects.map((project) => (
-                <CompactProjectCard key={project.id} project={project} />
-              ))}
+            <div className="mt-14">
+              <p className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
+                {t.android.selected}
+              </p>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {otherProfessionalProjects.map((project) => (
+                  <CompactProjectCard key={project.id} project={project} />
+                ))}
+              </div>
             </div>
           )}
         </Container>

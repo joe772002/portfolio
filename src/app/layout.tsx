@@ -15,10 +15,10 @@ const jetbrainsMono = localFont({
   display: "swap",
 });
 
-const siteUrl = "https://youssef-osama.dev";
-const title = "Youssef Osama Ali | Android Developer";
+const siteUrl = "https://yosama.vercel.app";
+const title = "Youssef Osama Ali | Android Engineer & AI-Powered Product Builder";
 const description =
-  "Android Developer with 3+ years of experience building modern Android applications with Kotlin, Jetpack Compose, MVVM, and modern AI-powered development workflows.";
+  "Android Engineer with 3+ years of professional experience building production Android applications with Kotlin and Jetpack Compose — enterprise and government platforms — plus AI-powered product building.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

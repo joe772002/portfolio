@@ -4,10 +4,12 @@ export function ScreensGallery({
   images,
   alt = "",
   className,
+  accent = "android",
 }: {
   images: string[];
   alt?: string;
   className?: string;
+  accent?: "android" | "ai";
 }) {
   return (
     <div
@@ -17,7 +19,7 @@ export function ScreensGallery({
         aria-hidden
         className="absolute inset-0 opacity-[0.35]"
         style={{
-          backgroundImage: "radial-gradient(var(--color-android-line) 1px, transparent 1px)",
+          backgroundImage: `radial-gradient(var(--color-${accent}-line) 1px, transparent 1px)`,
           backgroundSize: "22px 22px",
           maskImage: "radial-gradient(circle at 15% 20%, black, transparent 70%)",
         }}
@@ -25,7 +27,7 @@ export function ScreensGallery({
       <div
         aria-hidden
         className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full blur-[80px]"
-        style={{ backgroundColor: "var(--color-android)", opacity: 0.14 }}
+        style={{ backgroundColor: `var(--color-${accent})`, opacity: 0.14 }}
       />
 
       <div className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-1 sm:gap-6 sm:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

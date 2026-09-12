@@ -1,12 +1,13 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import type { AndroidProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
 import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function CompactProjectCard({ project }: { project: AndroidProject }) {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   return (
     <Reveal>
       <article className="flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-7 sm:p-8">
@@ -44,6 +45,17 @@ export function CompactProjectCard({ project }: { project: AndroidProject }) {
             </Tag>
           ))}
         </div>
+        {project.playUrl && (
+          <a
+            href={project.playUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-android)]"
+          >
+            {t.android.viewPlay}
+            <ArrowRight size={14} className="rtl:rotate-180" />
+          </a>
+        )}
       </article>
     </Reveal>
   );

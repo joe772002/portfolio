@@ -55,4 +55,5 @@ export const profile = {
     height: 1280,
     alt: "Portrait of Youssef Osama Ali",
   },
+  cvPath: "/cv/Youssef-Osama-Android-Developer-CV.pdf",
 };

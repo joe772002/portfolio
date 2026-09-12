@@ -8,17 +8,6 @@ import { ar } from "./ar";
 
 const dictionaries: Record<Lang, Dictionary> = { en, ar };
 
-function getInitialLang(): Lang {
-  if (typeof window === "undefined") return "en";
-  try {
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "en" || stored === "ar") return stored;
-  } catch {
-    // ignore
-  }
-  return "en";
-}
-
 interface LanguageContextValue {
   lang: Lang;
   setLang: (lang: Lang) => void;
@@ -34,7 +23,22 @@ const LanguageContext = createContext<LanguageContextValue>({
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>(() => getInitialLang());
+  // Always start with "en" so the first client render matches the server HTML.
+  // The stored language is applied mount-only (after hydration) to avoid mismatch.
+  const [lang, setLangState] = useState<Lang>("en");
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem("lang");
+      if (stored === "en" || stored === "ar") {
+        // Mount-only sync with localStorage (not a render cascade).
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setLangState(stored);
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;

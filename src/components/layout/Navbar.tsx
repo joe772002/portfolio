@@ -69,13 +69,6 @@ export function Navbar() {
           ))}
         </nav>
 
-        <Link
-          href="/#contact"
-          className="hidden rounded-full border border-[var(--color-border)] px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)] md:inline-flex"
-        >
-          {t.cta}
-        </Link>
-
         <div className="hidden items-center gap-2 md:flex">
           <LanguageToggle />
           <ThemeToggle />

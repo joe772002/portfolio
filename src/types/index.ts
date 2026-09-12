@@ -34,6 +34,8 @@ export interface AndroidProject {
   confidential?: boolean;
   featured?: boolean;
   personal?: boolean;
+  playUrl?: string;
+  caseStudyUrl?: string;
   /** Real product screenshots (when available and not confidential) shown instead of the abstract conceptual visual. */
   images?: string[];
   imageAlt?: string;
@@ -65,6 +67,8 @@ export interface AIProject {
   /** Real product screenshot (when available) shown instead of the abstract conceptual visual. */
   image?: string;
   imageAlt?: string;
+  /** Phone screenshots rendered in phone frames (e.g. Android client galleries). */
+  phoneImages?: string[];
   /** Multiple labeled screenshots/panels (e.g. design-system sections) shown as a gallery instead of a single image. */
   images?: ImagePanel[];
   overviewAr?: string;

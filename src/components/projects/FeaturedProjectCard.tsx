@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowRight, Lock } from "lucide-react";
 import type { AndroidProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
@@ -104,14 +105,35 @@ export function FeaturedProjectCard({
         ))}
       </div>
 
-      <div className="mt-7">
-        <button
-          onClick={() => setOpen(true)}
-          className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
-        >
-          {t.android.viewCase}
-          <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
-        </button>
+      <div className="mt-7 flex flex-wrap gap-3">
+        {project.caseStudyUrl ? (
+          <Link
+            href={project.caseStudyUrl}
+            className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+          >
+            {t.android.viewCase}
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+          </Link>
+        ) : (
+          <button
+            onClick={() => setOpen(true)}
+            className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+          >
+            {t.android.viewCase}
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+          </button>
+        )}
+        {project.playUrl && (
+          <a
+            href={project.playUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+          >
+            {t.android.viewPlay}
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+          </a>
+        )}
       </div>
       {open && <CaseStudyModal project={project} onClose={() => setOpen(false)} />}
     </>

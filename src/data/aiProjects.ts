@@ -2,15 +2,15 @@ import type { AIProject } from "@/types";
 
 export const aiProjects: AIProject[] = [
   {
-    id: "shipflow-web",
+    id: "shipflow",
     title: "ShipFlow",
     status: "Live",
-    context: "Web Platform",
-    contextAr: "منصة ويب",
+    context: "Personal Product — Android + Web",
+    contextAr: "منتج شخصي — أندرويد + ويب",
     overview:
-      "The web platform for ShipFlow — the same maritime operations product built for desktop: a fleet dashboard, vessel registry, inspection and certificate workflows, and registration requests, sharing one design system with the Android app.",
+      "A personal product build demonstrating product thinking end-to-end — Idea → Product Concept → Working Experience. A maritime operations concept with a fleet dashboard, vessel registry, inspection and certificate workflows, registration requests, document management, and payment-related concepts, sharing one design system across Android and web.",
     overviewAr:
-      "منصة الويب لـ ShipFlow — نفس منتج العمليات البحرية للديسكتوب: لوحة أسطول وسجل سفن ومسارات تفتيش وشهادات وطلبات تسجيل، بنظام تصميم واحد مع تطبيق الأندرويد.",
+      "منتج شخصي يوضح التفكير في المنتج من البداية للنهاية — من الفكرة إلى المفهوم إلى تجربة عملية. مفهوم عمليات بحرية فيه لوحة أسطول وسجل سفن ومسارات تفتيش وشهادات وطلبات تسجيل وإدارة مستندات ومفاهيم مدفوعات، بنظام تصميم واحد بين الأندرويد والويب.",
     focus: [
       "Fleet dashboard & KPIs",
       "Vessel registry & search",
@@ -19,6 +19,7 @@ export const aiProjects: AIProject[] = [
       "Document management",
       "Payments & financial tracking",
       "Analytics & reporting",
+      "Android client (Kotlin, Jetpack Compose, MVVM, Hilt, Retrofit, Room, Material 3)",
     ],
     focusAr: [
       "لوحة الأسطول ومؤشرات الأداء",
@@ -28,8 +29,9 @@ export const aiProjects: AIProject[] = [
       "إدارة المستندات",
       "المدفوعات والمتابعة المالية",
       "التحليلات والتقارير",
+      "تطبيق أندرويد (Kotlin وJetpack Compose وMVVM وHilt وRetrofit وRoom وMaterial 3)",
     ],
-    technicalDirection: ["Next.js", "TypeScript", "Tailwind CSS", "REST API Integration"],
+    technicalDirection: ["Kotlin", "Jetpack Compose", "Next.js", "TypeScript", "Tailwind CSS", "REST API Integration"],
     images: [
       {
         src: "/images/projects/shipflow/web-dashboard.webp",
@@ -104,52 +106,78 @@ export const aiProjects: AIProject[] = [
     ],
   },
   {
+    id: "shipflow-android",
+    title: "ShipFlow — Android Client",
+    status: "Live",
+    context: "Personal Product — Android",
+    contextAr: "منتج شخصي — أندرويد",
+    overview:
+      "The Android client for the ShipFlow product concept — fleet dashboard, vessel registry, vessel profiles, and inspection and certificate tracking for maritime operations teams, built with Kotlin and Jetpack Compose.",
+    overviewAr:
+      "تطبيق الأندرويد لمفهوم منتج ShipFlow — لوحة أسطول وسجل سفن وملفات السفن وتتبع التفتيش والشهادات لفرق التشغيل البحري، مبني بـ Kotlin وJetpack Compose.",
+    focus: [
+      "Fleet dashboard & KPIs",
+      "Vessel registry & search",
+      "Vessel profile & documentation",
+      "Inspection scheduling",
+      "Certificate tracking",
+      "Registration requests",
+    ],
+    focusAr: [
+      "لوحة الأسطول ومؤشرات الأداء",
+      "سجل السفن والبحث",
+      "ملف السفينة والمستندات",
+      "جدولة التفتيش",
+      "تتبع الشهادات",
+      "طلبات التسجيل",
+    ],
+    technicalDirection: [
+      "Kotlin",
+      "Jetpack Compose",
+      "MVVM",
+      "Hilt",
+      "Retrofit",
+      "Room",
+      "Material 3",
+      "Coroutines & Flow",
+    ],
+    phoneImages: [
+      "/images/projects/shipflow/android-home.webp",
+      "/images/projects/shipflow/android-vessels.webp",
+      "/images/projects/shipflow/android-vessel-detail.webp",
+      "/images/projects/shipflow/android-menu.webp",
+    ],
+    imageAlt: "ShipFlow Android app — fleet dashboard, vessel registry, vessel detail, and menu screens",
+  },
+  {
     id: "fakerni",
     title: "Fakerni",
     status: "Concept / Upcoming MVP",
+    context: "Upcoming Product Concept",
+    contextAr: "مفهوم منتج قادم",
     overview:
-      "A product concept designed as a smart reminder and information storage assistant — focused on reminder management, information storage, smart organization, and a modern product experience.",
+      "An upcoming product concept — a smart reminder and information-storage assistant focused on organizing reminders and information into a modern product experience.",
     overviewAr:
-      "فكرة منتج كمساعد ذكي للتذكير وتخزين المعلومات — مركز على إدارة التذكيرات وتخزين المعلومات والتنظيم الذكي وتجربة منتج حديثة.",
+      "مفهوم منتج قادم — مساعد ذكي للتذكير وتخزين المعلومات يركز على تنظيم التذكيرات والمعلومات في تجربة منتج حديثة.",
     focus: [
       "Reminder management",
       "Information storage",
       "Smart organization",
       "Modern product experience",
-      "Vibe-coded product development",
+      "AI-assisted product development",
     ],
     focusAr: [
       "إدارة التذكيرات",
       "تخزين المعلومات",
       "تنظيم ذكي",
       "تجربة منتج حديثة",
-      "تطوير منتج بالفايب كودنج",
+      "تطوير منتج مدعوم بالذكاء الاصطناعي",
     ],
     technicalDirection: [
       "Android",
       "Kotlin",
       "MVVM",
       "Modern local storage",
-      "Future iOS support",
-      "Cross-platform expansion",
     ],
-  },
-  {
-    id: "coming-soon-1",
-    title: "Coming Soon",
-    titleAr: "قريبًا",
-    status: "Coming Soon",
-    overview: "A future vibe-coded product experiment.",
-    overviewAr: "تجربة منتج قادمة بالفايب كودنج.",
-    placeholder: true,
-  },
-  {
-    id: "coming-soon-2",
-    title: "Coming Soon",
-    titleAr: "قريبًا",
-    status: "Coming Soon",
-    overview: "A future MVP built with vibe coding.",
-    overviewAr: "MVP قادم معمول بالفايب كودنج.",
-    placeholder: true,
   },
 ];

@@ -28,6 +28,7 @@ export interface Dictionary {
     roleA: string;
     roleB: string;
     viewWork: string;
+    downloadCv: string;
     getInTouch: string;
     scroll: string;
   };
@@ -55,6 +56,13 @@ export interface Dictionary {
     title: string;
     desc: string;
     items: { title: string; desc: string }[];
+    timeline: {
+      role: string;
+      company: string;
+      period: string;
+      type: string;
+      bullets: string[];
+    };
   };
   builder: {
     kicker: string;
@@ -75,11 +83,14 @@ export interface Dictionary {
     personalOne: string;
     limited: string;
     featured: string;
+    selected: string;
     role: string;
     platform: string;
     challenges: string;
     approach: string;
     viewCase: string;
+    viewPlay: string;
+    confidentialNote: string;
     close: string;
   };
   how: { kicker: string; title: string; desc: string; items: { title: string; desc: string }[] };
@@ -92,7 +103,27 @@ export interface Dictionary {
     status: Record<ProjectStatus, string>;
   };
   about: { kicker: string; strengthsTitle: string; strengths: string[] };
-  contact: { kicker: string; title: string; desc: string; email: string };
+  contact: { kicker: string; title: string; desc: string; email: string; downloadCv: string };
+  caseStudy: {
+    back: string;
+    overview: string;
+    context: string;
+    role: string;
+    responsibilities: string;
+    architecture: string;
+    dataflow: string;
+    auth: string;
+    api: string;
+    documents: string;
+    workflows: string;
+    offline: string;
+    localization: string;
+    screens: string;
+    challenges: string;
+    decisions: string;
+    takeaways: string;
+    confidential: string;
+  };
   footer: { tagline: string };
   a11y: {
     openMenu: string;

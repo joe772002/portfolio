@@ -6,6 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { AbstractVisual } from "./AbstractVisual";
 import { WebVisual } from "./WebVisual";
 import { WebScreensGallery } from "./WebScreensGallery";
+import { ScreensGallery } from "./ScreensGallery";
 import { pick, useLanguage } from "@/i18n/LanguageContext";
 
 export function AIProjectCard({
@@ -81,6 +82,27 @@ export function AIProjectCard({
               {t.ai.screens}
             </p>
             <WebScreensGallery panels={project.images!} />
+          </div>
+        </article>
+      </Reveal>
+    );
+  }
+
+  if (project.phoneImages && project.phoneImages.length > 0) {
+    return (
+      <Reveal delay={delay}>
+        <article className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8 lg:p-12">
+          {header}
+
+          <div className="mt-10">
+            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
+              {t.ai.screens}
+            </p>
+            <ScreensGallery
+              images={project.phoneImages}
+              alt={project.imageAlt ?? project.title}
+              accent="ai"
+            />
           </div>
         </article>
       </Reveal>

@@ -114,6 +114,13 @@ export function Hero() {
                 />
               </a>
               <a
+                href={profile.cvPath}
+                download
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+              >
+                {t.hero.downloadCv}
+              </a>
+              <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)]"
               >
