@@ -106,10 +106,10 @@ export function Hero() {
               className="mt-3 text-sm font-medium leading-relaxed text-[var(--color-text-primary)]"
             >
               <span className="text-[var(--color-android)]">
-                {lang === "ar" ? "الأندرويد أولًا." : "Android First."}
+                {lang === "ar" ? "بناء برمجيات موثوقة." : "Building Reliable Software."}
               </span>{" "}
               <span className="text-[var(--color-text-secondary)]">
-                {lang === "ar" ? "الذكاء الاصطناعي للتسريع." : "AI Accelerated."}
+                {lang === "ar" ? "عبر كل المنصات." : "Across Every Platform."}
               </span>
             </motion.p>
 

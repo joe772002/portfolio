@@ -47,13 +47,14 @@ export const androidSkills: SkillGroup[] = [
 
 export const aiSkills: SkillGroup[] = [
   {
-    title: "AI-Powered Building",
+    title: "Software Engineering",
     skills: [
-      "AI Coding Agents",
-      "Prompt Engineering for Development",
-      "AI-Assisted Debugging",
-      "AI-Assisted Refactoring",
-      "AI-Assisted Code Review",
+      "Clean & Modular Code",
+      "Architecture & State Management",
+      "API Integration & Authentication",
+      "Data Persistence & Offline Support",
+      "Performance & Scalability",
+      "Maintainability & Code Review",
     ],
   },
   {

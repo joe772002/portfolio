@@ -6,7 +6,7 @@ export const en: Dictionary = {
     projects: "Work",
     experience: "Experience",
     stack: "Expertise",
-    aiBuilds: "AI Builds",
+    aiBuilds: "SE Projects",
     about: "About",
     contact: "Contact",
   },
@@ -14,7 +14,7 @@ export const en: Dictionary = {
   explore: "Explore",
   hero: {
     badgeA: "Android Engineer",
-    badgeB: "AI-assisted product building",
+    badgeB: "Software Engineer",
     roleA: "Android Engineer",
     roleB: "3+ years of hands-on Android development",
     viewWork: "View Selected Work",
@@ -23,14 +23,14 @@ export const en: Dictionary = {
     linkedin: "LinkedIn",
     scroll: "Scroll to explore",
   },
-  trail: ["Android", "AI-Powered Building", "Shipping"],
+  trail: ["Android", "Software Engineering", "Shipping"],
   transition: {
-    kicker: "Android First, AI-Accelerated",
+    kicker: "Building Reliable Software. Across Every Platform.",
     aAccent: "Android engineering",
     aRest: " is my foundation.",
-    bAccent: "AI-powered development",
-    bRest: " helps me move faster from idea to product.",
-    para: "I combine structured Android development with modern AI-assisted workflows to build, experiment, and iterate efficiently.",
+    bAccent: "Software engineering",
+    bRest: " helps me build reliable products end to end.",
+    para: "I combine structured Android development with solid software engineering practices — architecture, maintainability, and end-to-end product thinking — to build and iterate efficiently.",
   },
   homeCards: [
     {
@@ -47,9 +47,9 @@ export const en: Dictionary = {
     },
     {
       href: "#ai-builds",
-      kicker: "AI-Powered Builds",
+      kicker: "Software Engineering Projects",
       title: "From idea to product",
-      desc: "Product concepts, MVPs, and experiments built with AI-assisted workflows.",
+      desc: "Product concepts, MVPs, and experiments engineered with clean architecture and maintainable code — AI tools used to accelerate prototyping where helpful.",
     },
   ],
   engineer: {
@@ -130,11 +130,11 @@ export const en: Dictionary = {
     ],
   },
   builder: {
-    kicker: "AI-Powered Building",
-    title: "Using AI-assisted development to explore ideas, prototype products, and accelerate implementation.",
+    kicker: "Software Engineering",
+    title: "Using software engineering practices to take ideas from concept to working product.",
     paragraph:
-      "Android engineering is my foundation. AI-assisted workflows help me move faster from an idea to a working product — prototyping, interface exploration, MVPs, and iteration. The goal is reducing the distance between IDEA → PROTOTYPE → PRODUCT, not replacing engineering.",
-    accelerates: "What AI-assisted building accelerates",
+      "Android engineering is my foundation. I apply software engineering principles — architecture, state management, API integration, and maintainability — to move from an idea to a working product: prototyping, interface exploration, MVPs, and iteration. AI tools are used to accelerate prototyping and implementation where helpful, without replacing engineering judgment. The goal is reducing the distance between IDEA → PROTOTYPE → PRODUCT.",
+    accelerates: "What this approach covers",
     focus: [
       "Rapid prototyping",
       "MVP development",
@@ -144,8 +144,8 @@ export const en: Dictionary = {
       "Exploring new ideas",
     ],
   },
-  workflow: { kicker: "AI-Assisted Workflow", title: "From idea to working product." },
-  skills: { kicker: "AI-Assisted Toolkit", toolsTitle: "Tools & evolving toolkit" },
+  workflow: { kicker: "Software Engineering Workflow", title: "From idea to working product." },
+  skills: { kicker: "Software Engineering Toolkit", toolsTitle: "Tools & evolving toolkit" },
   android: {
     kicker: "Featured Professional Projects",
     title: "Production Android applications.",
@@ -198,9 +198,9 @@ export const en: Dictionary = {
     ],
   },
   ai: {
-    kicker: "AI-Powered Builds — Experiments & MVPs",
-    title: "Product concepts, rapidly built.",
-    desc: "Separate from production Android work: experiments, MVPs, and product concepts built with AI-assisted workflows. ShipFlow is a product/design experiment — not a production deployment claim.",
+    kicker: "Software Engineering Projects — Experiments & MVPs",
+    title: "Product concepts, engineered end to end.",
+    desc: "Separate from production Android work: experiments, MVPs, and product concepts focused on architecture, state management, API integration, and maintainable code — with AI tools used to accelerate prototyping where helpful. ShipFlow is a product/design experiment — not a production deployment claim.",
     focus: "Focus",
     screens: "Product screens",
     status: {
@@ -221,7 +221,7 @@ export const en: Dictionary = {
       "Experience with professional enterprise applications",
       "Experience with government-oriented digital platforms",
       "Secure API and authentication workflows",
-      "AI-assisted workflows for rapid prototyping and MVPs",
+      "Software engineering mindset: architecture, maintainability, and end-to-end product thinking",
     ],
   },
   contact: {
@@ -253,7 +253,7 @@ export const en: Dictionary = {
     confidentiality: "Confidentiality note",
     confidential: "Details limited due to project confidentiality.",
   },
-  footer: { tagline: "Android • AI-Powered Building • Shipping" },
+  footer: { tagline: "Android • Software Engineering • Shipping" },
   a11y: {
     openMenu: "Open menu",
     closeMenu: "Close menu",

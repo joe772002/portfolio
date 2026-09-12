@@ -313,4 +313,137 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
     ],
   },
+  tawseek: {
+    id: "tawseek",
+    title: "Tawseek — Want To Make Procurement",
+    titleAr: "توثيق — أرغب في عمل توكيل",
+    contextEn: "Egypt Ministry of Justice — Real Estate Registration & Notarization · Published Production Android Application",
+    contextAr: "وزارة العدل المصرية — مصلحة الشهر العقاري والتوثيق · تطبيق أندرويد إنتاجي منشور",
+    images: [
+      "/images/projects/tawseek/splash.jpg",
+      "/images/projects/tawseek/services-home.jpg",
+      "/images/projects/tawseek/services-more.jpg",
+      "/images/projects/tawseek/branches.jpg",
+      "/images/projects/tawseek/branch-details.jpg",
+      "/images/projects/tawseek/book-turn.jpg",
+    ],
+    imageAlt: "Tawseek app screens",
+    sections: [
+      {
+        key: "overview",
+        bodyEn: [
+          "A real published Android application on Google Play for Egypt's Real Estate Registration & Notarization services — service discovery, branch locator, and appointment booking for notarization transactions.",
+        ],
+        bodyAr: [
+          "تطبيق أندرويد حقيقي منشور على Google Play لخدمات الشهر العقاري والتوثيق في مصر — اكتشاف الخدمات وتحديد الفروع وحجز المواعيد لمعاملات التوثيق.",
+        ],
+      },
+      {
+        key: "context",
+        bodyEn: [
+          "Notarization services involve many service types, branch networks, and scheduled visits. The Android client must help citizens find the right service, locate the nearest branch, and book a valid appointment with correct data — in Arabic and English.",
+        ],
+        bodyAr: [
+          "خدمات التوثيق تتضمن أنواع خدمات كثيرة وشبكة فروع وزيارات مجدولة. ويجب أن يساعد تطبيق الأندرويد المواطنين على اختيار الخدمة الصحيحة وإيجاد أقرب فرع وحجز موعد سليم ببيانات صحيحة — بالعربية والإنجليزية.",
+        ],
+      },
+      {
+        key: "role",
+        bodyEn: ["Android Developer — production maintenance, bug fixing, and feature development on the existing codebase, with incremental modernization toward Kotlin and Jetpack Compose with MVVM where applicable."],
+        bodyAr: ["مطوّر أندرويد — صيانة إنتاجية وإصلاح أخطاء وتطوير مزايا على قاعدة الكود الحالية، مع تحديث تدريجي نحو Kotlin وJetpack Compose مع MVVM حيث ينطبق."],
+        listEn: [
+          "Service listing and appointment booking flows",
+          "Branch locator with maps and distance details",
+          "Booking form validation and reservation inquiry",
+          "Production debugging and incremental modernization",
+        ],
+        listAr: [
+          "مسارات عرض الخدمات وحجز المواعيد",
+          "تحديد الفروع بالخرائط وتفاصيل المسافة",
+          "التحقق من نموذج الحجز والاستعلام عن الحجوزات",
+          "تصحيح أخطاء الإنتاج والتحديث التدريجي",
+        ],
+      },
+      {
+        key: "architecture",
+        bodyEn: ["MVVM + Repository with separation of concerns: UI → ViewModel → Business Logic → Repository → API / Local data — applied incrementally while maintaining the existing Java codebase."],
+        bodyAr: ["MVVM مع Repository وفصل واضح للمسؤوليات: الواجهة ← ViewModel ← منطق الأعمال ← المستودع ← API / بيانات محلية — مطبق تدريجيًا مع الحفاظ على قاعدة كود Java الحالية."],
+        listEn: ["MVVM", "Repository Pattern", "State-driven UI", "Java → Kotlin modernization", "Separation of concerns"],
+        listAr: ["MVVM", "Repository Pattern", "واجهات مبنية على الحالة", "التحديث من Java لـ Kotlin", "فصل المسؤوليات"],
+      },
+      {
+        key: "dataflow",
+        bodyEn: ["Unidirectional data flow keeps service, branch, and booking screens predictable — loading, success, empty, and error states are handled explicitly across the booking journey."],
+        bodyAr: ["تدفق بيانات أحادي الاتجاه يجعل شاشات الخدمات والفروع والحجز متوقعة — مع معالجة صريحة لحالات التحميل والنجاح والفراغ والخطأ عبر رحلة الحجز."],
+      },
+      {
+        key: "api",
+        bodyEn: ["REST API integration for services, branches, time slots, and reservations — with full validation (including the 14-digit national ID), error handling, and user-facing feedback."],
+        bodyAr: ["تكامل REST APIs للخدمات والفروع والمواعيد والحجوزات — مع تحقق كامل (بما فيه الرقم القومي المكون من 14 رقمًا) ومعالجة أخطاء وتغذية راجعة واضحة للمستخدم."],
+      },
+      {
+        key: "workflows",
+        bodyEn: ["Citizen workflows: browse notarization services, find the nearest branch with work hours and distance, then book an appointment with category, editor type, day, and time — confirmed before submission."],
+        bodyAr: ["مسارات المواطنين: تصفح خدمات التوثيق وإيجاد أقرب فرع مع مواعيد العمل والمسافة، ثم حجز موعد مع التصنيف ونوع المحرر واليوم والوقت — مع التأكيد قبل الإرسال."],
+      },
+      {
+        key: "offline",
+        bodyEn: ["Resilient behavior on unreliable networks — clear loading and error states with retries so booking and branch lookup remain usable."],
+        bodyAr: ["سلوك مرن على الشبكات غير المستقرة — حالات تحميل وخطأ واضحة مع إعادة المحاولة ليبقى الحجز والبحث عن الفروع قابلًا للاستخدام."],
+      },
+      {
+        key: "localization",
+        bodyEn: ["Bilingual Arabic and English experience — service names, branch details, and booking forms stay balanced and readable across both languages."],
+        bodyAr: ["تجربة ثنائية اللغة بالعربية والإنجليزية — أسماء الخدمات وتفاصيل الفروع ونماذج الحجز تبقى متوازنة ومقروءة في اللغتين."],
+      },
+      {
+        key: "challenges",
+        bodyEn: ["Keeping a large published codebase stable while improving booking reliability and location accuracy."],
+        bodyAr: ["الحفاظ على استقرار قاعدة كود منشورة كبيرة مع تحسين موثوقية الحجز ودقة الموقع."],
+        listEn: [
+          "Maintaining stability across a large existing Java codebase while modernizing incrementally",
+          "Location-based branch discovery with accurate distances and map details",
+          "Multi-field booking validation (national ID, category, time slots) with clear user feedback",
+          "Keeping bilingual Arabic/English layouts consistent across service and booking screens",
+        ],
+        listAr: [
+          "الحفاظ على استقرار قاعدة كود Java كبيرة مع التحديث التدريجي",
+          "اكتشاف الفروع حسب الموقع مع مسافات دقيقة وتفاصيل الخريطة",
+          "التحقق من حقول الحجز المتعددة (الرقم القومي والتصنيف والمواعيد) مع تغذية راجعة واضحة",
+          "الحفاظ على اتساق التصميم العربي/الإنجليزي في شاشات الخدمات والحجز",
+        ],
+      },
+      {
+        key: "decisions",
+        bodyEn: ["Maintenance decisions favored stability first, then incremental modernization where it reduces risk."],
+        bodyAr: ["قرارات الصيانة فضّلت الاستقرار أولًا، ثم التحديث التدريجي حيث يقلل المخاطر."],
+        listEn: [
+          "MVVM + Repository to isolate UI from data and business logic",
+          "Explicit state-driven UI for every booking step",
+          "Centralized validation for booking forms",
+          "Incremental Java → Kotlin migration where applicable",
+        ],
+        listAr: [
+          "MVVM مع Repository لعزل الواجهة عن البيانات ومنطق الأعمال",
+          "واجهات صريحة مبنية على الحالة لكل خطوة حجز",
+          "تحقق مركزي لنماذج الحجز",
+          "ترحيل تدريجي من Java لـ Kotlin حيث ينطبق",
+        ],
+      },
+      {
+        key: "takeaways",
+        bodyEn: ["Published government-service apps reward careful validation, accurate location handling, and disciplined incremental modernization."],
+        bodyAr: ["تطبيقات الخدمات الحكومية المنشورة تكافئ التحقق الدقيق والتعامل السليم مع الموقع والتحديث التدريجي المنضبط."],
+      },
+      {
+        key: "outcome",
+        bodyEn: [
+          "A published production Android application helping citizens access notarization services — service discovery, nearest-branch lookup with maps, and validated appointment booking — available on Google Play.",
+        ],
+        bodyAr: [
+          "تطبيق أندرويد إنتاجي منشور يساعد المواطنين على الوصول لخدمات التوثيق — اكتشاف الخدمات وإيجاد أقرب فرع بالخرائط وحجز مواعيد متحقق منها — متاح على Google Play.",
+        ],
+      },
+    ],
+  },
 };

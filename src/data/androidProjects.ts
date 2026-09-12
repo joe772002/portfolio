@@ -205,7 +205,7 @@ export const androidProjects: AndroidProject[] = [
       "A real published Android application on Google Play — public proof of production Android work. I worked on production maintenance, bug fixing, and feature development on the existing codebase, with incremental modernization toward Kotlin and Jetpack Compose with MVVM where applicable.",
     overviewAr:
       "تطبيق أندرويد حقيقي منشور على Google Play — إثبات علني لعمل أندرويد إنتاجي. عملت على الصيانة الإنتاجية وإصلاح الأخطاء وتطوير المزايا على قاعدة الكود الحالية، مع تحديث تدريجي نحو Kotlin وJetpack Compose مع MVVM حيث ينطبق.",
-    technologies: ["Java", "Kotlin", "XML", "Jetpack Compose", "MVVM", "Android SDK", "REST APIs"],
+    technologies: ["Java", "Kotlin", "XML", "Jetpack Compose", "MVVM", "Android SDK", "REST APIs", "Google Maps", "Location Services"],
     focusAreas: [
       "Production maintenance on a published app",
       "Debugging production issues",
@@ -213,6 +213,8 @@ export const androidProjects: AndroidProject[] = [
       "Java → Kotlin modernization where applicable",
       "Jetpack Compose modernization where applicable",
       "API integration",
+      "Branch locator with maps and location",
+      "Appointment booking workflows",
     ],
     focusAreasAr: [
       "صيانة إنتاجية لتطبيق منشور",
@@ -221,13 +223,40 @@ export const androidProjects: AndroidProject[] = [
       "التحديث من Java لـ Kotlin حيث ينطبق",
       "التحديث نحو Jetpack Compose حيث ينطبق",
       "تكامل API",
+      "تحديد الفروع بالخرائط والموقع",
+      "مسارات حجز المواعيد",
     ],
     portfolioFocus: [
       "Public proof of production Android work — maintaining and improving a published Play Store application.",
     ],
     portfolioFocusAr: ["إثبات علني لعمل أندرويد إنتاجي — صيانة وتحسين تطبيق منشور على Play Store."],
+    challenges: [
+      "Maintaining stability across a large existing Java codebase while modernizing incrementally",
+      "Location-based branch discovery with accurate distances and map details",
+      "Multi-field booking validation (national ID, category, time slots) with clear user feedback",
+      "Keeping bilingual Arabic/English layouts consistent across service and booking screens",
+    ],
+    challengesAr: [
+      "الحفاظ على استقرار قاعدة كود Java كبيرة مع التحديث التدريجي",
+      "اكتشاف الفروع حسب الموقع مع مسافات دقيقة وتفاصيل الخريطة",
+      "التحقق من حقول الحجز المتعددة (الرقم القومي والتصنيف والمواعيد) مع تغذية راجعة واضحة",
+      "الحفاظ على اتساق التصميم العربي/الإنجليزي في شاشات الخدمات والحجز",
+    ],
+    approach: "MVVM + Repository — UI → ViewModel → Business logic → Repository → Remote API / Local data",
+    approachAr: "MVVM مع Repository — واجهة ← ViewModel ← منطق ← مستودع ← شبكة / بيانات محلية",
     playUrl: "https://play.google.com/store/apps/details?id=com.informatique.tawsekmisr",
     featured: true,
+    caseStudyUrl: "/projects/tawseek",
+    images: [
+      "/images/projects/tawseek/splash.jpg",
+      "/images/projects/tawseek/services-home.jpg",
+      "/images/projects/tawseek/services-more.jpg",
+      "/images/projects/tawseek/branches.jpg",
+      "/images/projects/tawseek/branch-details.jpg",
+      "/images/projects/tawseek/book-turn.jpg",
+    ],
+    imageAlt:
+      "Tawseek — Want To Make Procurement app — splash, services, nearby branches, branch details with map, and appointment booking screens",
   },
   {
     id: "attendance-system",

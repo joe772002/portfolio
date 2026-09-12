@@ -4,9 +4,9 @@ import { ProductWorkflowSection } from "@/components/sections/ProductWorkflowSec
 import { AISkillsSection } from "@/components/sections/AISkillsSection";
 
 export const metadata: Metadata = {
-  title: "AI-Powered Builds",
+  title: "Software Engineering Projects",
   description:
-    "AI-powered product building — turning ideas into prototypes, MVPs, and shipped products faster.",
+    "Software engineering projects — turning ideas into prototypes, MVPs, and working products with clean architecture and maintainable code.",
 };
 
 export default function BuilderPage() {

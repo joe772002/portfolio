@@ -82,12 +82,12 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
           <a
             href="#ai-builds"
             className="group mt-8 flex flex-col gap-2 rounded-2xl border border-dashed border-[var(--color-border)] p-6 transition-colors hover:border-[var(--color-ai-line)] sm:p-7"
-            aria-label={lang === "ar" ? "ShipFlow — انتقل إلى قسم البناء بالذكاء الاصطناعي" : "ShipFlow — go to AI-Powered Building"}
+            aria-label={lang === "ar" ? "ShipFlow — انتقل إلى مشاريع الهندسة البرمجية" : "ShipFlow — go to Software Engineering Projects"}
           >
             <span className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
               <span>04</span>
               <span aria-hidden className="h-px flex-1 bg-[var(--color-border-soft)]" />
-              {lang === "ar" ? "تجربة منتج شخصي — انظر قسم البناء بالذكاء الاصطناعي" : "Personal product experiment — see AI-Powered Building"}
+              {lang === "ar" ? "تجربة منتج شخصي — انظر مشاريع الهندسة البرمجية" : "Personal product experiment — see Software Engineering Projects"}
             </span>
             <span className="font-display text-lg font-medium text-[var(--color-text-primary)]">
               ShipFlow Maritime Platform

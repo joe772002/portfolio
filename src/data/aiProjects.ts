@@ -5,8 +5,8 @@ export const aiProjects: AIProject[] = [
     id: "shipflow",
     title: "ShipFlow Maritime Platform",
     status: "Product Experiment",
-    context: "Personal Product Concept · AI-Assisted Product Experiment · Not a production deployment",
-    contextAr: "مفهوم منتج شخصي · تجربة منتج مدعومة بالذكاء الاصطناعي · ليست نظامًا إنتاجيًا",
+    context: "Personal Product Concept · Software Engineering Experiment · Not a production deployment",
+    contextAr: "مفهوم منتج شخصي · تجربة هندسة برمجية · ليست نظامًا إنتاجيًا",
     overview:
       "A personal product/design experiment demonstrating product thinking end-to-end — Idea → Product Concept → Working Experience. A maritime operations concept with a fleet dashboard, vessel registry, inspection and certificate workflows, registration requests, document management, and payment-related concepts, sharing one design system across Web Platform and Android Client. ShipFlow is a product/design experiment and is not presented as a production deployment.",
     overviewAr:
@@ -104,37 +104,6 @@ export const aiProjects: AIProject[] = [
         width: 1200,
         height: 1000,
       },
-    ],
-  },
-  {
-    id: "fakerni",
-    title: "Fakerni",
-    status: "Concept / Upcoming MVP",
-    context: "Upcoming Product Concept",
-    contextAr: "مفهوم منتج قادم",
-    overview:
-      "An upcoming product concept — a smart reminder and information-storage assistant focused on organizing reminders and information into a modern product experience.",
-    overviewAr:
-      "مفهوم منتج قادم — مساعد ذكي للتذكير وتخزين المعلومات يركز على تنظيم التذكيرات والمعلومات في تجربة منتج حديثة.",
-    focus: [
-      "Reminder management",
-      "Information storage",
-      "Smart organization",
-      "Modern product experience",
-      "AI-assisted product development",
-    ],
-    focusAr: [
-      "إدارة التذكيرات",
-      "تخزين المعلومات",
-      "تنظيم ذكي",
-      "تجربة منتج حديثة",
-      "تطوير منتج مدعوم بالذكاء الاصطناعي",
-    ],
-    technicalDirection: [
-      "Android",
-      "Kotlin",
-      "MVVM",
-      "Modern local storage",
     ],
   },
 ];
