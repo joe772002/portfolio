@@ -7,7 +7,7 @@ export const profile = {
   lastNameAr: "أسامة علي",
   primaryRole: "Android Engineer",
   secondaryRole: "Software Engineer",
-  positioning: "Android Engineer & Software Engineer",
+  positioning: "Android Engineer . Software Engineer",
   tagline:
     "Android Engineer & Software Engineer with 3+ years of experience building reliable applications with Kotlin and Jetpack Compose — clean architecture, scalable mobile systems, and end-to-end product thinking.",
   heroSupport:

@@ -45,7 +45,7 @@ export function Hero() {
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-android)]" />
               {t.hero.badgeA}
-              <span className="text-[var(--color-text-tertiary)]">&</span>
+              <span aria-hidden className="h-1 w-1 rounded-full bg-[var(--color-text-tertiary)]" />
               <span className="font-normal normal-case tracking-normal text-[var(--color-text-tertiary)]">
                 {t.hero.badgeB}
               </span>
