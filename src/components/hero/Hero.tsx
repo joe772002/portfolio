@@ -4,8 +4,10 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { CountUp } from "@/components/ui/CountUp";
 import { profile } from "@/data/profile";
 import { pick, useLanguage } from "@/i18n/LanguageContext";
+import { EASE } from "@/lib/motion";
 
 export function Hero() {
   const shouldReduceMotion = useReducedMotion();
@@ -15,24 +17,49 @@ export function Hero() {
     shouldReduceMotion
       ? {}
       : {
-          initial: { opacity: 0, y: 22 },
+          initial: { opacity: 0, y: 20 },
           animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] as const },
+          transition: { duration: 0.55, delay, ease: EASE },
         };
 
   return (
     <section
       id="home"
-      className="relative overflow-hidden pt-24 pb-20 sm:pt-28 sm:pb-28 lg:pt-32"
+      className="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28 lg:pt-36"
     >
-      {/* ambient accents */}
+      {/* ambient accents — very slow drift */}
+      {!shouldReduceMotion && (
+        <>
+          <motion.div
+            aria-hidden
+            className="pointer-events-none absolute -top-32 left-1/4 h-72 w-72 rounded-full bg-[var(--color-android)] opacity-[0.05] blur-[120px]"
+            animate={{ x: [0, 24, 0], y: [0, 14, 0] }}
+            transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            aria-hidden
+            className="pointer-events-none absolute top-20 right-0 h-80 w-80 rounded-full bg-[var(--color-ai)] opacity-[0.08] blur-[130px]"
+            animate={{ x: [0, -20, 0], y: [0, 18, 0] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </>
+      )}
+      {shouldReduceMotion && (
+        <>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-32 left-1/4 h-72 w-72 rounded-full bg-[var(--color-android)] opacity-[0.05] blur-[120px]"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-20 right-0 h-80 w-80 rounded-full bg-[var(--color-ai)] opacity-[0.08] blur-[130px]"
+          />
+        </>
+      )}
+      {/* subtle engineering grid */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 left-1/4 h-72 w-72 rounded-full bg-[var(--color-android)] opacity-[0.05] blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute top-20 right-0 h-80 w-80 rounded-full bg-[var(--color-ai)] opacity-[0.08] blur-[130px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.05] [background-image:linear-gradient(var(--color-border)_1px,transparent_1px),linear-gradient(90deg,var(--color-border)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_60%_55%_at_50%_30%,black,transparent_75%)]"
       />
 
       <Container>
@@ -53,10 +80,10 @@ export function Hero() {
 
             <div className="flex items-center gap-4 sm:gap-8">
               <h1 className={`min-w-0 flex-1 font-display font-medium tracking-tight text-[var(--color-text-primary)] text-[clamp(2rem,10vw,3.25rem)] sm:text-6xl lg:text-[5.5rem] ${lang === "ar" ? "leading-[1.15]" : "leading-[0.95]"}`}>
-                <motion.span {...fadeUp(0.05)} className="block">
+                <motion.span {...fadeUp(0.06)} className="block">
                   {pick(lang, profile.firstName, profile.firstNameAr)}
                 </motion.span>
-                <motion.span {...fadeUp(0.14)} className={`block text-[var(--color-text-secondary)] ${lang === "ar" ? "mt-3 sm:mt-4" : ""}`}>
+                <motion.span {...fadeUp(0.13)} className={`block text-[var(--color-text-secondary)] ${lang === "ar" ? "mt-3 sm:mt-4" : ""}`}>
                   {pick(lang, profile.lastName, profile.lastNameAr)}
                 </motion.span>
               </h1>
@@ -65,7 +92,7 @@ export function Hero() {
               <motion.div
                 initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.97 }}
                 animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.7, delay: 0.18, ease: EASE }}
                 className="shrink-0 justify-self-end lg:hidden"
               >
                 <div className="relative aspect-square w-[clamp(96px,28vw,220px)] overflow-hidden rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)] sm:w-[clamp(160px,24vw,280px)]">
@@ -84,19 +111,19 @@ export function Hero() {
             </div>
 
             <motion.p
-              {...fadeUp(0.24)}
+              {...fadeUp(0.2)}
               className="mt-7 text-balance font-display text-2xl font-semibold leading-snug text-[var(--color-text-primary)] sm:text-3xl"
             >
               <span className="text-[var(--color-android)]">{t.hero.roleA}</span>
             </motion.p>
             <motion.p
-              {...fadeUp(0.26)}
+              {...fadeUp(0.24)}
               className="mt-3 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-secondary)] sm:text-sm"
             >
               Kotlin • Jetpack Compose • MVVM
             </motion.p>
             <motion.p
-              {...fadeUp(0.28)}
+              {...fadeUp(0.27)}
               className="mt-2 text-balance font-display text-base font-medium leading-snug text-[var(--color-text-secondary)] sm:text-lg"
             >
               {t.hero.roleB}
@@ -114,27 +141,27 @@ export function Hero() {
             </motion.p>
 
             <motion.p
-              {...fadeUp(0.32)}
+              {...fadeUp(0.33)}
               className="mt-5 max-w-xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg"
             >
               {pick(lang, profile.heroSupport, profile.heroSupportAr)}
             </motion.p>
 
-            <motion.div {...fadeUp(0.4)} className="mt-9 flex flex-wrap items-center gap-4">
+            <motion.div {...fadeUp(0.39)} className="mt-9 flex flex-wrap items-center gap-4">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-primary)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-bg)] transition-transform hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-primary)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-bg)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(0,0,0,0.6)]"
               >
                 {t.hero.viewWork}
                 <ArrowRight
                   size={14}
-                  className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5"
+                  className="transition-transform duration-200 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1"
                 />
               </a>
               <a
                 href={profile.cvPath}
                 download
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
               >
                 {t.hero.downloadCv}
               </a>
@@ -142,27 +169,27 @@ export function Hero() {
                 href={profile.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-android-line)] hover:text-[var(--color-android)]"
               >
                 {t.hero.linkedin}
               </a>
             </motion.div>
 
             <motion.div
-              {...fadeUp(0.5)}
+              {...fadeUp(0.46)}
               className="mt-10 grid max-w-lg grid-cols-[1.2fr_0.8fr] gap-3 sm:gap-4"
             >
-              <div className="rounded-2xl border border-[var(--color-android-line)] bg-[var(--color-bg-elevated)] p-4 sm:p-5">
+              <div className="rounded-2xl border border-[var(--color-android-line)] bg-[var(--color-bg-elevated)] p-4 transition-transform duration-300 hover:-translate-y-1 sm:p-5">
                 <span className="block font-display text-2xl font-semibold tracking-tight text-[var(--color-android)] sm:text-3xl">
-                  {profile.androidExperience}
+                  <CountUp value={profile.androidExperience} />
                 </span>
                 <span className="mt-1.5 block font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">
                   {pick(lang, profile.androidExperienceLabel, profile.androidExperienceLabelAr)}
                 </span>
               </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/60 p-4 opacity-90 sm:p-5">
+              <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/60 p-4 opacity-90 transition-transform duration-300 hover:-translate-y-1 sm:p-5">
                 <span className="block font-display text-xl font-semibold tracking-tight text-[var(--color-ai)] sm:text-2xl">
-                  {profile.aiExperience}
+                  <CountUp value={profile.aiExperience} />
                 </span>
                 <span className="mt-1.5 block font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">
                   {pick(lang, profile.aiExperienceLabel, profile.aiExperienceLabelAr)}
@@ -171,7 +198,7 @@ export function Hero() {
             </motion.div>
 
             <motion.div
-              {...fadeUp(0.55)}
+              {...fadeUp(0.52)}
               className="mt-8 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-tertiary)]"
             >
               <span>{t.trail[0]}</span>
@@ -184,9 +211,9 @@ export function Hero() {
 
           {/* Right: portrait composition (desktop only — mobile version lives next to h1) */}
           <motion.div
-            initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.97 }}
-            animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            initial={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.97, y: 12 }}
+            animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.18, ease: EASE }}
             className="relative mx-auto hidden w-full max-w-[280px] sm:max-w-[300px] lg:mx-0 lg:block lg:max-w-[330px] lg:justify-self-end"
           >
             <div className="relative aspect-square w-full overflow-hidden rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)]">
@@ -205,10 +232,16 @@ export function Hero() {
         </div>
 
         <motion.div
-          {...fadeUp(0.7)}
+          {...fadeUp(0.62)}
           className="mt-20 hidden items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:flex"
         >
-          <ArrowDown size={12} />
+          <motion.span
+            animate={shouldReduceMotion ? undefined : { y: [0, 5, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            className="inline-flex"
+          >
+            <ArrowDown size={12} />
+          </motion.span>
           {t.hero.scroll}
         </motion.div>
       </Container>

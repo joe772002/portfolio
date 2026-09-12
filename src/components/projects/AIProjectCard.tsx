@@ -74,7 +74,7 @@ export function AIProjectCard({
   if (hasGallery || (project.phoneImages && project.phoneImages.length > 0)) {
     return (
       <Reveal delay={delay}>
-        <article className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8 lg:p-12">
+        <article className="rounded-3xl border border-[var(--color-border)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-ai-line)]/70 hover:shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)] sm:p-8 lg:p-12">
           {header}
 
           {hasGallery && (
@@ -105,7 +105,7 @@ export function AIProjectCard({
 
   return (
     <Reveal delay={delay}>
-      <article className="grid grid-cols-1 gap-10 rounded-3xl border border-[var(--color-border)] p-6 sm:p-8 lg:grid-cols-2 lg:gap-14 lg:p-12">
+      <article className="grid grid-cols-1 gap-10 rounded-3xl border border-[var(--color-border)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-ai-line)]/70 hover:shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)] sm:p-8 lg:grid-cols-2 lg:gap-14 lg:p-12">
         <div className={reverse ? "lg:order-2" : ""}>
           {project.image ? (
             <WebVisual image={project.image} alt={project.imageAlt ?? project.title} className="h-full" />

@@ -105,7 +105,7 @@ export function ContactSection() {
                       : link.href.startsWith("http")
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                    className="group flex h-full flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition-colors hover:border-[var(--color-ai-line)]"
+                    className="group flex h-full flex-col justify-between rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-ai-line)] hover:shadow-[0_20px_44px_-24px_rgba(0,0,0,0.7)]"
                   >
                     {card}
                   </a>

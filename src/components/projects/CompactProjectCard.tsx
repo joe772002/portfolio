@@ -10,7 +10,7 @@ export function CompactProjectCard({ project }: { project: AndroidProject }) {
   const { lang, t } = useLanguage();
   return (
     <Reveal>
-      <article className="flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-7 sm:p-8">
+      <article className="flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-android-line)]/60 hover:shadow-[0_20px_44px_-24px_rgba(0,0,0,0.7)] sm:p-8">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs text-[var(--color-text-tertiary)]">
             {project.index}

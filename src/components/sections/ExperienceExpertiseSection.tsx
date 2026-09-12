@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading, SectionKicker } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -11,6 +13,10 @@ export function ExperienceExpertiseSection() {
   const ind = t.experience.independent;
   const tl = t.experience.timeline;
   const sw = t.experience.software;
+  const reduce = useReducedMotion();
+  const journeyRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: journeyRef, offset: ["start 0.8", "end 0.55"] });
+  const lineProgress = useSpring(scrollYProgress, { stiffness: 90, damping: 24 });
   return (
     <section
       id="experience"
@@ -59,8 +65,15 @@ export function ExperienceExpertiseSection() {
           <Reveal>
             <SectionKicker accent="android">01 · {t.experience.journeyLabel}</SectionKicker>
           </Reveal>
-          <div className="relative mt-8 flex flex-col gap-6">
+          <div ref={journeyRef} className="relative mt-8 flex flex-col gap-6">
             <div aria-hidden className="absolute top-2 bottom-2 left-[7px] w-px bg-[var(--color-border)] sm:left-[7px]" />
+            {!reduce && (
+              <motion.div
+                aria-hidden
+                className="absolute top-2 bottom-2 left-[7px] w-px origin-top bg-[var(--color-android)] opacity-70 sm:left-[7px]"
+                style={{ scaleY: lineProgress }}
+              />
+            )}
             <Reveal>
               <article className="relative ps-8">
                 <span aria-hidden className="absolute top-2 left-0 h-[15px] w-[15px] rounded-full border-2 border-[var(--color-border)] bg-[var(--color-bg)]" />

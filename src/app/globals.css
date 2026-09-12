@@ -81,6 +81,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 88px;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text-primary);
@@ -137,6 +141,16 @@ html[dir="rtl"] .font-mono {
 :root[data-theme="light"] .noise-overlay {
   opacity: 0.05;
   mix-blend-mode: multiply;
+}
+
+/* Subtle architecture flow shimmer (decorative, low opacity) */
+@keyframes flow-sheen {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

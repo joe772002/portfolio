@@ -12,7 +12,7 @@ export function Tag({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border font-mono tracking-tight",
+        "inline-flex items-center rounded-full border font-mono tracking-tight transition-all duration-200 hover:-translate-y-0.5",
         size === "sm" ? "px-3 py-1 text-xs" : "px-2.5 py-0.5 text-[11px]",
         accent === "neutral" &&
           "border-[var(--color-border)] bg-[var(--color-bg-elevated)] text-[var(--color-text-secondary)]",

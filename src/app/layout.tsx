@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import localFont from "next/font/local";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
@@ -75,6 +76,7 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning className="min-h-screen bg-[var(--color-bg)] font-sans text-[var(--color-text-primary)] antialiased">
         <LanguageProvider>
+          <ScrollProgress />
           <Navbar />
           <main>{children}</main>
           <Footer />
