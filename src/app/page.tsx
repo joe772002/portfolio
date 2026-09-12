@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionSection } from "@/components/sections/TransitionSection";
 import { AndroidProjectsSection } from "@/components/sections/AndroidProjectsSection";
-import { TechnicalExpertise } from "@/components/sections/TechnicalExpertise";
-import { HowIBuildSection } from "@/components/sections/HowIBuildSection";
-import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { ExperienceExpertiseSection } from "@/components/sections/ExperienceExpertiseSection";
 import { AIProjectsSection } from "@/components/sections/AIProjectsSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -20,10 +18,8 @@ export default function Home() {
     <>
       <Hero />
       <TransitionSection />
-      <ExperienceSection />
+      <ExperienceExpertiseSection />
       <AndroidProjectsSection mode="featured" />
-      <TechnicalExpertise />
-      <HowIBuildSection />
       <AIProjectsSection />
       <AboutSection />
       <ContactSection />

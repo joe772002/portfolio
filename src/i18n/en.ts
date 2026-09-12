@@ -5,8 +5,7 @@ export const en: Dictionary = {
     home: "Home",
     projects: "Work",
     experience: "Experience",
-    stack: "Expertise",
-    aiBuilds: "SE Projects",
+    aiBuilds: "Engineering Projects",
     about: "About",
     contact: "Contact",
   },
@@ -40,7 +39,7 @@ export const en: Dictionary = {
       desc: "Enterprise and government Android applications, with case studies.",
     },
     {
-      href: "#stack",
+      href: "#experience",
       kicker: "Tech Stack",
       title: "Technical expertise",
       desc: "Kotlin, Jetpack Compose, MVVM, Hilt, Ktor, Room, and more.",
@@ -58,7 +57,7 @@ export const en: Dictionary = {
     desc: "Not just library names — how I organize real applications so they stay maintainable as they grow.",
   },
   experience: {
-    kicker: "Experience & Engineering",
+    kicker: "Experience & Expertise",
     title: "Production experience, not demos.",
     desc: "3+ years of hands-on Android development — from independent projects into full-time professional production work — with a broader software engineering scope built around that foundation.",
     metrics: [
@@ -75,6 +74,7 @@ export const en: Dictionary = {
     ],
     foundation:
       "Android engineering is my foundation. Software engineering helps me build reliable products end to end.",
+    journeyLabel: "Experience",
     independent: {
       role: "Independent Android Development",
       period: "Before July 2024",

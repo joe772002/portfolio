@@ -5,8 +5,7 @@ export const ar: Dictionary = {
     home: "الرئيسية",
     projects: "الأعمال",
     experience: "الخبرة",
-    stack: "الخبرات",
-    aiBuilds: "مشاريع هندسية",
+    aiBuilds: "المشاريع الهندسية",
     about: "عني",
     contact: "تواصل",
   },
@@ -40,7 +39,7 @@ export const ar: Dictionary = {
       desc: "تطبيقات أندرويد للمؤسسات والجهات الحكومية مع دراسات حالة.",
     },
     {
-      href: "#stack",
+      href: "#experience",
       kicker: "التقنيات",
       title: "الخبرات التقنية",
       desc: "Kotlin وJetpack Compose وMVVM وHilt وKtor وRoom وغيرها.",
@@ -58,7 +57,7 @@ export const ar: Dictionary = {
     desc: "ليست مجرد أسماء مكتبات — بل طريقة تنظيم التطبيقات الحقيقية لتبقى قابلة للصيانة مع نموها.",
   },
   experience: {
-    kicker: "الخبرة والهندسة",
+    kicker: "الخبرة والخبرات",
     title: "خبرة إنتاجية حقيقية — وليست نماذج تجريبية.",
     desc: "أكثر من 3 سنوات من تطوير الأندرويد العملي — من المشاريع المستقلة إلى العمل الإنتاجي الاحترافي بدوام كامل — مع نطاق أوسع في هندسة البرمجيات مبني حول هذا الأساس.",
     metrics: [
@@ -75,6 +74,7 @@ export const ar: Dictionary = {
     ],
     foundation:
       "هندسة تطبيقات أندرويد هي الأساس. تساعدني هندسة البرمجيات على بناء منتجات موثوقة من البداية للنهاية.",
+    journeyLabel: "الخبرة",
     independent: {
       role: "تطوير أندرويد مستقل",
       period: "قبل يوليو 2024",

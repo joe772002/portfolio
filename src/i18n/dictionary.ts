@@ -6,7 +6,6 @@ export type NavKey =
   | "home"
   | "projects"
   | "experience"
-  | "stack"
   | "aiBuilds"
   | "about"
   | "contact";
@@ -50,6 +49,7 @@ export interface Dictionary {
     desc: string;
     metrics: { value: string; label: string; hint: string }[];
     foundation: string;
+    journeyLabel: string;
     items: { title: string; desc: string }[];
     independent: {
       role: string;

@@ -1,9 +1,9 @@
 import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Experience & Engineering",
+  title: "Experience & Expertise",
   description:
-    "Experience and engineering background — consolidated into the single Experience & Engineering section on the main portfolio.",
+    "Experience and engineering background — consolidated into the single Experience & Expertise section on the main portfolio.",
 };
 
 export default function EngineeringPage() {
