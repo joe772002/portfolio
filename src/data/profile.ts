@@ -6,36 +6,36 @@ export const profile = {
   lastName: "Osama Ali",
   lastNameAr: "أسامة علي",
   primaryRole: "Android Developer",
-  secondaryRole: "Vibe Coder & Product Builder",
-  positioning: "Android Developer & Vibe Coder",
+  secondaryRole: "AI-Powered Product Builder",
+  positioning: "Android Developer",
   tagline:
-    "I combine professional mobile engineering with vibe coding to build reliable software and move faster from idea to product.",
+    "Android Developer with 3+ years of experience building reliable applications with Kotlin and Jetpack Compose — and using AI-powered workflows to turn ideas into working products faster.",
   heroSupport:
-    "Building reliable Android applications and turning ideas into real products with modern AI-powered development workflows.",
+    "Building reliable Android applications with Kotlin and Jetpack Compose — and using AI-powered workflows to turn ideas into working products faster.",
   heroSupportAr:
-    "ببني تطبيقات أندرويد موثوقة، وبحوّل الأفكار لمنتجات حقيقية بأساليب تطوير حديثة مدعومة بالذكاء الاصطناعي.",
+    "أبني تطبيقات أندرويد موثوقة باستخدام Kotlin وJetpack Compose، وأستخدم أدوات وأساليب التطوير المدعومة بالذكاء الاصطناعي لتسريع تحويل الأفكار إلى منتجات حقيقية.",
   androidExperience: "3+",
   androidExperienceLabel: "Years Building Android Applications",
-  androidExperienceLabelAr: "سنين خبرة في تطبيقات الأندرويد",
+  androidExperienceLabelAr: "سنوات في تطوير تطبيقات أندرويد",
   aiExperience: "1+",
-  aiExperienceLabel: "Year of Vibe Coding",
-  aiExperienceLabelAr: "سنة فايب كودنج",
+  aiExperienceLabel: "Year AI-Powered Building",
+  aiExperienceLabelAr: "سنة في البناء المدعوم بالذكاء الاصطناعي",
   about: [
-    "I'm an Android Developer with 3+ years of hands-on experience building modern mobile applications using Kotlin and Jetpack Compose. I enjoy solving complex problems, improving application architecture, and turning requirements into reliable mobile experiences.",
-    "Alongside professional mobile development, I use vibe coding and coding agents to accelerate prototyping, experimentation, and product development.",
+    "I'm an Android Developer focused on building reliable mobile applications with modern Android technologies.",
+    "Over the past 3+ years, I have worked on Android applications involving complex workflows, APIs, authentication, multilingual experiences, documents, and enterprise-oriented requirements. Alongside Android development, I explore AI-powered workflows that help accelerate the journey from an idea to a working product.",
   ],
   aboutAr: [
-    "مطور أندرويد بخبرة عملية أكتر من 3 سنين في بناء تطبيقات موبايل حديثة بـ Kotlin وJetpack Compose. بحب أحل المشاكل المعقدة وأحسّن معمارية التطبيقات وأحوّل المتطلبات لتجربة موبايل موثوقة.",
-    "وجنب شغل الموبايل الاحترافي، بستخدم الفايب كودنج ووكلاء البرمجة لتسريع النماذج الأولية والتجارب وتطوير المنتجات.",
+    "أنا مطوّر أندرويد أركز على بناء تطبيقات موثوقة باستخدام تقنيات أندرويد الحديثة.",
+    "خلال أكثر من 3 سنوات في تطوير تطبيقات أندرويد، عملت على تطبيقات تتضمن مسارات عمل معقدة، والتكامل مع APIs، وأنظمة المصادقة، ودعم اللغتين العربية والإنجليزية، والتعامل مع المستندات والمتطلبات الاحترافية. وبجانب تطوير أندرويد، أستخدم أدوات وأساليب حديثة مدعومة بالذكاء الاصطناعي لتسريع تحويل الأفكار إلى منتجات وتجارب عملية.",
   ],
   philosophy:
     "I build Android applications with a focus on maintainability, scalable architecture, secure integrations, and reliable user experiences.",
   philosophyAr:
-    "ببني تطبيقات أندرويد مع التركيز على الصيانة السهلة، والمعمارية القابلة للتوسع، والتكاملات الآمنة، وتجربة استخدام موثوقة.",
+    "أبني تطبيقات أندرويد مع التركيز على قابلية الصيانة، والمعمارية القابلة للتوسع، والتكاملات الآمنة، وتجربة استخدام موثوقة.",
   aiPhilosophy:
-    "Vibe coding does not replace engineering judgment. It accelerates exploration, development, iteration, and problem solving.",
+    "AI-assisted development does not replace engineering judgment. It accelerates exploration, prototyping, iteration, and problem solving.",
   aiPhilosophyAr:
-    "الفايب كودنج مش بديل للحكم الهندسي، هو بيسرّع الاستكشاف والتطوير والتكرار وحل المشاكل.",
+    "التطوير المدعوم بالذكاء الاصطناعي ليس بديلًا عن الحكم الهندسي، بل يسرّع الاستكشاف وبناء النماذج الأولية والتكرار وحل المشكلات.",
   contact: {
     linkedin: "https://linkedin.com/in/youssef-osama-775302343",
     linkedinLabel: "linkedin.com/in/youssef-osama-775302343",

@@ -84,10 +84,14 @@ export function Hero() {
 
             <motion.p
               {...fadeUp(0.24)}
-              className="mt-7 text-balance font-display text-xl font-medium leading-snug text-[var(--color-text-primary)] sm:text-2xl"
+              className="mt-7 text-balance font-display text-2xl font-semibold leading-snug text-[var(--color-text-primary)] sm:text-3xl"
             >
               <span className="text-[var(--color-android)]">{t.hero.roleA}</span>
-              <span className="text-[var(--color-text-tertiary)]"> &amp; </span>
+            </motion.p>
+            <motion.p
+              {...fadeUp(0.28)}
+              className="mt-2 text-balance font-display text-base font-medium leading-snug text-[var(--color-text-secondary)] sm:text-lg"
+            >
               <span className="text-[var(--color-ai)]">{t.hero.roleB}</span>
             </motion.p>
 
@@ -100,7 +104,7 @@ export function Hero() {
 
             <motion.div {...fadeUp(0.4)} className="mt-9 flex flex-wrap items-center gap-4">
               <a
-                href="/work"
+                href="#projects"
                 className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-text-primary)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-bg)] transition-transform hover:-translate-y-0.5"
               >
                 {t.hero.viewWork}
@@ -110,7 +114,7 @@ export function Hero() {
                 />
               </a>
               <a
-                href="/contact"
+                href="#contact"
                 className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-3 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)]"
               >
                 {t.hero.getInTouch}
@@ -119,9 +123,9 @@ export function Hero() {
 
             <motion.div
               {...fadeUp(0.5)}
-              className="mt-10 grid max-w-lg grid-cols-2 gap-3 sm:gap-4"
+              className="mt-10 grid max-w-lg grid-cols-[1.2fr_0.8fr] gap-3 sm:gap-4"
             >
-              <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 sm:p-5">
+              <div className="rounded-2xl border border-[var(--color-android-line)] bg-[var(--color-bg-elevated)] p-4 sm:p-5">
                 <span className="block font-display text-2xl font-semibold tracking-tight text-[var(--color-android)] sm:text-3xl">
                   {profile.androidExperience}
                 </span>
@@ -129,8 +133,8 @@ export function Hero() {
                   {pick(lang, profile.androidExperienceLabel, profile.androidExperienceLabelAr)}
                 </span>
               </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-4 sm:p-5">
-                <span className="block font-display text-2xl font-semibold tracking-tight text-[var(--color-ai)] sm:text-3xl">
+              <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)]/60 p-4 opacity-90 sm:p-5">
+                <span className="block font-display text-xl font-semibold tracking-tight text-[var(--color-ai)] sm:text-2xl">
                   {profile.aiExperience}
                 </span>
                 <span className="mt-1.5 block font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-[var(--color-text-secondary)]">

@@ -44,14 +44,14 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between sm:h-20">
         <Link
-          href="/"
+          href="/#home"
           className="font-display text-sm font-medium tracking-tight text-[var(--color-text-primary)]"
           onClick={() => setOpen(false)}
         >
           {pick(lang, profile.name, profile.nameAr)}
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:gap-8 md:flex">
           {navLinks.map((item) => (
             <Link
               key={item.href}
@@ -70,7 +70,7 @@ export function Navbar() {
         </nav>
 
         <Link
-          href="/contact"
+          href="/#contact"
           className="hidden rounded-full border border-[var(--color-border)] px-4 py-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)] md:inline-flex"
         >
           {t.cta}

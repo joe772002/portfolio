@@ -13,7 +13,7 @@ export function AIProjectsSection() {
   const placeholders = aiProjects.filter((p) => p.placeholder);
 
   return (
-    <section className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
+    <section id="ai-builds" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
       <Container>
         <SectionHeading
           kicker={t.ai.kicker}

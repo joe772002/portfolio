@@ -4,7 +4,7 @@ import { AIProjectsSection } from "@/components/sections/AIProjectsSection";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "All projects — professional mobile apps and vibe-coded builds.",
+  description: "All projects — professional Android applications and AI-powered builds.",
 };
 
 export default function WorkPage() {

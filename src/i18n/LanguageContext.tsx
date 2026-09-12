@@ -9,14 +9,14 @@ import { ar } from "./ar";
 const dictionaries: Record<Lang, Dictionary> = { en, ar };
 
 function getInitialLang(): Lang {
-  if (typeof window === "undefined") return "ar";
+  if (typeof window === "undefined") return "en";
   try {
     const stored = window.localStorage.getItem("lang");
     if (stored === "en" || stored === "ar") return stored;
   } catch {
     // ignore
   }
-  return "ar";
+  return "en";
 }
 
 interface LanguageContextValue {
@@ -27,10 +27,10 @@ interface LanguageContextValue {
 }
 
 const LanguageContext = createContext<LanguageContextValue>({
-  lang: "ar",
+  lang: "en",
   setLang: () => {},
   toggleLang: () => {},
-  t: ar,
+  t: en,
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

@@ -9,7 +9,7 @@ import { pick, useLanguage } from "@/i18n/LanguageContext";
 export function BuilderSection() {
   const { lang, t } = useLanguage();
   return (
-    <section id="builder" className="relative py-24 sm:py-32">
+    <section id="ai-powered" className="relative py-24 sm:py-32">
       <Container>
         <SectionHeading
           kicker={t.builder.kicker}

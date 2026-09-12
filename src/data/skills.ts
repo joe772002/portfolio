@@ -59,7 +59,7 @@ export const androidSkills: SkillGroup[] = [
 
 export const aiSkills: SkillGroup[] = [
   {
-    title: "Vibe Coding",
+    title: "AI-Powered Building",
     skills: [
       "AI Coding Agents",
       "Prompt Engineering for Development",

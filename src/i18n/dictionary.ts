@@ -2,7 +2,14 @@ import type { ProjectStatus } from "@/types";
 
 export type Lang = "ar" | "en";
 
-export type NavKey = "home" | "mobile" | "projects" | "vibe" | "about" | "contact";
+export type NavKey =
+  | "home"
+  | "projects"
+  | "experience"
+  | "stack"
+  | "aiBuilds"
+  | "about"
+  | "contact";
 
 export interface HomeCard {
   href: string;
@@ -42,7 +49,13 @@ export interface Dictionary {
     context: string[];
     focus: string[];
   };
-  expertise: { kicker: string };
+  expertise: { kicker: string; title: string; desc: string };
+  experience: {
+    kicker: string;
+    title: string;
+    desc: string;
+    items: { title: string; desc: string }[];
+  };
   builder: {
     kicker: string;
     title: string;

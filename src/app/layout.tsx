@@ -16,9 +16,9 @@ const jetbrainsMono = localFont({
 });
 
 const siteUrl = "https://youssef-osama.dev";
-const title = "Youssef Osama Ali — Android Developer & Vibe Coder";
+const title = "Youssef Osama Ali | Android Developer";
 const description =
-  "Youssef Osama Ali — Android Developer specializing in Kotlin, Jetpack Compose, scalable mobile architecture, and vibe-coded product development.";
+  "Android Developer with 3+ years of experience building modern Android applications with Kotlin, Jetpack Compose, MVVM, and modern AI-powered development workflows.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,8 +32,11 @@ export const metadata: Metadata = {
     "Android Developer",
     "Kotlin",
     "Jetpack Compose",
-    "Mobile Engineer",
-    "Vibe Coding",
+    "MVVM",
+    "Hilt",
+    "Ktor",
+    "Room",
+    "AI-Powered Development",
     "Product Builder",
   ],
   authors: [{ name: "Youssef Osama Ali" }],
@@ -63,8 +66,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ar"
-      dir="rtl"
+      lang="en"
+      dir="ltr"
       suppressHydrationWarning
       className={`${jetbrainsMono.variable}`}
     >

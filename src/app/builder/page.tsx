@@ -4,9 +4,9 @@ import { ProductWorkflowSection } from "@/components/sections/ProductWorkflowSec
 import { AISkillsSection } from "@/components/sections/AISkillsSection";
 
 export const metadata: Metadata = {
-  title: "Vibe Coding",
+  title: "AI-Powered Builds",
   description:
-    "Vibe coding — turning ideas into prototypes, MVPs, and shipped products faster.",
+    "AI-powered product building — turning ideas into prototypes, MVPs, and shipped products faster.",
 };
 
 export default function BuilderPage() {
