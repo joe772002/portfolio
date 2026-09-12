@@ -70,10 +70,12 @@ export function Hero() {
               {...fadeUp(0)}
               className="mb-7 inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-elevated)] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-secondary)]"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-android)]" />
-              {t.hero.badgeA}
-              <span aria-hidden className="h-1 w-1 rounded-full bg-[var(--color-text-tertiary)]" />
-              <span className="font-normal normal-case tracking-normal text-[var(--color-text-tertiary)]">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-android)]" />
+              <span className="font-medium whitespace-nowrap text-[var(--color-text-secondary)]">
+                {t.hero.badgeA}
+              </span>
+              <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-ai)]" />
+              <span className="font-medium whitespace-nowrap text-[var(--color-text-secondary)]">
                 {t.hero.badgeB}
               </span>
             </motion.div>
