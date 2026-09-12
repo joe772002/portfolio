@@ -18,6 +18,154 @@ export interface CaseStudy {
 }
 
 export const caseStudies: Record<string, CaseStudy> = {
+  sak: {
+    id: "sak",
+    title: "SAK – Ministry of Justice Qatar",
+    titleAr: "صك — وزارة العدل القطرية",
+    contextEn: "Ministry of Justice – Qatar · Production Government Android Application",
+    contextAr: "وزارة العدل — قطر · تطبيق أندرويد حكومي إنتاجي",
+    images: [
+      "/images/projects/sak/splash.webp",
+      "/images/projects/sak/login.webp",
+      "/images/projects/sak/home-services.webp",
+      "/images/projects/sak/real-estate-services.webp",
+      "/images/projects/sak/documentation-services.webp",
+      "/images/projects/sak/laws.webp",
+      "/images/projects/sak/contact.webp",
+    ],
+    imageAlt: "SAK Ministry of Justice Qatar app screens",
+    sections: [
+      {
+        key: "overview",
+        bodyEn: [
+          "The official Ministry of Justice Qatar Android application (صك SAK) for real estate registration and documentation services — service categories, transaction requests, documentation workflows, inquiries, and government service delivery for individuals, businesses, investors, and government entities. The application is publicly available on Google Play.",
+        ],
+        bodyAr: [
+          "التطبيق الرسمي لوزارة العدل القطرية (صك SAK) لخدمات التسجيل العقاري والتوثيق — فئات الخدمات وطلبات المعاملات ومسارات التوثيق والاستعلامات وتقديم الخدمات الحكومية للأفراد والشركات والمستثمرين والجهات الحكومية. والتطبيق متاح للعامة على Google Play.",
+        ],
+      },
+      {
+        key: "context",
+        bodyEn: [
+          "Real estate registration and documentation involve strict multi-step government workflows, validated transaction forms, document attachments, authentication, and status tracking. The Android client works within an established large production codebase and must remain reliable, secure, and fully localized in Arabic (RTL) and English.",
+        ],
+        bodyAr: [
+          "التسجيل العقاري والتوثيق يتضمنان مسارات حكومية صارمة متعددة الخطوات ونماذج معاملات متحققًا منها ومرفقات مستندات ومصادقة ومتابعة للحالة. ويعمل تطبيق الأندرويد ضمن قاعدة كود إنتاجية كبيرة قائمة ويجب أن يبقى موثوقًا وآمنًا ومعربًا بالكامل بالعربية (RTL) والإنجليزية.",
+        ],
+      },
+      {
+        key: "role",
+        bodyEn: ["Android Developer — contributing to production features, API integration, authentication handling, document workflows, and localization within the existing Java/XML codebase."],
+        bodyAr: ["مطوّر أندرويد — المساهمة في المزايا الإنتاجية وتكامل API والتعامل مع المصادقة ومسارات المستندات والتوطين ضمن قاعدة كود Java/XML القائمة."],
+        listEn: [
+          "Real estate registration and documentation flows",
+          "Transaction forms with validation and request state",
+          "Authentication and token lifecycle handling",
+          "Document uploads and attachments",
+          "Arabic RTL + English localization",
+        ],
+        listAr: [
+          "مسارات التسجيل العقاري والتوثيق",
+          "نماذج المعاملات مع التحقق وحالة الطلب",
+          "التعامل مع المصادقة ودورة حياة التوكن",
+          "رفع المستندات والمرفقات",
+          "التوطين العربي RTL والإنجليزي",
+        ],
+      },
+      {
+        key: "architecture",
+        bodyEn: ["MVVM + Repository Pattern with Activities/Fragments and ViewBinding/DataBinding: UI → ViewModel → Business Logic → Repository → API / Local data — maintained within the established production architecture."],
+        bodyAr: ["MVVM مع Repository وأنشطة/فراجمنت وViewBinding/DataBinding: الواجهة ← ViewModel ← منطق الأعمال ← المستودع ← API / بيانات محلية — مع الحفاظ على المعمارية الإنتاجية القائمة."],
+        listEn: ["MVVM", "Repository Pattern", "Activities / Fragments", "ViewBinding / DataBinding", "Separation of concerns"],
+        listAr: ["MVVM", "Repository Pattern", "أنشطة / فراجمنت", "ViewBinding / DataBinding", "فصل المسؤوليات"],
+      },
+      {
+        key: "dataflow",
+        bodyEn: ["Unidirectional data flow keeps long transaction workflows predictable — loading, success, empty, and error states are handled explicitly across multi-step service requests."],
+        bodyAr: ["تدفق بيانات أحادي الاتجاه يجعل مسارات المعاملات الطويلة متوقعة — مع معالجة صريحة لحالات التحميل والنجاح والفراغ والخطأ عبر طلبات الخدمات متعددة الخطوات."],
+      },
+      {
+        key: "auth",
+        bodyEn: ["OAuth 2.0-based government authentication with JWT token handling, centralized authentication interceptors, biometric support, and secure API communication for sensitive government data."],
+        bodyAr: ["مصادقة حكومية قائمة على OAuth 2.0 مع التعامل مع توكن JWT واعتراضات مصادقة مركزية ودعم البصمة واتصال آمن مع API للبيانات الحكومية الحساسة."],
+        listEn: ["OAuth 2.0 / government authentication flow", "JWT token lifecycle management", "Centralized auth interceptors", "Biometrics", "Secure API communication"],
+        listAr: ["مصادقة OAuth 2.0 / مسار المصادقة الحكومية", "إدارة دورة حياة توكن JWT", "اعتراضات مصادقة مركزية", "البصمة", "اتصال آمن مع API"],
+      },
+      {
+        key: "api",
+        bodyEn: ["Retrofit + OkHttp REST API integration for service categories, transaction submission, inquiries, and request tracking — with full validation, error handling, and user-facing feedback."],
+        bodyAr: ["تكامل Retrofit مع OkHttp وREST APIs لفئات الخدمات وتقديم المعاملات والاستعلامات ومتابعة الطلبات — مع تحقق كامل ومعالجة أخطاء وتغذية راجعة واضحة للمستخدم."],
+      },
+      {
+        key: "documents",
+        bodyEn: ["Document-heavy transaction flows — uploads, attachments, validation, and viewing for government documentation. The project handles camera-based capture, scanning, and PDF/document viewing where applicable."],
+        bodyAr: ["مسارات معاملات كثيفة المستندات — الرفع والمرفقات والتحقق والعرض لمعاملات التوثيق الحكومية. ويتعامل المشروع مع الالتقاط بالكاميرا والمسح الضوئي وعرض PDF/المستندات حيث ينطبق."],
+      },
+      {
+        key: "workflows",
+        bodyEn: ["Government transaction workflows: browse real estate and documentation services, submit validated transaction requests with attachments, then track request status — including supporting content such as laws, guidance, and contact channels."],
+        bodyAr: ["مسارات المعاملات الحكومية: تصفح خدمات التسجيل العقاري والتوثيق وتقديم طلبات معاملات متحقق منها مع المرفقات، ثم متابعة حالة الطلب — مع محتوى داعم مثل القوانين والإرشادات وقنوات التواصل."],
+      },
+      {
+        key: "offline",
+        bodyEn: ["Resilient behavior on unreliable networks — local persistence for drafts and request state with clear loading, empty, and error states plus retries so long forms survive interruptions."],
+        bodyAr: ["سلوك مرن على الشبكات غير المستقرة — حفظ محلي للمسودات وحالة الطلبات مع حالات تحميل وفراغ وخطأ واضحة وإعادة محاولة لتبقى النماذج الطويلة صالحة عند الانقطاع."],
+      },
+      {
+        key: "localization",
+        bodyEn: ["Full Arabic RTL and English localization — layouts mirror correctly and remain balanced across both languages, including service grids, forms, and mobile."],
+        bodyAr: ["توطين كامل بالعربية RTL والإنجليزية — التصميم ينعكس بشكل صحيح ويبقى متوازنًا في اللغتين بما فيها شبكات الخدمات والنماذج والموبايل."],
+      },
+      {
+        key: "challenges",
+        bodyEn: ["Working within a large established production codebase with many service workflows, strict transaction validation, and bilingual layout requirements."],
+        bodyAr: ["العمل ضمن قاعدة كود إنتاجية كبيرة قائمة مع مسارات خدمية كثيرة وتحقق صارم للمعاملات ومتطلبات تصميم ثنائي اللغة."],
+        listEn: [
+          "Maintaining consistency across many service workflows in a large existing codebase",
+          "Multi-step government transaction forms with strict validation",
+          "Authentication token lifecycle with government auth flows",
+          "Document-heavy flows with uploads and attachments",
+        ],
+        listAr: [
+          "الحفاظ على الاتساق عبر مسارات خدمية كثيرة في قاعدة كود كبيرة قائمة",
+          "نماذج معاملات حكومية متعددة الخطوات مع تحقق صارم",
+          "إدارة دورة حياة التوكن مع مسارات المصادقة الحكومية",
+          "مسارات كثيفة المستندات مع الرفع والمرفقات",
+        ],
+      },
+      {
+        key: "decisions",
+        bodyEn: ["Engineering decisions favored working within the established architecture and keeping transaction behavior predictable."],
+        bodyAr: ["القرارات الهندسية فضّلت العمل ضمن المعمارية القائمة والحفاظ على سلوك معاملات متوقع."],
+        listEn: [
+          "MVVM + Repository to isolate UI from data and business logic",
+          "Explicit state-driven UI for every transaction step",
+          "Centralized token handling for secure communication",
+          "Local persistence for drafts and resilient retries",
+        ],
+        listAr: [
+          "MVVM مع Repository لعزل الواجهة عن البيانات ومنطق الأعمال",
+          "واجهات صريحة مبنية على الحالة لكل خطوة معاملة",
+          "معالجة مركزية للتوكن لاتصال آمن",
+          "حفظ محلي للمسودات وإعادة محاولة مرنة",
+        ],
+      },
+      {
+        key: "takeaways",
+        bodyEn: ["Large government production applications reward disciplined maintenance, careful validation, and respect for established architecture and sensitive systems."],
+        bodyAr: ["تطبيقات الحكومة الإنتاجية الكبيرة تكافئ الصيانة المنضبطة والتحقق الدقيق واحترام المعمارية القائمة والأنظمة الحساسة."],
+      },
+      {
+        key: "outcome",
+        bodyEn: [
+          "A production government Android application supporting real Ministry of Justice service workflows — real estate registration, documentation, transaction submission, and request tracking — with secure authentication, bilingual RTL/English experience, and document-heavy flows, available on Google Play.",
+        ],
+        bodyAr: [
+          "تطبيق أندرويد حكومي إنتاجي يدعم مسارات خدمات حقيقية لوزارة العدل — التسجيل العقاري والتوثيق وتقديم المعاملات ومتابعة الطلبات — مع مصادقة آمنة وتجربة ثنائية اللغة RTL/إنجليزية ومسارات كثيفة المستندات، ومتاح على Google Play.",
+        ],
+      },
+    ],
+  },
   mtcit: {
     id: "mtcit",
     title: "MTCIT Maritime Platform",
