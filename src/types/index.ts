@@ -75,6 +75,8 @@ export interface AIProject {
   /** Overrides the default "Android Client — Product screens" heading above phoneImages (e.g. for a responsive web project). */
   phoneSectionLabel?: string;
   phoneSectionLabelAr?: string;
+  /** Link to a live/hosted deployment of the project, shown as a "View Live Site" CTA. */
+  liveUrl?: string;
   overviewAr?: string;
   focusAr?: string[];
   contextAr?: string;

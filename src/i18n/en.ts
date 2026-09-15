@@ -194,6 +194,7 @@ export const en: Dictionary = {
     desc: "Separate from production Android work: experiments, MVPs, and product concepts focused on architecture, state management, API integration, and maintainable code — with AI tools used to accelerate prototyping where helpful. ShipFlow is a product/design experiment — not a production deployment claim.",
     focus: "Focus",
     screens: "Product screens",
+    viewLive: "View Live Site",
     status: {
       Live: "Live",
       "In Development": "In Development",

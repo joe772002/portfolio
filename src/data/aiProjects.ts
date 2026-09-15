@@ -31,6 +31,7 @@ export const aiProjects: AIProject[] = [
       "توطين كامل عربي RTL + إنجليزي، مع وضعين فاتح وداكن",
     ],
     technicalDirection: ["PHP", "MySQL", "PDO", "Custom SMTP Mailer", "Session Auth", "RTL / i18n"],
+    liveUrl: "https://bokly.wuaze.com/",
     phoneImages: [
       "/images/projects/bookly/mobile-home-light.webp",
       "/images/projects/bookly/mobile-home-2.webp",

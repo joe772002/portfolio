@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import type { AIProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
@@ -102,6 +102,20 @@ export function AIProjectCard({
               {tech}
             </Tag>
           ))}
+        </div>
+      )}
+
+      {project.liveUrl && (
+        <div className="mt-5 flex flex-wrap gap-3 sm:mt-7">
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-[var(--color-text-primary)] transition-colors hover:border-[var(--color-ai-line)] hover:text-[var(--color-ai)]"
+          >
+            {t.ai.viewLive}
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" />
+          </a>
         </div>
       )}
     </>

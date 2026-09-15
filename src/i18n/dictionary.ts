@@ -94,8 +94,6 @@ export interface Dictionary {
     viewPlay: string;
     confidentialNote: string;
     close: string;
-    showMore: string;
-    showLess: string;
   };
   how: { kicker: string; title: string; desc: string; items: { title: string; desc: string }[] };
   ai: {
@@ -104,6 +102,7 @@ export interface Dictionary {
     desc: string;
     focus: string;
     screens: string;
+    viewLive: string;
     status: Record<ProjectStatus, string>;
   };
   about: { kicker: string; strengthsTitle: string; strengths: string[] };
