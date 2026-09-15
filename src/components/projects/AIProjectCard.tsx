@@ -89,7 +89,9 @@ export function AIProjectCard({
           {project.phoneImages && project.phoneImages.length > 0 && (
             <div className="mt-10">
               <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
-                {lang === "ar" ? "تطبيق الأندرويد" : "Android Client — Product screens"}
+                {lang === "ar"
+                  ? (project.phoneSectionLabelAr ?? "تطبيق الأندرويد")
+                  : (project.phoneSectionLabel ?? "Android Client — Product screens")}
               </p>
               <ScreensGallery
                 images={project.phoneImages}

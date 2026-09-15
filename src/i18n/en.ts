@@ -29,7 +29,7 @@ export const en: Dictionary = {
     aRest: " is my foundation.",
     bAccent: "Software engineering",
     bRest: " helps me build reliable products end to end.",
-    para: "I combine structured Android development with solid software engineering practices — architecture, maintainability, and end-to-end product thinking — to build and iterate efficiently.",
+    para: "Structured Android development with end-to-end product thinking — to build and iterate efficiently.",
   },
   homeCards: [
     {
@@ -53,13 +53,13 @@ export const en: Dictionary = {
   ],
   expertise: {
     kicker: "Technical Expertise",
-    title: "How my Android apps are structured.",
-    desc: "Not just library names — how I organize real applications so they stay maintainable as they grow.",
+    title: "Technologies and engineering areas I work with.",
+    desc: "The stack and technical domains I use in production Android work — languages, UI, architecture, networking, data, security, and tools.",
   },
   experience: {
     kicker: "Experience & Expertise",
     title: "Production experience, not demos.",
-    desc: "3+ years of hands-on Android development — from independent projects into full-time professional production work — with a broader software engineering scope built around that foundation.",
+    desc: "3+ years of hands-on Android development — from independent projects into full-time professional production work.",
     metrics: [
       {
         value: "3+",
@@ -73,7 +73,7 @@ export const en: Dictionary = {
       },
     ],
     foundation:
-      "Android engineering is my foundation. Software engineering helps me build reliable products end to end.",
+      "Independent builds into enterprise production work at Informatique — with product engineering scope beyond Android.",
     journeyLabel: "Experience",
     independent: {
       role: "Independent Android Development",
@@ -103,11 +103,11 @@ export const en: Dictionary = {
       period: "Ongoing",
       type: "Across personal and professional work",
       scopeLabel: "Engineering scope",
-      desc: "A broader engineering scope across my work — beyond Android — covering how I think through and build products end to end.",
+      desc: "Broader product engineering scope beyond Android — from concept to working product.",
       bullets: [
-        "Architecture, application structure, state management, and API integration with end-to-end product thinking.",
-        "Product concepts, MVPs, prototypes, and experiments engineered with clean architecture and maintainable code.",
-        "Prototyping, debugging, and iteration across web and mobile product concepts.",
+        "End-to-end product thinking: from concept through structure, integration, and iteration.",
+        "Product concepts, MVPs, and experiments built with clean, maintainable code.",
+        "Work across web and mobile product concepts, beyond production Android.",
       ],
       aiNote:
         "AI is part of my engineering workflow — helping me research, prototype, implement, debug, and iterate faster, while architecture, technical decisions, and code quality remain engineering-driven.",
@@ -115,7 +115,7 @@ export const en: Dictionary = {
     items: [
       {
         title: "Android Development",
-        desc: "Building and maintaining modern Android applications with Kotlin and Jetpack Compose.",
+        desc: "Modern production Android applications, built and maintained over time.",
       },
       {
         title: "Enterprise Workflows",
@@ -154,35 +154,37 @@ export const en: Dictionary = {
     viewPlay: "View on Google Play",
     confidentialNote: "Due to the nature of the government platform, certain implementation details and internal system information are intentionally omitted.",
     close: "Close",
+    showMore: "Show more",
+    showLess: "Show less",
   },
   how: {
     kicker: "How I Build Android Apps",
     title: "Engineering discipline first.",
-    desc: "Concise principles I apply in production Android work.",
+    desc: "Principles behind how I structure, connect, and harden production Android apps.",
     items: [
       {
         title: "Scalable Architecture",
-        desc: "MVVM + Repository with clear separation — UI, ViewModel, business logic, repository, remote/local data.",
+        desc: "Clear layer separation — UI stays lean, logic stays testable, data access stays isolated — so features scale without tangling.",
       },
       {
         title: "State-Driven UI",
-        desc: "Predictable loading, success, empty, and error states with Jetpack Compose.",
+        desc: "Every screen models its states explicitly — loading, success, empty, error — so behavior stays predictable.",
       },
       {
         title: "Clean Data Flow",
-        desc: "Unidirectional data flow: UI → ViewModel → business logic → repository → API / database.",
+        desc: "Single source of truth with one-way flow, so state changes stay traceable and side effects stay contained.",
       },
       {
         title: "Secure API Integration",
-        desc: "Authentication flows, token lifecycle management, and communication with complex REST APIs.",
+        desc: "Auth and integration designed around failure — expired sessions, retries, and error mapping handled deliberately.",
       },
       {
         title: "Offline & Resilient",
-        desc: "Room, DataStore, and WorkManager so apps stay useful on unreliable networks.",
+        desc: "Local-first thinking — cache, queue, and sync — so apps stay useful on unreliable networks.",
       },
       {
         title: "Production-Oriented",
-        desc: "Maintainability, error handling, localization, performance, and real-world user workflows.",
+        desc: "Built for real-world use — edge cases, performance, and long-term maintainability over happy-path demos.",
       },
     ],
   },

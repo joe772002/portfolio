@@ -72,6 +72,9 @@ export interface AIProject {
   phoneImages?: string[];
   /** Multiple labeled screenshots/panels (e.g. design-system sections) shown as a gallery instead of a single image. */
   images?: ImagePanel[];
+  /** Overrides the default "Android Client — Product screens" heading above phoneImages (e.g. for a responsive web project). */
+  phoneSectionLabel?: string;
+  phoneSectionLabelAr?: string;
   overviewAr?: string;
   focusAr?: string[];
   contextAr?: string;

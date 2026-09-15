@@ -5,6 +5,7 @@ import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading, SectionKicker } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { Tag } from "@/components/ui/Tag";
 import { androidSkills } from "@/data/skills";
 import { pick, useLanguage } from "@/i18n/LanguageContext";
 
@@ -20,7 +21,7 @@ export function ExperienceExpertiseSection() {
   return (
     <section
       id="experience"
-      className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-28"
+      className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-20 lg:py-28"
     >
       <Container>
         <SectionHeading
@@ -61,7 +62,7 @@ export function ExperienceExpertiseSection() {
           </p>
         </Reveal>
 
-        <div className="mt-16 border-t border-[var(--color-border-soft)] pt-12">
+        <div className="mt-10 border-t border-[var(--color-border-soft)] pt-8 sm:mt-16 sm:pt-12">
           <Reveal>
             <SectionKicker accent="android">01 · {t.experience.journeyLabel}</SectionKicker>
           </Reveal>
@@ -193,7 +194,7 @@ export function ExperienceExpertiseSection() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-[var(--color-border-soft)] pt-12">
+        <div className="mt-10 border-t border-[var(--color-border-soft)] pt-8 sm:mt-16 sm:pt-12">
           <Reveal>
             <SectionKicker accent="android">02 · {t.expertise.kicker}</SectionKicker>
             <p className="mt-5 max-w-2xl font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
@@ -210,7 +211,16 @@ export function ExperienceExpertiseSection() {
                   <h3 className="font-display text-sm font-medium text-[var(--color-text-primary)]">
                     {pick(lang, group.title, group.titleAr)}
                   </h3>
-                  <ul className="mt-4 flex flex-col gap-2">
+                  {/* Mobile: compact wrapped chips — keeps this long 6-group list scannable
+                      without one skill per line. Desktop keeps the original plain list. */}
+                  <div className="mt-4 flex flex-wrap gap-2 sm:hidden">
+                    {group.skills.map((skill) => (
+                      <Tag key={skill} size="xs">
+                        {skill}
+                      </Tag>
+                    ))}
+                  </div>
+                  <ul className="mt-4 hidden flex-col gap-2 sm:flex">
                     {group.skills.map((skill) => (
                       <li
                         key={skill}
@@ -226,7 +236,7 @@ export function ExperienceExpertiseSection() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-[var(--color-border-soft)] pt-12">
+        <div className="mt-10 border-t border-[var(--color-border-soft)] pt-8 sm:mt-16 sm:pt-12">
           <Reveal>
             <SectionKicker accent="android">03 · {t.how.kicker}</SectionKicker>
             <p className="mt-5 max-w-2xl font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-3xl">

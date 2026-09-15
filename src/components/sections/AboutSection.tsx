@@ -10,7 +10,7 @@ export function AboutSection() {
   const { lang, t } = useLanguage();
   const strengths = t.about.strengths;
   return (
-    <section id="about" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
+    <section id="about" className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-24 lg:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">

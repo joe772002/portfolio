@@ -2,6 +2,78 @@ import type { AIProject } from "@/types";
 
 export const aiProjects: AIProject[] = [
   {
+    id: "bookly",
+    title: "Bookly",
+    titleAr: "بوكلي",
+    status: "Product Experiment",
+    context: "Personal Full-Stack Project · Vanilla PHP & MySQL · Not a production deployment",
+    contextAr: "مشروع متكامل شخصي · PHP وMySQL خام · ليس نظامًا إنتاجيًا منشورًا",
+    overview:
+      "A full-stack online bookstore built from scratch in vanilla PHP and MySQL — no framework, no Composer dependencies. Catalog browsing and search across 10 categories, book detail pages with ratings and reviews, a session-based cart and full checkout flow, and order confirmation through a hand-written SMTP mail client plus a pre-filled WhatsApp message link. Accounts cover registration, login-attempt throttling, and secure hashed-token password reset. A separate admin dashboard manages books, categories, orders, users, and sales analytics. Fully bilingual — true Arabic RTL and English — with light and dark themes throughout.",
+    overviewAr:
+      "متجر كتب إلكتروني متكامل مبني من الصفر بلغة PHP الخام وقاعدة بيانات MySQL — من غير أي framework أو مكتبات Composer. تصفح وبحث في الكتالوج عبر 10 تصنيفات، صفحات تفاصيل للكتب فيها تقييمات ومراجعات، عربة تسوق بالجلسة (Session) ومسار شراء كامل، وتأكيد للطلب عبر عميل بريد SMTP مكتوب من الصفر ورسالة واتساب جاهزة مسبقًا. الحسابات فيها تسجيل دخول مع حماية من محاولات الاختراق المتكررة، واستعادة كلمة مرور آمنة بتوكن مُشفّر. لوحة تحكم إدارية منفصلة لإدارة الكتب والتصنيفات والطلبات والمستخدمين وتحليلات المبيعات. المتجر ثنائي اللغة بالكامل — عربي RTL حقيقي وإنجليزي — مع وضعين فاتح وداكن.",
+    focus: [
+      "Book catalog, search, filtering, and category browsing on a normalized MySQL schema",
+      "Cart, checkout, and order flow — order items, payment method, and shipping details",
+      "Auth: registration, login-attempt throttling, and secure hashed-token password reset",
+      "Reviews & ratings, plus a favorites/wishlist system",
+      "Admin dashboard: books, categories, orders, users, and sales analytics",
+      "Order confirmation via a hand-written SMTP mail client and a pre-filled WhatsApp link",
+      "Full Arabic RTL + English localization, with light and dark themes",
+    ],
+    focusAr: [
+      "كتالوج كتب وبحث وفلاتر وتصفح تصنيفات فوق مخطط MySQL منظم (normalized)",
+      "عربة تسوق ومسار شراء كامل — عناصر الطلب وطريقة الدفع وبيانات الشحن",
+      "المصادقة: تسجيل حساب، حماية من محاولات الدخول المتكررة، واستعادة كلمة مرور آمنة بتوكن مُشفّر",
+      "تقييمات ومراجعات، ونظام مفضلة (Wishlist)",
+      "لوحة تحكم إدارية: الكتب والتصنيفات والطلبات والمستخدمين وتحليلات المبيعات",
+      "تأكيد الطلب عبر عميل بريد SMTP مكتوب من الصفر ورسالة واتساب جاهزة",
+      "توطين كامل عربي RTL + إنجليزي، مع وضعين فاتح وداكن",
+    ],
+    technicalDirection: ["PHP", "MySQL", "PDO", "Custom SMTP Mailer", "Session Auth", "RTL / i18n"],
+    phoneImages: [
+      "/images/projects/bookly/mobile-home-light.webp",
+      "/images/projects/bookly/mobile-home-2.webp",
+      "/images/projects/bookly/mobile-book-detail.webp",
+      "/images/projects/bookly/mobile-book-detail-2.webp",
+      "/images/projects/bookly/mobile-profile-light.webp",
+      "/images/projects/bookly/mobile-profile-2.webp",
+    ],
+    imageAlt: "Bookly on mobile — home, categories and featured books, book detail with reviews, and account favorites screens",
+    phoneSectionLabel: "Mobile — Product screens",
+    phoneSectionLabelAr: "شاشات الموبايل",
+    images: [
+      {
+        src: "/images/projects/bookly/web-dashboard-light.webp",
+        alt: "Bookly web platform — admin dashboard with revenue, orders, and sales analytics",
+        label: "Admin Dashboard",
+        width: 1200,
+        height: 1271,
+      },
+      {
+        src: "/images/projects/bookly/web-home-light.webp",
+        alt: "Bookly web platform — home page with featured books, categories, and stats",
+        label: "Home",
+        width: 1200,
+        height: 1271,
+      },
+      {
+        src: "/images/projects/bookly/web-books.webp",
+        alt: "Bookly web platform — catalog browsing with category filters and search",
+        label: "Browse & Search",
+        width: 1200,
+        height: 1071,
+      },
+      {
+        src: "/images/projects/bookly/web-categories.webp",
+        alt: "Bookly web platform — category grid",
+        label: "Categories",
+        width: 1200,
+        height: 722,
+      },
+    ],
+  },
+  {
     id: "shipflow",
     title: "ShipFlow Maritime Platform",
     status: "Product Experiment",

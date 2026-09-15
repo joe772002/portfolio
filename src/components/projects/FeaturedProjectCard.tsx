@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Lock } from "lucide-react";
+import { ArrowRight, ChevronDown, Lock } from "lucide-react";
 import type { AndroidProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
@@ -21,7 +21,12 @@ export function FeaturedProjectCard({
 }) {
   const { lang, t } = useLanguage();
   const [open, setOpen] = useState(false);
+  const [areasExpanded, setAreasExpanded] = useState(false);
   const hasGallery = project.images && project.images.length >= 3;
+  const allAreas = pick(lang, project.focusAreas, project.focusAreasAr);
+  const AREAS_COLLAPSE_AT = 5;
+  const areasCanCollapse = allAreas.length > AREAS_COLLAPSE_AT;
+  const visibleAreas = areasCanCollapse && !areasExpanded ? allAreas.slice(0, AREAS_COLLAPSE_AT) : allAreas;
 
   const header = (
     <>
@@ -88,13 +93,26 @@ export function FeaturedProjectCard({
           {t.android.areas}
         </p>
         <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-          {pick(lang, project.focusAreas, project.focusAreasAr).map((area) => (
+          {visibleAreas.map((area) => (
             <li key={area} className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]">
               <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--color-android)]" />
               {area}
             </li>
           ))}
         </ul>
+        {areasCanCollapse && (
+          <button
+            type="button"
+            onClick={() => setAreasExpanded((v) => !v)}
+            className="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-android)]"
+          >
+            {areasExpanded ? t.android.showLess : t.android.showMore}
+            <ChevronDown
+              size={13}
+              className={`transition-transform duration-200 ${areasExpanded ? "rotate-180" : ""}`}
+            />
+          </button>
+        )}
       </div>
 
       <div className="mt-7 flex flex-wrap gap-2">

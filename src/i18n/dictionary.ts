@@ -94,6 +94,8 @@ export interface Dictionary {
     viewPlay: string;
     confidentialNote: string;
     close: string;
+    showMore: string;
+    showLess: string;
   };
   how: { kicker: string; title: string; desc: string; items: { title: string; desc: string }[] };
   ai: {

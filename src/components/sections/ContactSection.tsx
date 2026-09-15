@@ -58,7 +58,7 @@ export function ContactSection() {
     },
   ];
   return (
-    <section id="contact" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
+    <section id="contact" className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-24 lg:py-32">
       <Container>
         <Reveal>
           <div className="max-w-2xl">

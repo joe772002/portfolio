@@ -25,7 +25,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28 lg:pt-36"
+      className="relative overflow-hidden pt-20 pb-14 sm:pt-32 sm:pb-28 lg:pt-36"
     >
       {/* ambient accents — very slow drift */}
       {!shouldReduceMotion && (

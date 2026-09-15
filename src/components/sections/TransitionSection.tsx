@@ -7,7 +7,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 export function TransitionSection() {
   const { t } = useLanguage();
   return (
-    <section className="relative overflow-hidden border-t border-[var(--color-border-soft)] py-28 sm:py-36">
+    <section className="relative overflow-hidden border-t border-[var(--color-border-soft)] py-16 sm:py-24 lg:py-36">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"

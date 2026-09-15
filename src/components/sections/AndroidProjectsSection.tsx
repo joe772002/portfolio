@@ -19,7 +19,7 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
     return (
       <section
         id="projects"
-        className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32"
+        className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-24 lg:py-32"
       >
         <Container>
           <SectionHeading
@@ -29,7 +29,7 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
             description={t.android.desc}
           />
 
-          <p className="mt-16 mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
+          <p className="mt-10 mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:mt-16">
             {t.android.featured}
           </p>
           <div className="flex flex-col gap-8">
@@ -58,7 +58,7 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
   }
 
   return (
-    <section id="work" className="relative border-t border-[var(--color-border-soft)] py-24 sm:py-32">
+    <section id="work" className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-24 lg:py-32">
       <Container>
         <SectionHeading
           kicker={t.android.kicker}
@@ -67,7 +67,7 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
           description={t.android.desc}
         />
 
-        <p className="mt-16 mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
+        <p className="mt-10 mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:mt-16">
           {t.android.featured}
         </p>
         <div className="flex flex-col gap-8">
