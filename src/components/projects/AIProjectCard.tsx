@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import type { AIProject } from "@/types";
 import { Tag } from "@/components/ui/Tag";
 import { Reveal } from "@/components/ui/Reveal";
@@ -19,7 +21,13 @@ export function AIProjectCard({
   delay?: number;
 }) {
   const { lang, t } = useLanguage();
+  const [focusExpanded, setFocusExpanded] = useState(false);
+  const [overviewExpanded, setOverviewExpanded] = useState(false);
   const hasGallery = project.images && project.images.length >= 3;
+  const allFocus = project.focus ? pick(lang, project.focus, project.focusAr) : [];
+  const FOCUS_COLLAPSE_AT = 5;
+  const focusCanCollapse = allFocus.length > FOCUS_COLLAPSE_AT;
+  const visibleFocus = focusCanCollapse && !focusExpanded ? allFocus.slice(0, FOCUS_COLLAPSE_AT) : allFocus;
 
   const header = (
     <>
@@ -36,17 +44,32 @@ export function AIProjectCard({
         </p>
       )}
 
-      <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)]">
+      <p
+        className={`mt-4 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:mt-5 ${
+          overviewExpanded ? "" : "line-clamp-3 sm:line-clamp-none"
+        }`}
+      >
         {pick(lang, project.overview, project.overviewAr)}
       </p>
+      <button
+        type="button"
+        onClick={() => setOverviewExpanded((v) => !v)}
+        className="mt-1.5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-ai)] sm:hidden"
+      >
+        {overviewExpanded ? t.android.showLess : t.android.showMore}
+        <ChevronDown
+          size={13}
+          className={`transition-transform duration-200 ${overviewExpanded ? "rotate-180" : ""}`}
+        />
+      </button>
 
       {project.focus && (
-        <div className="mt-7">
+        <div className="mt-5 sm:mt-7">
           <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
             {t.ai.focus}
           </p>
           <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-            {pick(lang, project.focus, project.focusAr).map((item) => (
+            {visibleFocus.map((item) => (
               <li
                 key={item}
                 className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]"
@@ -56,11 +79,24 @@ export function AIProjectCard({
               </li>
             ))}
           </ul>
+          {focusCanCollapse && (
+            <button
+              type="button"
+              onClick={() => setFocusExpanded((v) => !v)}
+              className="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-ai)]"
+            >
+              {focusExpanded ? t.android.showLess : t.android.showMore}
+              <ChevronDown
+                size={13}
+                className={`transition-transform duration-200 ${focusExpanded ? "rotate-180" : ""}`}
+              />
+            </button>
+          )}
         </div>
       )}
 
       {project.technicalDirection && (
-        <div className="mt-7 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2 sm:mt-7">
           {project.technicalDirection.map((tech) => (
             <Tag key={tech} size="xs">
               {tech}
@@ -74,11 +110,11 @@ export function AIProjectCard({
   if (hasGallery || (project.phoneImages && project.phoneImages.length > 0)) {
     return (
       <Reveal delay={delay}>
-        <article className="rounded-3xl border border-[var(--color-border)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-ai-line)]/70 hover:shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)] sm:p-8 lg:p-12">
+        <article className="rounded-3xl border border-[var(--color-border)] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-ai-line)]/70 hover:shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)] sm:p-8 lg:p-12">
           {header}
 
           {hasGallery && (
-            <div className="mt-10">
+            <div className="mt-7 sm:mt-10">
               <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
                 {lang === "ar" ? "شاشات منصة الويب" : "Web Platform — Product screens"}
               </p>
@@ -87,7 +123,7 @@ export function AIProjectCard({
           )}
 
           {project.phoneImages && project.phoneImages.length > 0 && (
-            <div className="mt-10">
+            <div className="mt-7 sm:mt-10">
               <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
                 {lang === "ar"
                   ? (project.phoneSectionLabelAr ?? "تطبيق الأندرويد")

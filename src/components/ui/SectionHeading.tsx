@@ -47,7 +47,7 @@ export function SectionHeading({
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
       <Reveal>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3 sm:gap-4">
           {kicker && <SectionKicker accent={kickerAccent}>{kicker}</SectionKicker>}
           <h2 className="text-balance font-display text-3xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
             {title}

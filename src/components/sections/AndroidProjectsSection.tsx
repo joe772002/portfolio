@@ -19,7 +19,7 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
     return (
       <section
         id="projects"
-        className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-24 lg:py-32"
+        className="relative border-t border-[var(--color-border-soft)] py-10 sm:py-24 lg:py-32"
       >
         <Container>
           <SectionHeading
@@ -29,10 +29,10 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
             description={t.android.desc}
           />
 
-          <p className="mt-10 mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:mt-16">
+          <p className="mt-7 mb-4 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:mt-16 sm:mb-6">
             {t.android.featured}
           </p>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5 sm:gap-8">
             {featuredAndroidProjects
               .filter((p) => !p.personal)
               .map((project, i) => (
@@ -41,8 +41,8 @@ export function AndroidProjectsSection({ mode = "all" }: { mode?: Mode } = {}) {
           </div>
 
           {otherProfessionalProjects.length > 0 && (
-            <div className="mt-14">
-              <p className="mb-6 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
+            <div className="mt-8 sm:mt-14">
+              <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)] sm:mb-6">
                 {t.android.selected}
               </p>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

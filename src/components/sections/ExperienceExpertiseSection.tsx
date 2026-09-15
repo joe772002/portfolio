@@ -21,7 +21,7 @@ export function ExperienceExpertiseSection() {
   return (
     <section
       id="experience"
-      className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-20 lg:py-28"
+      className="relative border-t border-[var(--color-border-soft)] py-10 sm:py-20 lg:py-28"
     >
       <Container>
         <SectionHeading
@@ -31,11 +31,11 @@ export function ExperienceExpertiseSection() {
           description={t.experience.desc}
         />
         <Reveal delay={0.05}>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <div className="mt-7 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-5 sm:grid-cols-2">
             {t.experience.metrics.map((m, i) => (
               <div
                 key={m.label}
-                className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 sm:p-8"
+                className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-5 sm:p-8"
               >
                 <span
                   className={
@@ -57,16 +57,16 @@ export function ExperienceExpertiseSection() {
           </div>
         </Reveal>
         <Reveal delay={0.08}>
-          <p className="mt-6 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 font-display text-base leading-relaxed text-[var(--color-text-primary)] sm:p-8 sm:text-lg">
+          <p className="mt-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 font-display text-base leading-relaxed text-[var(--color-text-primary)] sm:mt-6 sm:p-8 sm:text-lg">
             {t.experience.foundation}
           </p>
         </Reveal>
 
-        <div className="mt-10 border-t border-[var(--color-border-soft)] pt-8 sm:mt-16 sm:pt-12">
+        <div className="mt-8 border-t border-[var(--color-border-soft)] pt-6 sm:mt-16 sm:pt-12">
           <Reveal>
             <SectionKicker accent="android">01 · {t.experience.journeyLabel}</SectionKicker>
           </Reveal>
-          <div ref={journeyRef} className="relative mt-8 flex flex-col gap-6">
+          <div ref={journeyRef} className="relative mt-6 flex flex-col gap-4 sm:mt-8 sm:gap-6">
             <div aria-hidden className="absolute top-2 bottom-2 left-[7px] w-px bg-[var(--color-border)] sm:left-[7px]" />
             {!reduce && (
               <motion.div
@@ -78,7 +78,7 @@ export function ExperienceExpertiseSection() {
             <Reveal>
               <article className="relative ps-8">
                 <span aria-hidden className="absolute top-2 left-0 h-[15px] w-[15px] rounded-full border-2 border-[var(--color-border)] bg-[var(--color-bg)]" />
-                <div className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8">
+                <div className="rounded-3xl border border-[var(--color-border)] p-5 sm:p-8">
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <div>
                       <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-text-tertiary)]">
@@ -92,10 +92,10 @@ export function ExperienceExpertiseSection() {
                       </p>
                     </div>
                   </div>
-                  <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:mt-4 sm:text-base">
                     {ind.desc}
                   </p>
-                  <ul className="mt-4 flex flex-col gap-2.5">
+                  <ul className="mt-3 flex flex-col gap-2 sm:mt-4 sm:gap-2.5">
                     {ind.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-text-tertiary)]" />
@@ -109,7 +109,7 @@ export function ExperienceExpertiseSection() {
             <Reveal delay={0.08}>
               <article className="relative ps-8">
                 <span aria-hidden className="absolute top-2 left-0 h-[15px] w-[15px] rounded-full bg-[var(--color-android)]" />
-                <div className="rounded-3xl border border-[var(--color-android-line)] bg-[var(--color-bg-elevated)] p-6 sm:p-8 lg:p-10">
+                <div className="rounded-3xl border border-[var(--color-android-line)] bg-[var(--color-bg-elevated)] p-5 sm:p-8 lg:p-10">
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <div>
                       <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-android)]">
@@ -126,7 +126,7 @@ export function ExperienceExpertiseSection() {
                       {lang === "ar" ? "الحالية" : "Current"}
                     </span>
                   </div>
-                  <ul className="mt-6 flex flex-col gap-3">
+                  <ul className="mt-4 flex flex-col gap-2.5 sm:mt-6 sm:gap-3">
                     {tl.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-android)]" />
@@ -140,7 +140,7 @@ export function ExperienceExpertiseSection() {
             <Reveal delay={0.12}>
               <article className="relative ps-8">
                 <span aria-hidden className="absolute top-2 left-0 h-[15px] w-[15px] rounded-full bg-[var(--color-ai)]" />
-                <div className="rounded-3xl border border-[var(--color-border)] p-6 sm:p-8">
+                <div className="rounded-3xl border border-[var(--color-border)] p-5 sm:p-8">
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <div>
                       <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-ai)]">
@@ -157,10 +157,10 @@ export function ExperienceExpertiseSection() {
                       {sw.scopeLabel}
                     </span>
                   </div>
-                  <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:mt-4 sm:text-base">
                     {sw.desc}
                   </p>
-                  <ul className="mt-4 flex flex-col gap-2.5">
+                  <ul className="mt-3 flex flex-col gap-2 sm:mt-4 sm:gap-2.5">
                     {sw.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-ai)]" />
@@ -168,24 +168,24 @@ export function ExperienceExpertiseSection() {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-6 border-t border-[var(--color-border-soft)] pt-5 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  <p className="mt-4 border-t border-[var(--color-border-soft)] pt-4 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:mt-6 sm:pt-5">
                     {sw.aiNote}
                   </p>
                 </div>
               </article>
             </Reveal>
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {t.experience.items.map((item, i) => (
               <Reveal key={item.title} delay={Math.min(i * 0.05, 0.25)}>
-                <div className="h-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:bg-[var(--color-bg-elevated)]">
+                <div className="h-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-4 transition-colors hover:bg-[var(--color-bg-elevated)] sm:p-6">
                   <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-android)]">
                     0{i + 1}
                   </span>
-                  <h3 className="mt-3 font-display text-base font-medium text-[var(--color-text-primary)]">
+                  <h3 className="mt-2.5 font-display text-base font-medium text-[var(--color-text-primary)] sm:mt-3">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:mt-2">
                     {item.desc}
                   </p>
                 </div>
@@ -194,26 +194,26 @@ export function ExperienceExpertiseSection() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-[var(--color-border-soft)] pt-8 sm:mt-16 sm:pt-12">
+        <div className="mt-8 border-t border-[var(--color-border-soft)] pt-6 sm:mt-16 sm:pt-12">
           <Reveal>
             <SectionKicker accent="android">02 · {t.expertise.kicker}</SectionKicker>
-            <p className="mt-5 max-w-2xl font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+            <p className="mt-4 max-w-2xl font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:mt-5 sm:text-3xl">
               {t.expertise.title}
             </p>
-            <p className="mt-3 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)]">
+            <p className="mt-2.5 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)] sm:mt-3">
               {t.expertise.desc}
             </p>
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-border-soft)] sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-border-soft)] sm:mt-10 sm:grid-cols-2 lg:grid-cols-3">
             {androidSkills.map((group, i) => (
               <Reveal key={group.title} delay={Math.min(i * 0.05, 0.3)}>
-                <div className="h-full bg-[var(--color-bg)] p-6 transition-colors hover:bg-[var(--color-bg-elevated)]">
+                <div className="h-full bg-[var(--color-bg)] p-4 transition-colors hover:bg-[var(--color-bg-elevated)] sm:p-6">
                   <h3 className="font-display text-sm font-medium text-[var(--color-text-primary)]">
                     {pick(lang, group.title, group.titleAr)}
                   </h3>
                   {/* Mobile: compact wrapped chips — keeps this long 6-group list scannable
                       without one skill per line. Desktop keeps the original plain list. */}
-                  <div className="mt-4 flex flex-wrap gap-2 sm:hidden">
+                  <div className="mt-3 flex flex-wrap gap-2 sm:mt-4 sm:hidden">
                     {group.skills.map((skill) => (
                       <Tag key={skill} size="xs">
                         {skill}
@@ -236,29 +236,29 @@ export function ExperienceExpertiseSection() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-[var(--color-border-soft)] pt-8 sm:mt-16 sm:pt-12">
+        <div className="mt-8 border-t border-[var(--color-border-soft)] pt-6 sm:mt-16 sm:pt-12">
           <Reveal>
             <SectionKicker accent="android">03 · {t.how.kicker}</SectionKicker>
-            <p className="mt-5 max-w-2xl font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+            <p className="mt-4 max-w-2xl font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:mt-5 sm:text-3xl">
               {t.how.title}
             </p>
-            <p className="mt-3 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)]">
+            <p className="mt-2.5 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)] sm:mt-3">
               {t.how.desc}
             </p>
           </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {t.how.items.map((item, i) => (
               <Reveal key={item.title} delay={Math.min(i * 0.05, 0.25)}>
-                <div className="h-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-6 transition-colors hover:bg-[var(--color-bg-elevated)]">
+                <div className="h-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-5 transition-colors hover:bg-[var(--color-bg-elevated)] sm:p-6">
                   <SectionKicker accent="android">0{i + 1}</SectionKicker>
-                  <h3 className="mt-3 font-display text-base font-medium text-[var(--color-text-primary)]">
+                  <h3 className="mt-2.5 font-display text-base font-medium text-[var(--color-text-primary)] sm:mt-3">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-secondary)] sm:mt-2">
                     {item.desc}
                   </p>
                   {i === 0 && (
-                    <p dir="ltr" className="mt-4 rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-bg-elevated)]/50 p-3 text-center font-mono text-[11px] leading-relaxed text-[var(--color-text-secondary)]">
+                    <p dir="ltr" className="mt-3 rounded-xl border border-[var(--color-border-soft)] bg-[var(--color-bg-elevated)]/50 p-3 text-center font-mono text-[11px] leading-relaxed text-[var(--color-text-secondary)] sm:mt-4">
                       UI → ViewModel → UseCase → Repository → API / DB
                     </p>
                   )}

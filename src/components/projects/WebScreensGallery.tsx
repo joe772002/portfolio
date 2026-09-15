@@ -10,7 +10,7 @@ export function WebScreensGallery({
 }) {
   return (
     <div
-      className={`relative isolate overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-8 sm:py-10 ${className ?? ""}`}
+      className={`relative isolate overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-5 sm:py-10 ${className ?? ""}`}
     >
       <div
         aria-hidden
@@ -49,7 +49,7 @@ export function WebScreensGallery({
               aria-hidden={i !== 0}
               width={panel.width}
               height={panel.height}
-              className="h-[300px] w-auto sm:h-[380px]"
+              className="h-[210px] w-auto sm:h-[300px] lg:h-[380px]"
               priority={i === 0}
             />
           </div>

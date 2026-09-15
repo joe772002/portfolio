@@ -22,6 +22,7 @@ export function FeaturedProjectCard({
   const { lang, t } = useLanguage();
   const [open, setOpen] = useState(false);
   const [areasExpanded, setAreasExpanded] = useState(false);
+  const [overviewExpanded, setOverviewExpanded] = useState(false);
   const hasGallery = project.images && project.images.length >= 3;
   const allAreas = pick(lang, project.focusAreas, project.focusAreasAr);
   const AREAS_COLLAPSE_AT = 5;
@@ -41,7 +42,7 @@ export function FeaturedProjectCard({
         )}
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-3 flex flex-wrap gap-2 sm:mt-4">
         {pick(lang, project.category, project.categoryAr).map((c) => (
           <Tag key={c} accent="android">
             {c}
@@ -49,7 +50,7 @@ export function FeaturedProjectCard({
         ))}
       </div>
 
-      <h3 className="mt-5 font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:text-3xl">
+      <h3 className="mt-4 font-display text-2xl font-medium tracking-tight text-[var(--color-text-primary)] sm:mt-5 sm:text-3xl">
         {project.title}
       </h3>
 
@@ -60,7 +61,7 @@ export function FeaturedProjectCard({
       )}
 
       {(project.role || project.platform) && (
-        <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-2">
+        <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 sm:mt-5">
           {project.role && (
             <div className="flex items-baseline gap-2">
               <dt className="font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
@@ -84,11 +85,26 @@ export function FeaturedProjectCard({
         </dl>
       )}
 
-      <p className="mt-5 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)]">
+      <p
+        className={`mt-4 max-w-2xl text-balance text-base leading-relaxed text-[var(--color-text-secondary)] sm:mt-5 ${
+          overviewExpanded ? "" : "line-clamp-3 sm:line-clamp-none"
+        }`}
+      >
         {pick(lang, project.overview, project.overviewAr)}
       </p>
+      <button
+        type="button"
+        onClick={() => setOverviewExpanded((v) => !v)}
+        className="mt-1.5 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-android)] sm:hidden"
+      >
+        {overviewExpanded ? t.android.showLess : t.android.showMore}
+        <ChevronDown
+          size={13}
+          className={`transition-transform duration-200 ${overviewExpanded ? "rotate-180" : ""}`}
+        />
+      </button>
 
-      <div className="mt-7">
+      <div className="mt-5 sm:mt-7">
         <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
           {t.android.areas}
         </p>
@@ -115,7 +131,7 @@ export function FeaturedProjectCard({
         )}
       </div>
 
-      <div className="mt-7 flex flex-wrap gap-2">
+      <div className="mt-5 flex flex-wrap gap-2 sm:mt-7">
         {project.technologies.map((tech) => (
           <Tag key={tech} size="xs">
             {tech}
@@ -123,7 +139,7 @@ export function FeaturedProjectCard({
         ))}
       </div>
 
-      <div className="mt-7 flex flex-wrap gap-3">
+      <div className="mt-5 flex flex-wrap gap-3 sm:mt-7">
         {project.caseStudyUrl ? (
           <Link
             href={project.caseStudyUrl}
@@ -160,10 +176,10 @@ export function FeaturedProjectCard({
   if (hasGallery) {
     return (
       <Reveal>
-        <article className="rounded-3xl border border-[var(--color-border)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-android-line)]/60 hover:shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)] sm:p-8 lg:p-12">
+        <article className="rounded-3xl border border-[var(--color-border)] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-android-line)]/60 hover:shadow-[0_24px_60px_-28px_rgba(0,0,0,0.7)] sm:p-8 lg:p-12">
           {header}
 
-          <div className="mt-10">
+          <div className="mt-7 sm:mt-10">
             <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-tertiary)]">
               {t.android.screens}
             </p>

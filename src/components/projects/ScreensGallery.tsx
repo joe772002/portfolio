@@ -23,7 +23,7 @@ export function ScreensGallery({
   return (
     <>
       <div
-        className={`relative isolate overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-8 sm:py-10 ${className ?? ""}`}
+        className={`relative isolate overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-elevated)] py-5 sm:py-10 ${className ?? ""}`}
       >
         <div
           aria-hidden
@@ -51,7 +51,7 @@ export function ScreensGallery({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.45, delay: Math.min(i * 0.07, 0.35), ease: EASE }}
-              className="group w-[64vw] max-w-[230px] shrink-0 snap-center overflow-hidden rounded-[1.6rem] border border-[var(--color-border)] text-left shadow-2xl shadow-black/50 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-android-line)] hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.7)] sm:w-[210px]"
+              className="group w-[46vw] max-w-[175px] shrink-0 snap-center overflow-hidden rounded-[1.6rem] border border-[var(--color-border)] text-left shadow-2xl shadow-black/50 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-android-line)] hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.7)] sm:w-[210px] sm:max-w-none"
             >
               <span className="block overflow-hidden">
                 <Image

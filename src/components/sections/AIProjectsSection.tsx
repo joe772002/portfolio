@@ -13,7 +13,7 @@ export function AIProjectsSection() {
   const placeholders = aiProjects.filter((p) => p.placeholder);
 
   return (
-    <section id="ai-builds" className="relative border-t border-[var(--color-border-soft)] py-14 sm:py-24 lg:py-32">
+    <section id="ai-builds" className="relative border-t border-[var(--color-border-soft)] py-10 sm:py-32">
       <Container>
         <SectionHeading
           kicker={t.ai.kicker}
@@ -23,7 +23,7 @@ export function AIProjectsSection() {
         />
 
         {majors.length > 0 && (
-          <div className="mt-14 flex flex-col gap-8">
+          <div className="mt-7 flex flex-col gap-5 sm:mt-14 sm:gap-8">
             {majors.map((project, i) => (
               <AIProjectCard
                 key={project.id}
@@ -36,7 +36,7 @@ export function AIProjectsSection() {
         )}
 
         {placeholders.length > 0 && (
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:grid-cols-2">
             {placeholders.map((project, i) => (
               <Reveal key={project.id} delay={Math.min(i * 0.08, 0.2)}>
                 <div className="flex h-full min-h-[160px] flex-col justify-between rounded-2xl border border-dashed border-[var(--color-border)] p-7">
